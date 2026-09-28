@@ -98,32 +98,35 @@ it runs after your code. These are built in (your own definitions win):
 - Stops after 3000 steps, with a 15 second hard timeout.
 - Pointer markers are name based. A variable called `x` won't show on an
   array, by design, to avoid noise.
-- Python can reuse the `id` of a freed object, so an object may occasionally
-  be marked as new when it isn't.
 
 ## How it works
 
 ```
-public/tracer.py            sys.settrace hook: snapshots frames + heap every step, plus LeetCode helpers
-public/pyodide-worker.js    loads Pyodide in a Web Worker and runs tracer.py
-src/usePython.js            talks to the worker, restarts it on timeout
-src/lib.js                  narration, diffs between steps, default heap layout, syntax colors
-src/structures.js           view suggestions and data for each structure view
-src/components/Structures   the eight structure views
-src/components/CallTree     call tree built from call/return events
-src/components/             CodeView, StackPanel, HeapPanel, Arrows (SVG), Timeline, Guide
-src/App.jsx                 edit and view modes, playback, stepping, guess mode
+src/engines/            one engine per language behind a shared interface
+  python/tracer.py      sys.settrace hook: records frames and heap changes every step
+  python/helpers.py     ListNode, TreeNode, build_list, build_tree
+  python/worker.ts      loads Pyodide in a Web Worker and runs the tracer
+  useEngine.ts          talks to the worker, restarts it on timeout
+src/trace/              the shared trace format and Trace, which rebuilds any step
+src/model/              narration, diffs, heap layout, call tree, guess mode
+src/structures/         view suggestions and data for each structure view
+src/app/                store (zustand), playback, keyboard, App shell
+src/components/         edit mode, view mode, memory panels, structure views
+src/styles/             one small stylesheet per area
 ```
 
 The tracer only records frames from the user's code. Primitives are stored
-inline; everything else goes in the heap keyed by `id()`, which is what makes
-shared references visible. The UI is a pure replay of those snapshots, so
-stepping backwards is free and every view is just a different drawing of the
-same snapshot.
+inline; everything else goes in the heap under a stable id, which is what makes
+shared references visible. Each step stores only the heap objects that changed,
+and the UI rebuilds any step from those changes, so stepping backwards is free
+and every view is just a different drawing of the same step.
 
-To test the tracer without the UI:
+## Checks
 
 ```
-cd visualizer/public
-python -c "import tracer; print(tracer.run_trace('a = [1]\nb = a'))"
+npm test          # tracer golden traces, trace rebuilding, builders, render smoke test
+npm run build     # typecheck, then production build
 ```
+
+Golden traces live in `src/engines/python/__golden__`. After an intended tracer
+change, update them with `npx vitest run -u` and review the diff.

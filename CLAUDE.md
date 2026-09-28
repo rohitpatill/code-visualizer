@@ -42,19 +42,14 @@ at scale by people who never met us.
 
 ### Product practice
 
-- Every change must leave the app working: `npm run build` passes and the
-  touched feature is checked.
+- Every change must leave the app working: `npm test` and `npm run build`
+  pass, and the touched feature is checked. Tracer changes update the golden
+  traces (`npx vitest run -u`) with the diff reviewed.
 - Handle failure paths (bad input, timeouts, empty data) explicitly, with a
   short user-facing message.
 - UI stays self-explanatory: short copy, sentence case, one job per element.
 - Accessibility: keyboard reachable, visible focus, `prefers-reduced-motion`
   respected, colour never the only signal.
-
-### Existing debt against this standard
-
-These files exceed 300 lines and should be split when next touched:
-`src/App.jsx` (509), `src/styles.css` (911), `src/features.css` (834),
-`src/structures.js` (361), `src/components/Structures.jsx` (344).
 
 ## Working agreements
 
@@ -75,7 +70,7 @@ These files exceed 300 lines and should be split when next touched:
 
 After any change to architecture, files, decisions, limits or backlog, update
 the matching section here in the same piece of work. Remove what is no longer
-true. Line counts in "Existing debt" are updated when files change.
+true.
 
 ## Running
 
@@ -85,7 +80,8 @@ npm run dev
 ```
 
 Serves at http://localhost:5173. `.claude/launch.json` defines the
-`stepthrough` preview config for the same command. `npm run build` outputs to
+`stepthrough` preview config for the same command. `npm test` runs Vitest,
+`npm run typecheck` runs `tsc`, `npm run build` typechecks then outputs to
 `dist/`. The first run needs internet (Pyodide loads from the jsdelivr CDN).
 
 Git: `main` tracks https://github.com/rohitpatill/code-visualizer.
@@ -104,9 +100,9 @@ common data structure or pattern.
 1. **React + Vite.** Many linked panels share state; plain HTML gets messy.
 2. **Pyodide (CPython in WebAssembly) in a Web Worker.** No backend, real
    Python semantics, page stays responsive, worker can be killed on timeout.
-3. **Tracer in Python via `sys.settrace`**, recording a full snapshot per
-   step. The UI is a pure replay, so stepping back is free and every view is
-   a different drawing of the same snapshot.
+3. **Tracers record every step up front; the UI is a pure replay.** Steps
+   store heap deltas and `Trace` rebuilds any step, so stepping back is free
+   and every view is a different drawing of the same step.
 4. **SVG + DOM, not 3D.** Stack and heap are 2D concepts.
 5. **Default view is the memory view** (stack, heap, arrows). Structure views
    are opt in.
@@ -124,88 +120,141 @@ common data structure or pattern.
 10. **Guess mode** (predict a value before seeing it) is the most valued
     learning feature. Learning features keep getting weight without clutter.
 11. **LeetCode support**: a "code that calls your solution" box plus built-in
-    `ListNode`, `TreeNode`, `build_list`, `build_tree` defined in `tracer.py`
-    so their lines are never traced.
+    `ListNode`, `TreeNode`, `build_list`, `build_tree` in `helpers.py`, a
+    separate module, so their lines are never traced.
+12. **One engine per language behind a shared trace contract.** The UI never
+    knows which language ran. TypeScript enforces the contract; golden traces
+    and builder tests catch drift.
+13. **State in a zustand store with narrow selectors**, so a hover or a step
+    re-renders only what depends on it.
 
 ## Architecture
 
+Every language is an engine that emits one shared trace format. Everything
+after the engine (model, structures, UI) is language-neutral and only reads
+that format.
+
 ```
-index.html                 IBM Plex Sans + Mono, mounts React
-package.json               react, react-dom, @uiw/react-codemirror,
-                           @codemirror/lang-python, @codemirror/view, vite
-vite.config.js
-README.md                  user guide
-CLAUDE.md                  this file
-.claude/launch.json        dev server preview config
-public/
-  tracer.py                the whole Python side
-  pyodide-worker.js        classic worker: loads Pyodide v0.26.4 (Python 3.12)
-                           from jsdelivr, fetches tracer.py, runs run_trace()
+index.html                  fonts, mounts src/main.tsx
+vite.config.ts              React plugin, ES workers, Vitest config
+tsconfig.json               strict, noUncheckedIndexedAccess
+.claude/launch.json         dev server preview config
 src/
-  main.jsx                 entry, imports styles.css then features.css
-  App.jsx                  edit/view mode, playback, stepping, breakpoints,
-                           guess mode, tabs, localStorage
-  usePython.js             worker lifecycle, 15 s timeout, restarts worker
-  lib.js                   narration (describeStep), diffSteps, heap layout
-                           (layoutHeap), Python syntax highlighter
-  structures.js            view suggestions, pointer detection, per-view data
-                           builders, buildStructures(), buildTags()
-  samples.js               13 grouped examples, can preset views and call
-  styles.css               base theme and memory view
-  features.css             structure views, call tree, breakpoints, guess
-                           mode, guide
+  main.tsx                  entry: persistence, React root, styles
+  trace/
+    types.ts                THE CONTRACT: Value, HeapObject, Frame, StepRecord,
+                            RawTrace, Step
+    Trace.ts                rebuilds any step from heap deltas (checkpoints)
+    values.ts               sameValue, deref, topFrame, isProgramEnd, ...
+  engines/
+    types.ts                Engine interface (worker, editor language,
+                            highlighter, samples, copy)
+    registry.ts             list of engines, default engine
+    protocol.ts             worker request/response messages
+    useEngine.ts            worker lifecycle, 15 s timeout, restart
+    python/
+      index.ts              the Python engine definition
+      worker.ts             module worker: Pyodide from CDN, runs the tracer
+      runtime.ts            installTracer(): shared by worker and tests
+      pyodide.ts            PYODIDE_VERSION, CDN url
+      tracer.py             sys.settrace tracer
+      helpers.py            ListNode, TreeNode, build_list, build_tree
+      highlight.ts          Python token colours for the code view
+      samples.ts            13 grouped examples, can preset views and call
+      __golden__/           golden traces, one per sample
+  model/                    pure logic: describe, diff, heapLayout,
+                            callTree, guess
+  structures/               view suggestions and data builders: common,
+                            pointers, suggest, linear, trees, graph, build
+  app/
+    store.ts                zustand store: all state and actions
+    navigation.ts           step over / out / breakpoint targets
+    storage.ts              safe localStorage (stepthrough-* keys)
+    source.ts               joinSource(code, call)
+    usePlayback.ts          play timer
+    useKeyboard.ts          shortcuts, registered once
+    App.tsx                 shell: top bar, edit or view, guide
   components/
-    CodeView.jsx           code lines, next/prev markers, breakpoints
-    StackPanel.jsx         frames as a staircase, view picker per variable
-    HeapPanel.jsx          structure cards first, then default heap rows
-    Value.jsx              primitive / inline ref / port; CoverContext
-    Arrows.jsx             SVG arrows measured from the DOM after render
-    Structures.jsx         Array, Grid, LinkedList, Tree, Graph, Stack, Queue,
-                           Heap views + StructureCard
-    CallTree.jsx           buildCallTree(steps) + view
-    Timeline.jsx           depth graph scrubber
-    Guide.jsx              "How to use" sheet, opens on first visit
+    TopBar.tsx, Guide.tsx
+    edit/                   EditPane (CodeMirror), SamplePicker
+    view/                   ViewLayout, CodeView, OutputPanel, MemoryPane,
+                            Controls, Transport, QuizForm, Timeline,
+                            CallTreeView
+    memory/                 StackPanel, ViewControl, HeapPanel, HeapObject,
+                            Value, Arrows, cover (CoverContext, useIsHot)
+    structures/             StructureCard + one file per view family
+  styles/                   index.css imports 14 small sheets in cascade order
 ```
 
-### Tracer (`public/tracer.py`)
+### Trace contract (`src/trace/types.ts`)
 
-- `run_trace(code, stdin_text)` returns JSON
-  `{steps, truncated, error, stdout, maxSteps}`.
+- `RawTrace`: `{steps, truncated, error, stdout, maxSteps}`.
+- `StepRecord`: `line, event, frames[], out, heap, ret?, exc?`. `event` is
+  `call | line | return | exception`; a `line` event fires before the line
+  runs ("runs next"). `out` is the stdout length so far in UTF-16 units; the
+  UI slices the final `stdout` with it.
+- `heap` is a delta: `set` holds objects that are new or changed on this step,
+  `del` lists ids that stopped being reachable.
+- Frames: user frames only, outermost first, `global: true` on the module
+  frame, stable small ids.
+- Values: `{t:'p', k, v, s?}` inline primitives, where `k` is neutral
+  (`none bool int float str other`), `v` is the literal in the source
+  language, and `s` is the raw text for strings. Otherwise `{t:'r', id}`.
+- Heap objects: `kind` drives rendering (`list tuple set deque dict instance
+  class function module other`), `type` is the language's own type name for
+  labels.
+- `Trace` keeps a full heap copy every 64 steps, so `step(i)` replays at most
+  63 deltas, keeps an 8-step LRU cache, and `scan()` walks every step in
+  O(total deltas) for whole-run views like the call tree.
+
+### Python tracer (`src/engines/python/tracer.py`)
+
 - Compiles user code as `"<your code>"`; frames from any other file are
-  ignored, so helpers and library code are skipped.
-- Events: `call`, `line`, `return`, `exception`. The module's own `call` is
-  skipped. A `line` event fires before the line runs ("runs next" in the UI).
-- Step: `line, event, func, frames[], heap{}, stdout`, plus `ret` on return
-  and `exc` on exception.
-- Frames: user frames only, outermost first, globals without dunders, stable
-  small ids (frame objects kept alive so `id()` isn't reused).
-- Values: exact-type primitives (`None bool int float complex str`) inline as
-  `{t:'p', k, v}`; everything else `{t:'r', id}` into the heap. Heap kinds:
-  `list tuple set deque dict function class module instance other`.
-  Containers capped at 100 items, reprs at 200 chars.
-- `input()` reads from the stdin box; stdout captured by swapping `sys.stdout`.
-- Limits: `MAX_STEPS = 3000`, plus the 15 s worker timeout as a backstop for
-  code that swallows the stop exception.
-- Cost: each step re-serializes every reachable object, so a run is
-  O(steps x reachable heap) in time and memory. This is the main scaling
-  bottleneck.
+  ignored, which is why helpers (a separate module) are never traced.
+- Object ids are small and stable, and the tracer holds every object it has
+  seen, so CPython can never reuse an id for a different object.
+- Each step still walks every reachable object to detect changes (settrace
+  has no mutation hook), but only changed objects are emitted.
+- Classes not defined in user code (like `deque`) carry no attrs; they render
+  as an inline label anyway.
+- Containers capped at 100 items, reprs at 200 chars. `MAX_STEPS = 3000`,
+  plus the 15 s worker timeout for code that swallows the stop exception.
+- `input()` reads the stdin box; stdout is captured by swapping `sys.stdout`.
 
 ### Frontend data flow
 
-1. Edit mode: CodeMirror, samples, call box, optional stdin. Code, call and
-   views persist in `localStorage` (`stepthrough-*` keys).
-2. Visualize joins code + call and sends it to the worker.
-3. View mode: `index` into `steps` drives everything. Per step App computes
-   `diffSteps` (coral flashes), `buildStructures`, `buildTags`; once per run
-   `buildCallTree`.
-4. `coveredBy` maps heap ids drawn inside a structure card. Those are skipped
+1. Edit mode: code, call and views live in the store and persist to
+   `localStorage` through `persistDrafts()`.
+2. Visualize joins code + call (`joinSource`) and asks the engine to run it.
+   The worker returns a JSON string, parsed once into a `Trace`.
+3. View mode: the store's `index` drives everything. `ViewLayout` rebuilds the
+   current and previous `Step`; `MemoryPane` derives the diff (from the
+   step's `touched` ids, O(changes)), structures, tags and cover per step, and
+   the call tree once per run.
+4. Hover lives in the store and components subscribe per id (`useIsHot`), so
+   hovering re-renders two elements, not the tree. Arrows re-measure only when
+   the layout changes.
+5. `coveredBy` maps heap ids drawn inside a structure card. Those are skipped
    by the default heap layout and draw no arrow; the card carries
    `data-heap=rootId` so the owning variable's arrow lands on it.
-5. Recursive functions with `root` in every frame: frames are walked
+6. Recursive functions with `root` in every frame: frames are walked
    outermost first and covered roots skipped, so one tree is drawn.
-6. Default heap layout: one row per object a variable points at, references
-   placed to its right (DFS), keeping arrows left to right. Stack and heap
-   share one scroll container so arrow coordinates stay valid.
+7. Default heap layout: one row per object a variable points at, references
+   placed to its right (DFS). Stack and heap share one scroll container so
+   arrow coordinates stay valid.
+8. Timeline bars are one SVG path built once per run; the playhead moves a
+   clip rect and one bar.
+
+### Adding a language
+
+1. Write a tracer that emits `RawTrace` exactly as in `trace/types.ts`.
+2. Add `src/engines/<lang>/` with a worker that speaks `engines/protocol.ts`,
+   an `Engine` definition (editor language, highlighter, samples, copy), and
+   register it in `engines/registry.ts`.
+3. Add golden traces for its samples. The model, structure and render tests
+   should then pass unchanged; if they need changes, the contract leaked.
+4. Still to build when the second engine lands: a language picker and
+   per-language drafts in `localStorage`.
 
 ## Design system
 
@@ -225,29 +274,43 @@ src/
 
 ## Verification status
 
-- Tracer was tested directly with a local Python importing `public/tracer.py`
-  (recursion, aliasing, classes, dicts, input, syntax and runtime errors,
-  infinite loops). Local Python is 3.10; Pyodide runs 3.12, so behaviour tied
-  to newer features (`co_qualname`) differs locally.
-- All 13 samples traced and fed through `structures.js` and `lib.js` in Node.
-- `npm run build` passes (the 500 kB bundle warning is CodeMirror).
-- Dev server confirmed running. Structure views, layout and arrows still need
-  a visual pass in the browser.
-- `npm audit`: 2 dev-tooling vulnerabilities, deliberately not force-fixed
+- `npm test` (Vitest, 63 tests):
+  - tracer golden traces for all 13 samples, run in real Pyodide 0.26.4 from
+    npm with `PYTHONHASHSEED=0` (set order depends on string hashing), plus
+    edge cases: syntax and runtime errors, step limit, `input()`, UTF-16
+    output slicing, stable ids, delta emission, raw strings;
+  - `Trace` rebuilding checked against a forward replay in shuffled order;
+  - every structure builder over every step of every sample;
+  - every step of every sample rendered in jsdom, both tabs, guess mode,
+    empty-run error, top bar and guide, with no React warnings.
+- `npm run build` runs `tsc` then Vite. The 500 kB chunk warning is CodeMirror.
+- A test asserts the npm Pyodide version equals the CDN version the browser
+  loads; bump `pyodide.ts` and `package.json` together.
+- Not yet checked by eye in a browser since the TypeScript migration.
+- `npm audit`: dev-tooling vulnerabilities, deliberately not force-fixed
   (would jump Vite a major version; local-only tool).
 
 ## Known limits
 
 - One file, standard library only. Needs internet on first load.
 - Flash may not replay if the same thing changes on consecutive steps.
-- Python can reuse `id()` of freed objects, so an object may look new.
 - Generators and iterators render as opaque `other` boxes.
+- Set display order follows Python's real iteration order, which changes
+  between runs (string hash seed).
+- Guess mode only asks about plain values that change at the same call depth,
+  so pure recursion (factorial) asks nothing.
 - Structure detection is heuristic. Graphs assume adjacency dicts or lists
   (no edge lists). Trees need `left`/`right` or `children`; node values come
   from `val value data key item` or the first primitive attr.
 - Graph layout is a circle, fine up to about 20 to 30 nodes.
 - Call tree includes every call, `__init__` too.
-- String array view slices the repr, so `\n` shows as two chars.
+
+## Roadmap
+
+Agreed order: (1) language-neutral foundation, done; (2) JavaScript engine
+(instrument code with acorn, run it in a worker); (3) better structure
+views; (4) backend with sandboxed runners for Java, C and C++; (5) accounts
+and progress on that same backend.
 
 ## Backlog
 
@@ -257,7 +320,5 @@ src/
 - Shareable link with code and views in the URL.
 - Edge-list graph input, better layout for large graphs.
 - Hide `__init__` and other noise in the call tree.
-- Incremental snapshots (store only changed heap objects per step) to lift
-  the O(steps x heap) cost.
-- Split the files listed under "Existing debt".
+- Split CodeMirror into its own chunk (only edit mode needs it).
 - More learning-first features in the spirit of guess mode.
