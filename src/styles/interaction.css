@@ -1,0 +1,81 @@
+button.lineno {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  position: relative;
+}
+
+button.lineno:hover {
+  color: var(--text);
+}
+
+button.lineno.has-bp {
+  color: var(--coral);
+  font-weight: 600;
+}
+
+button.lineno.has-bp::before {
+  content: "●";
+  position: absolute;
+  left: -4px;
+  font-size: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.legend-bp {
+  color: var(--coral);
+}
+
+/* ---------- Guess mode ---------- */
+
+.quiz {
+  align-items: center;
+}
+
+.quiz code {
+  color: var(--teal);
+}
+
+.quiz-input {
+  background: var(--panel);
+  border: 1px solid var(--amber);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-family: var(--mono);
+  font-size: 14px;
+  width: 180px;
+}
+
+.quiz-result code {
+  font-family: var(--mono);
+}
+
+.quiz.is-right .quiz-result {
+  color: var(--teal);
+}
+
+.quiz.is-wrong .quiz-result {
+  color: var(--coral);
+}
+
+.speed-sep {
+  width: 1px;
+  background: var(--line);
+  margin: 0 6px;
+}
+
+/* ---------- Edit side fields ---------- */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 500;
+}
+

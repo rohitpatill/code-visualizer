@@ -1,0 +1,117 @@
+.memory-pane {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 2px;
+  padding: 8px 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 6px 12px 8px;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab.is-on {
+  color: var(--text);
+  border-bottom-color: var(--amber);
+}
+
+.tab:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.tab-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: 4px;
+}
+
+.memory {
+  flex: 1;
+}
+
+/* ---------- Stack: view picker ---------- */
+
+.slot-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.view-pill {
+  border-radius: 999px;
+  padding: 0 9px;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+  font-family: var(--sans);
+}
+
+.view-pill.is-suggest {
+  background: none;
+  border: 1px dashed rgba(86, 199, 184, 0.6);
+  color: var(--teal);
+}
+
+.view-pill.is-on {
+  background: rgba(86, 199, 184, 0.15);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+}
+
+.view-more {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  padding: 0 4px;
+  opacity: 0.35;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.slots tr:hover .view-more,
+.view-more:focus-visible,
+.view-more[aria-expanded="true"] {
+  opacity: 1;
+}
+
+.view-menu {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 6px 0 4px;
+}
+
+.port-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.port.is-inside {
+  background: transparent;
+  border: 2px solid var(--teal);
+  box-shadow: none;
+}
+
+.port-note {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--teal);
+}
+

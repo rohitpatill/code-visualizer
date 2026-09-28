@@ -1,0 +1,175 @@
+.struct {
+  background: rgba(33, 44, 68, 0.55);
+  border: 1px solid #36506a;
+  border-radius: 10px;
+  padding: 10px 14px 14px;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  transition: box-shadow 150ms;
+}
+
+.struct.is-hot {
+  box-shadow: 0 0 0 2px var(--amber);
+}
+
+.struct-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.struct-head code {
+  font-family: var(--mono);
+  color: var(--teal);
+  font-weight: 600;
+}
+
+.struct-frame {
+  color: #5f6b86;
+}
+
+.struct-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.struct-close:hover {
+  color: var(--text);
+}
+
+.struct-empty {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 13px;
+  padding: 6px 0;
+}
+
+.struct-note {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Array with pointers */
+
+.arr-row {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.arr-col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 44px;
+  padding-top: 4px;
+}
+
+.arr-col.in-window {
+  background: rgba(245, 184, 74, 0.1);
+}
+
+.arr-cell {
+  border: 1px solid #3b5c6a;
+  margin-left: -1px;
+  background: var(--panel);
+  padding: 8px 10px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 14px;
+  white-space: pre;
+}
+
+.arr-cell.is-pointed {
+  border-color: var(--amber);
+  color: #ffe3ad;
+  position: relative;
+  z-index: 1;
+}
+
+.arr-cell.is-changed {
+  animation: flash 900ms ease-out;
+}
+
+.arr-cell.is-ghost {
+  border-style: dashed;
+  color: var(--muted);
+  font-size: 11px;
+  background: none;
+}
+
+.arr-index {
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  padding-top: 2px;
+}
+
+.arr-ptrs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 4px;
+}
+
+.ptr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--amber);
+  line-height: 1.1;
+}
+
+.ptr-caret {
+  font-size: 9px;
+}
+
+/* Grid */
+
+.grid {
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.grid th {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 11px;
+  padding: 2px 6px;
+}
+
+.grid td {
+  border: 1px solid #3b5c6a;
+  background: var(--panel);
+  min-width: 38px;
+  height: 34px;
+  text-align: center;
+  padding: 2px 6px;
+}
+
+.grid td.is-pointed {
+  outline: 2px solid var(--amber);
+  outline-offset: -2px;
+  color: #ffe3ad;
+}
+
+.grid td.is-changed {
+  animation: flash 900ms ease-out;
+}
+

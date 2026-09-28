@@ -1,0 +1,206 @@
+/* Values */
+
+.prim {
+  font-family: var(--mono);
+  white-space: pre;
+}
+.prim-str {
+  color: var(--string);
+}
+.prim-int,
+.prim-float,
+.prim-complex {
+  color: #f7c97a;
+}
+.prim-bool,
+.prim-NoneType {
+  color: #f08fb4;
+}
+
+.inline-ref {
+  font-family: var(--mono);
+  color: var(--violet);
+}
+
+.port {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--teal);
+  vertical-align: -1px;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(86, 199, 184, 0.15);
+}
+
+.port.is-hot {
+  background: var(--amber);
+  box-shadow: 0 0 0 4px rgba(245, 184, 74, 0.25);
+}
+
+/* Heap */
+
+.heap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.heap-empty {
+  margin: 0;
+  color: #56627d;
+  font-size: 14px;
+  max-width: 38ch;
+}
+
+.heap-row {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+}
+
+.heap-obj {
+  flex: none;
+  border-radius: 4px;
+  transition: box-shadow 150ms;
+}
+
+.heap-obj.is-hot {
+  box-shadow: 0 0 0 2px var(--amber);
+}
+
+.heap-obj.is-new {
+  animation: obj-in 500ms ease-out;
+}
+
+.heap-obj.is-changed > .heap-label {
+  color: var(--coral);
+}
+
+@keyframes obj-in {
+  from {
+    box-shadow: 0 0 0 6px rgba(86, 199, 184, 0.45);
+  }
+}
+
+.heap-label {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal);
+  padding: 0 2px 4px;
+  height: 22px;
+}
+
+.kind-instance > .heap-label,
+.kind-class > .heap-label {
+  color: var(--violet);
+}
+
+.heap-size {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.cells {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 560px;
+}
+
+.cell {
+  min-width: 46px;
+  border: 1px solid #3b5c6a;
+  margin-left: -1px;
+  background: var(--panel);
+  text-align: center;
+}
+
+.cell-value {
+  padding: 6px 10px;
+  font-family: var(--mono);
+  font-size: 13px;
+  min-height: 32px;
+}
+
+.cell-index {
+  font-size: 11px;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding: 1px 0;
+  font-family: var(--mono);
+}
+
+.cell.is-changed .cell-value {
+  animation: flash 900ms ease-out;
+}
+
+.cell.is-changed .cell-index {
+  color: var(--coral);
+}
+
+.cell-empty,
+.cell-more {
+  padding: 6px 12px;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* tuples are immutable: dashed borders set them apart from lists */
+.kind-tuple .cell {
+  border-style: dashed;
+}
+
+/* sets have no order and no index */
+.kind-set .cells {
+  gap: 6px;
+}
+.kind-set .cell {
+  border-radius: 999px;
+  margin-left: 0;
+}
+
+.pairs {
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 13px;
+  background: var(--panel);
+}
+
+.pairs th,
+.pairs td {
+  border: 1px solid #3b5c6a;
+  padding: 5px 12px;
+  text-align: left;
+}
+
+.pairs th {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.kind-instance .pairs th,
+.kind-instance .pairs td {
+  border-color: #4b4674;
+}
+
+.kind-instance .pairs th {
+  color: var(--muted);
+}
+
+.pairs tr.is-changed td {
+  animation: flash 900ms ease-out;
+}
+
+.other-repr {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+

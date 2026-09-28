@@ -1,0 +1,145 @@
+.graph {
+  position: relative;
+}
+
+.graph svg {
+  position: absolute;
+  inset: 0;
+}
+
+.g-edge {
+  stroke: #56627d;
+  stroke-width: 1.5;
+}
+
+.g-head {
+  fill: #56627d;
+}
+
+.g-weight {
+  fill: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.gnode {
+  border-color: #56627d;
+}
+
+.gnode.is-visited {
+  background: rgba(86, 199, 184, 0.22);
+  border-color: var(--teal);
+}
+
+.gnode.is-frontier {
+  border: 2px dashed var(--amber);
+}
+
+.gnode.is-current {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: #1a1406;
+  font-weight: 600;
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+
+.sw {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  vertical-align: -1px;
+  margin-right: 4px;
+}
+
+.sw-current {
+  background: var(--amber);
+}
+
+.sw-frontier {
+  border: 2px dashed var(--amber);
+}
+
+.sw-visited {
+  background: rgba(86, 199, 184, 0.5);
+}
+
+/* Stack and queue */
+
+.stackview {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  gap: 3px;
+}
+
+.stack-item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #3b5c6a;
+  background: var(--panel);
+  padding: 6px 10px;
+  font-family: var(--mono);
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.stack-item.is-top {
+  border-color: var(--amber);
+}
+
+.stack-top {
+  color: var(--amber);
+  font-family: var(--sans);
+  font-size: 11px;
+}
+
+.stack-base {
+  height: 3px;
+  background: #56627d;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.queueview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.q-end {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.q-items {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  border-top: 2px solid #56627d;
+  border-bottom: 2px solid #56627d;
+  padding: 5px 4px;
+  min-width: 80px;
+}
+
+.q-item {
+  border: 1px solid #3b5c6a;
+  background: var(--panel);
+  padding: 6px 10px;
+  font-family: var(--mono);
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.q-item.is-front {
+  border-color: var(--amber);
+}
+

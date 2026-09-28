@@ -1,0 +1,52 @@
+:root {
+  --ink: #141b2d;
+  --panel: #1b2438;
+  --panel-2: #212c44;
+  --line: #2c3854;
+  --text: #dce3f0;
+  --muted: #8391ad;
+  --amber: #f5b84a; /* execution: next line, active frame */
+  --teal: #56c7b8; /* heap objects and references */
+  --coral: #ff7b6e; /* changes and errors */
+  --violet: #a99bff; /* functions and classes */
+  --string: #b5d98f;
+  --sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--ink);
+  color: var(--text);
+  font: 15px/1.5 var(--sans);
+}
+
+button,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+

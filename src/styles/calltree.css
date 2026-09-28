@@ -1,0 +1,73 @@
+.calltree {
+  padding: 14px 24px 40px;
+  width: max-content;
+  min-width: 100%;
+}
+
+.calltree-note {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.calltree-canvas {
+  position: relative;
+}
+
+.calltree-canvas svg {
+  position: absolute;
+  inset: 0;
+}
+
+.ct-edge {
+  stroke: #3d4a68;
+  stroke-width: 1.5;
+}
+
+.ct-edge.is-hot {
+  stroke: var(--amber);
+  stroke-width: 2;
+}
+
+.ct-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  max-width: 118px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.ct-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.ct-node.is-path {
+  border-color: rgba(245, 184, 74, 0.6);
+}
+
+.ct-node.is-active {
+  border-color: var(--amber);
+  background: rgba(245, 184, 74, 0.18);
+  color: #ffe3ad;
+}
+
+.ct-node.is-done {
+  color: var(--muted);
+}
+
+.ct-ret {
+  color: var(--teal);
+}
+

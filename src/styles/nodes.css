@@ -1,0 +1,143 @@
+.ll {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.ll-item {
+  display: flex;
+  align-items: flex-end;
+}
+
+.ll-node-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ll-node {
+  display: flex;
+  border: 1px solid var(--violet);
+  border-radius: 6px;
+  background: var(--panel);
+  font-family: var(--mono);
+  font-size: 14px;
+  transition: box-shadow 150ms;
+}
+
+.ll-node.is-hot {
+  box-shadow: 0 0 0 2px var(--amber);
+}
+
+.ll-val {
+  padding: 7px 12px;
+}
+
+.ll-next {
+  width: 14px;
+  border-left: 1px solid #4b4674;
+  background: rgba(169, 155, 255, 0.12);
+}
+
+.ll-arrow {
+  color: var(--violet);
+  padding: 0 8px 8px;
+  font-size: 16px;
+}
+
+.ll-none,
+.ll-cycle {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  padding-bottom: 9px;
+}
+
+.ll-cycle {
+  color: var(--coral);
+}
+
+/* Name tags on nodes */
+
+.tags {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  margin-bottom: 3px;
+  min-height: 18px;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 0 5px;
+  border-radius: 4px;
+  line-height: 17px;
+  background: #2c3854;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.tag.is-active {
+  background: var(--amber);
+  color: #1a1406;
+  font-weight: 600;
+}
+
+/* Trees (binary, n-ary, heap) */
+
+.tree {
+  position: relative;
+}
+
+.tree-edges {
+  position: absolute;
+  inset: 0;
+}
+
+.tree-edges line {
+  stroke: #56627d;
+  stroke-width: 1.5;
+}
+
+/* anchor is the node circle's center; tags stack above it */
+.tree-node-wrap {
+  position: absolute;
+  transform: translate(-50%, calc(-100% + 19px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tnode,
+.gnode {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 13px;
+  background: var(--panel);
+  border: 1.5px solid var(--violet);
+  transition: box-shadow 150ms;
+}
+
+.tnode.is-current {
+  border-color: var(--amber);
+  background: rgba(245, 184, 74, 0.15);
+}
+
+.tnode.is-hot {
+  box-shadow: 0 0 0 3px var(--amber);
+}
+
+.tnode.is-root {
+  border-color: var(--amber);
+}
+
+.heapview .arr-row {
+  margin-top: 8px;
+}
+
