@@ -1,8 +1,9 @@
 # Stepthrough
 
-A step-by-step Python execution visualizer. Paste a single Python file, press
-Visualize, and move through every step of the run while watching the stack,
-the heap and the references between them. Data structures can be drawn in
+A step-by-step code execution visualizer for Python and JavaScript. Pick a
+language, paste a single file, press Visualize, and move through every step
+of the run while watching the stack, the heap and the references between
+them. Data structures can be drawn in
 their real shape (tree, graph, grid, ...) and index variables show up as
 pointers on them.
 
@@ -12,13 +13,14 @@ The in-app **How to use** panel covers everything below in short form.
 ## Run it
 
 ```
-cd visualizer
 npm install      # first time only
 npm run dev
 ```
 
-Open the URL Vite prints. The first Visualize takes a few seconds while Python
-loads in the browser (needs internet for the Pyodide download, cached after).
+Open the URL Vite prints (http://localhost:5173). Choose the language in the
+top bar; each language keeps its own code. The first Python run takes a few
+seconds while Python loads in the browser (needs internet for the Pyodide
+download, cached after). JavaScript starts instantly.
 
 ## The default view
 
@@ -87,14 +89,19 @@ by `node` / `cur` / `u` / `v` / `nei` is solid amber.
 Put code that calls your solution in the "Code that calls your solution" box;
 it runs after your code. These are built in (your own definitions win):
 
-- `ListNode(val, next)`, `TreeNode(val, left, right)`
-- `build_list([1, 2, 3])` gives the head node
-- `build_tree([3, 9, 20, None, None, 15, 7])` gives the root, LeetCode order
+| | Python | JavaScript |
+| --- | --- | --- |
+| Nodes | `ListNode(val, next)`, `TreeNode(val, left, right)` | `new ListNode(val, next)`, `new TreeNode(val, left, right)` |
+| List from values | `build_list([1, 2, 3])` | `buildList([1, 2, 3])` |
+| Tree, LeetCode order | `build_tree([3, 9, 20, None, None, 15, 7])` | `buildTree([3, 9, 20, null, null, 15, 7])` |
+| Example call | `result = Solution().reverseList(build_list([1, 2]))` | `const result = reverseList(buildList([1, 2]))` |
 
 ## Limits
 
-- One file only, standard library only (no pip packages).
-- `input()` reads from the "Add lines for input()" box, one line per call.
+- One file only, standard library only (no pip packages, no imports in JS).
+- `input()` (Python) and `prompt()` (JavaScript) read from the input lines
+  box, one line per call.
+- JavaScript: async functions, generators and `await` are not supported yet.
 - Stops after 3000 steps, with a 15 second hard timeout.
 - Pointer markers are name based. A variable called `x` won't show on an
   array, by design, to avoid noise.
@@ -102,12 +109,14 @@ it runs after your code. These are built in (your own definitions win):
 ## How it works
 
 ```
-src/engines/            one engine per language behind a shared interface
+src/engines/            one engine per language behind a shared Runner interface
   python/tracer.py      sys.settrace hook: records frames and heap changes every step
   python/helpers.py     ListNode, TreeNode, build_list, build_tree
   python/worker.ts      loads Pyodide in a Web Worker and runs the tracer
-  useEngine.ts          talks to the worker, restarts it on timeout
+  javascript/           acorn instrumenter + runtime tracer, runs in a Web Worker
+  workerRunner.ts       talks to a worker, restarts it on timeout
 src/trace/              the shared trace format and Trace, which rebuilds any step
+src/samples/catalog.ts  the examples every language implements
 src/model/              narration, diffs, heap layout, call tree, guess mode
 src/structures/         view suggestions and data for each structure view
 src/app/                store (zustand), playback, keyboard, App shell
@@ -115,11 +124,12 @@ src/components/         edit mode, view mode, memory panels, structure views
 src/styles/             one small stylesheet per area
 ```
 
-The tracer only records frames from the user's code. Primitives are stored
+Each tracer only records frames from the user's code. Primitives are stored
 inline; everything else goes in the heap under a stable id, which is what makes
-shared references visible. Each step stores only the heap objects that changed,
-and the UI rebuilds any step from those changes, so stepping backwards is free
-and every view is just a different drawing of the same step.
+shared references visible. Each step stores only the frames and heap objects
+that changed, and the UI rebuilds any step from those changes, so stepping
+backwards is free and every view is just a different drawing of the same step.
+The UI never knows which language produced the trace.
 
 ## Checks
 
