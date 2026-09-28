@@ -4,7 +4,8 @@ A local, step-by-step code visualizer (Python, JavaScript and C++) for
 learning programming and DSA.
 `README.md` is the user guide. This file is the builder's memory and the
 engineering contract. Keep it in sync with the code (see "Keeping this file
-true").
+true"). `context.md` is the narrative handoff: how we got here, what Rohit
+prefers, and what is open next.
 
 ## Engineering standard
 
@@ -86,6 +87,11 @@ Serves at http://localhost:5173. `.claude/launch.json` defines the
 `dist/`. The first run needs internet (Pyodide loads from the jsdelivr CDN).
 
 Git: `main` tracks https://github.com/rohitpatill/code-visualizer.
+
+Naming: the product is **Code Visualizer** (header, tab title, docs). The old
+name Stepthrough survives only internally: the `stepthrough-*` localStorage
+keys (renaming them would erase saved drafts unless migrated), the package
+name, the launch config name and the Python helper module name.
 
 ## Why it exists
 
@@ -333,8 +339,9 @@ src/
    own draft (in memory while switching, and in `localStorage` as
    `stepthrough-draft-<id>`; the old single-language keys migrate into
    Python). The language choice persists as `stepthrough-language`.
-2. Visualize joins code + call (`joinSource`) and asks the engine's runner to
-   run it. The worker returns a JSON string, parsed once into a `Trace`.
+2. Visualize builds the program with `engine.buildProgram(code, call)`
+   (`joinSource` for Python and JavaScript, `buildCppProgram` for C++) and
+   asks the engine's runner to run it. The worker returns a JSON string, parsed once into a `Trace`.
 3. View mode: the store's `index` drives everything. `ViewLayout` rebuilds the
    current and previous `Step`; `MemoryPane` derives the diff (from the
    step's `touched` ids), structures, tags and cover per step, and the call
@@ -422,6 +429,11 @@ src/
 ## Known limits
 
 - One file, standard library only. Needs internet on first load (Pyodide).
+- Runaway code: every engine stops at 3000 steps (loop tests and calls count
+  as steps, so empty loops are caught), and the 15 s worker timeout is the
+  backstop for loops inside built-ins or code that swallows the stop signal.
+  Code that allocates huge memory can crash the worker before either; the UI
+  survives but the message is generic.
 - Runaway recursion stays small on the wire but costs about 1 s (JS) to 4 s
   (Python) to trace, because every step walks every frame to find reachable
   objects.
