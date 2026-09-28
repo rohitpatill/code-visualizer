@@ -1,5 +1,6 @@
 import { useStore } from '../app/store'
 import type { RunnerStatus } from '../engines/runner'
+import { LanguagePicker } from './edit/LanguagePicker'
 import { SamplePicker } from './edit/SamplePicker'
 
 interface Props {
@@ -22,6 +23,7 @@ export function TopBar({ status, onVisualize }: Props) {
     <header className="topbar">
       <h1 className="brand">Stepthrough</h1>
       <div className="topbar-actions">
+        {!viewing && <LanguagePicker />}
         {!viewing && <SamplePicker />}
         <button className="btn" onClick={() => setGuideOpen(true)}>
           How to use

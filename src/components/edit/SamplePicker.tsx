@@ -18,7 +18,7 @@ export function SamplePicker() {
   const groups = useMemo(() => groupSamples(samples), [samples])
   return (
     <select
-      className="sample-picker"
+      className="picker"
       value=""
       onChange={(e) => {
         const sample = samples[Number(e.target.value)]

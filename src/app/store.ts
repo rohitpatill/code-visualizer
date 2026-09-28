@@ -5,7 +5,7 @@ import { type Question, questionFor, sameAnswer } from '../model/guess'
 import type { ViewName, Views } from '../structures/types'
 import type { Trace } from '../trace/Trace'
 import { findStep, isBreakpointHit, stepOutTarget, stepOverTarget } from './navigation'
-import { loadDraft, saveDraft } from './drafts'
+import { type Draft, loadDraft, saveDraft } from './drafts'
 import { KEYS, readText, write } from './storage'
 
 export const SPEEDS = [
@@ -78,6 +78,9 @@ const lastIndex = (run: Run | null) => (run ? run.trace.length - 1 : 0)
 
 const initialEngine = findEngine(readText(KEYS.language) ?? '')
 
+// Drafts of languages switched away from, so a switch never depends on storage working.
+const openDrafts = new Map<string, Draft>()
+
 export const useStore = create<Store>()((set, get) => ({
   engine: initialEngine,
   ...loadDraft(initialEngine),
@@ -95,9 +98,12 @@ export const useStore = create<Store>()((set, get) => ({
   guideOpen: readText(KEYS.seenGuide) === null,
 
   setEngine: (id) => {
+    const { engine: current, code, call, views } = get()
     const engine = findEngine(id)
-    if (engine === get().engine) return
-    set({ engine, ...loadDraft(engine), stdin: '', run: null, playing: false, quiz: null, breakpoints: new Set() })
+    if (engine === current) return
+    openDrafts.set(current.id, { code, call, views })
+    const draft = openDrafts.get(engine.id) ?? loadDraft(engine)
+    set({ engine, ...draft, stdin: '', run: null, playing: false, quiz: null, breakpoints: new Set() })
   },
   setCode: (code) => set({ code }),
   setCall: (call) => set({ call }),

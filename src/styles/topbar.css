@@ -1,7 +1,9 @@
 .topbar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
   padding: 12px 20px;
   border-bottom: 1px solid var(--line);
 }
@@ -23,8 +25,11 @@
 
 .topbar-actions {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 10px;
   align-items: center;
+  min-width: 0;
 }
 
 .btn {
@@ -61,11 +66,27 @@
   font-size: 13px;
 }
 
-.sample-picker {
+.picker {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 6px;
   padding: 7px 10px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    padding: 10px 12px;
+  }
+
+  .topbar-actions {
+    width: 100%;
+  }
+
+  .topbar-actions > * {
+    flex: 1 1 auto;
+  }
 }
 
 .banner {
