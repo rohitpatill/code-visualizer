@@ -1,4 +1,4 @@
-import type { Frame, HeapDelta, HeapObject, StepEvent, StepRecord, Value } from '../../../trace/types'
+import type { Frame, FrameDelta, HeapDelta, HeapObject, StepEvent, Value, WireStep } from '../../../trace/types'
 import { type HeapDraft, Encoder } from './encode'
 import { describeError } from './format'
 
@@ -36,13 +36,14 @@ export class Output {
 }
 
 export class Tracer {
-  readonly steps: StepRecord[] = []
+  readonly steps: WireStep[] = []
   readonly out = new Output()
   /** The deepest line an escaping error was raised on. */
   errorLine: number | null = null
   private readonly stack: LiveFrame[] = []
   private readonly encoder = new Encoder()
   private prevHeap = new Map<string, string>()
+  private prevFrames: string[] = []
   private nextFrameId = 1
   private lastError: unknown = undefined
 
@@ -107,6 +108,15 @@ export class Tracer {
     return [...live].map(([name, v]) => [name, this.encoder.value(v, heap)])
   }
 
+  private framesDelta(frames: Frame[]): FrameDelta {
+    const json = frames.map((f) => JSON.stringify(f))
+    let keep = 0
+    const limit = Math.min(json.length, this.prevFrames.length)
+    while (keep < limit && json[keep] === this.prevFrames[keep]) keep++
+    this.prevFrames = json
+    return { keep, push: frames.slice(keep) }
+  }
+
   private heapDelta(heap: HeapDraft): HeapDelta {
     const next = new Map<string, string>()
     const set: Record<string, HeapObject> = {}
@@ -137,7 +147,7 @@ export class Tracer {
       global: f.global,
       vars: this.frameVars(f, heap),
     }))
-    const step: StepRecord = { line, event, frames, out: this.out.length, heap: {} }
+    const step: WireStep = { line, event, frames: this.framesDelta(frames), out: this.out.length, heap: {} }
     if ('ret' in extra) step.ret = this.encoder.value(extra.ret, heap)
     if (extra.exc !== undefined) step.exc = extra.exc
     step.heap = this.heapDelta(heap)

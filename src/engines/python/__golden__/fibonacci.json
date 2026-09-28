@@ -3,38 +3,44 @@
   {
    "line": 1,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": []
-    }
-   ],
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 1,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 6,
+      "global": true,
+      "vars": [
+       [
+        "fib",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -50,843 +56,334 @@
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "fib",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "fib",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "fib",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "fib",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "fib",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "fib",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "fib",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "fib",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "fib",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 5,
+      "name": "fib",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "fib",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 5,
+      "name": "fib",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "fib",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 5,
+      "name": "fib",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -898,348 +395,91 @@
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 6,
+      "name": "fib",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "fib",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 6,
+      "name": "fib",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "fib",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 6,
+      "name": "fib",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -1251,71 +491,10 @@
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -1327,284 +506,91 @@
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 7,
+      "name": "fib",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "fib",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 7,
+      "name": "fib",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "fib",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 7,
+      "name": "fib",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -1616,55 +602,10 @@
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 3,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -1676,449 +617,172 @@
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 8,
+      "name": "fib",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 8,
+      "name": "fib",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 8,
+      "name": "fib",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 9,
+      "name": "fib",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "fib",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 9,
+      "name": "fib",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "fib",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 9,
+      "name": "fib",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -2130,284 +794,91 @@
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "fib",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "fib",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "fib",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "fib",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "fib",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "fib",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -2419,55 +890,10 @@
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 3,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -2479,39 +905,10 @@
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "fib",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "n",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "4"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 2,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -2523,23 +920,10 @@
   {
    "line": 6,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "fib",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 1,
+    "push": []
+   },
    "out": 2,
    "ret": {
     "t": "p",

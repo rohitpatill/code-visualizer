@@ -1,25 +1,32 @@
 import { describe, expect, it } from 'vitest'
 import { joinSource } from '../../app/source'
 import { resolveSamples } from '../../samples/catalog'
+import { Trace } from '../../trace/Trace'
 import type { Frame, RawTrace, Ref, StepRecord, Value } from '../../trace/types'
 import { runTrace } from './runtime/run'
 import { javascriptSamples } from './samples'
 
-const trace = (code: string, stdin = ''): RawTrace => JSON.parse(runTrace(code, stdin)) as RawTrace
+type Expanded = Omit<RawTrace, 'steps'> & { steps: readonly StepRecord[] }
+
+const raw = (code: string, stdin = ''): RawTrace => JSON.parse(runTrace(code, stdin)) as RawTrace
+const trace = (code: string, stdin = ''): Expanded => {
+  const r = raw(code, stdin)
+  return { ...r, steps: new Trace(r).records }
+}
 
 const top = (s: StepRecord): Frame => s.frames[s.frames.length - 1]!
 const varOf = (s: StepRecord, name: string): Value | undefined => top(s).vars.find(([n]) => n === name)?.[1]
-const last = (raw: RawTrace) => raw.steps[raw.steps.length - 1]!
-const lines = (raw: RawTrace) => raw.steps.filter((s) => s.event === 'line').map((s) => s.line)
+const last = (t: Expanded) => t.steps[t.steps.length - 1]!
+const lines = (t: Expanded) => t.steps.filter((s) => s.event === 'line').map((s) => s.line)
 
 describe('javascript tracer', () => {
   describe('golden traces', () => {
     for (const sample of resolveSamples(javascriptSamples)) {
       it(sample.name, async () => {
-        const raw = trace(joinSource(sample.code, sample.call ?? ''))
-        expect(raw.error).toBeNull()
-        expect(raw.truncated).toBe(false)
-        await expect(`${JSON.stringify(raw, null, 1)}\n`).toMatchFileSnapshot(`__golden__/${sample.id}.json`)
+        const golden = raw(joinSource(sample.code, sample.call ?? ''))
+        expect(golden.error).toBeNull()
+        expect(golden.truncated).toBe(false)
+        await expect(`${JSON.stringify(golden, null, 1)}\n`).toMatchFileSnapshot(`__golden__/${sample.id}.json`)
       })
     }
   })

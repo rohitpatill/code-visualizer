@@ -3,47 +3,53 @@
   {
    "line": 1,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "undefined"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 1,
+      "global": true,
+      "vars": [
+       [
+        "reverseList",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "undefined"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 13,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 13,
+      "global": true,
+      "vars": [
+       [
+        "reverseList",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -59,38 +65,26 @@
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -185,310 +179,238 @@
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -520,281 +442,221 @@
   {
    "line": 8,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 8,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -825,281 +687,221 @@
   {
    "line": 8,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 8,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -1130,283 +932,223 @@
   {
    "line": 8,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 8,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -1437,219 +1179,140 @@
   {
    "line": 8,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "nxt",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 8,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "nxt",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 10,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "reverseList",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "head",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "prev",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "curr",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 10,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 10,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "reverseList",
-     "line": 10,
-     "global": false,
-     "vars": [
-      [
-       "head",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "prev",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "curr",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 2,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -1660,30 +1323,33 @@
   {
    "line": 13,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "reverseList",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "result",
-       {
-        "t": "r",
-        "id": "5"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 13,
+      "global": true,
+      "vars": [
+       [
+        "reverseList",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "result",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {},
    "ret": {

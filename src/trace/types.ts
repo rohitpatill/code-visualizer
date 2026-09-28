@@ -52,16 +52,31 @@ export interface HeapDelta {
   del?: string[]
 }
 
-/** One step as stored: heap objects appear only on the step where they change. */
-export interface StepRecord {
+/**
+ * The stack as a change from the previous step: the first `keep` frames are
+ * unchanged, `push` replaces everything above them. Callers are paused while
+ * a callee runs, so deep recursion costs one frame per step, not the whole stack.
+ */
+export interface FrameDelta {
+  keep: number
+  push: Frame[]
+}
+
+/** One step as an engine sends it: frames and heap objects appear only when they change. */
+export interface WireStep {
   line: number
   event: StepEvent
-  frames: Frame[]
+  frames: FrameDelta
   /** Length of stdout so far, in UTF-16 code units. */
   out: number
   heap: HeapDelta
   ret?: Value
   exc?: string
+}
+
+/** A step with its full stack rebuilt; the heap stays a delta until `Trace.step`. */
+export interface StepRecord extends Omit<WireStep, 'frames'> {
+  frames: Frame[]
 }
 
 export interface TraceError {
@@ -70,7 +85,7 @@ export interface TraceError {
 }
 
 export interface RawTrace {
-  steps: StepRecord[]
+  steps: WireStep[]
   truncated: boolean
   error: TraceError | null
   stdout: string

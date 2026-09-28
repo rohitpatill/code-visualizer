@@ -3,72 +3,81 @@
   {
    "line": 1,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": []
-    }
-   ],
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 1,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 2,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 2,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 3,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 3,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -127,39 +136,42 @@
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 4,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 4,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -175,215 +187,227 @@
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 5,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 5,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'('",
-        "s": "("
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 6,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'('",
+         "s": "("
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 11,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'('",
-        "s": "("
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 11,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'('",
+         "s": "("
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 5,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'('",
-        "s": "("
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 5,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'('",
+         "s": "("
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -406,168 +430,177 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'['",
-        "s": "["
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 6,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'['",
+         "s": "["
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 11,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'['",
-        "s": "["
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 11,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'['",
+         "s": "["
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 5,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'['",
-        "s": "["
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 5,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'['",
+         "s": "["
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -596,168 +629,177 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "']'",
-        "s": "]"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 6,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "']'",
+         "s": "]"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 7,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "']'",
-        "s": "]"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 7,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "']'",
+         "s": "]"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 5,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "']'",
-        "s": "]"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 5,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "']'",
+         "s": "]"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -780,168 +822,177 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'{'",
-        "s": "{"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 6,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'{'",
+         "s": "{"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 11,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'{'",
-        "s": "{"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 11,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'{'",
+         "s": "{"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 5,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'{'",
-        "s": "{"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 5,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'{'",
+         "s": "{"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -970,168 +1021,177 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'}'",
-        "s": "}"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 6,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'}'",
+         "s": "}"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 7,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'}'",
-        "s": "}"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 7,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'}'",
+         "s": "}"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 5,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'}'",
-        "s": "}"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 5,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'}'",
+         "s": "}"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -1154,168 +1214,177 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "')'",
-        "s": ")"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 6,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "')'",
+         "s": ")"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 7,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "')'",
-        "s": ")"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 7,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "')'",
+         "s": ")"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 5,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "')'",
-        "s": ")"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 5,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "')'",
+         "s": ")"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -1331,112 +1400,69 @@
   {
    "line": 12,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 12,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "')'",
-        "s": ")"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 12,
+      "global": true,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'([]{})'",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "True"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "')'",
+         "s": ")"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 12,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 12,
-     "global": true,
-     "vars": [
-      [
-       "s",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'([]{})'",
-        "s": "([]{})"
-       }
-      ],
-      [
-       "pairs",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "stack",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "valid",
-       {
-        "t": "p",
-        "k": "bool",
-        "v": "True"
-       }
-      ],
-      [
-       "ch",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "')'",
-        "s": ")"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 1,
+    "push": []
+   },
    "out": 5,
    "ret": {
     "t": "p",

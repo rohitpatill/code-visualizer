@@ -1,8 +1,8 @@
 """Runs user code under sys.settrace and records every step in the shared trace format.
 
-A step holds the line, the event, every live user frame and a heap delta: only
-objects that are new or changed since the previous step, plus ids that stopped
-being reachable. Primitives are stored inline; everything else lives in the
+A step holds the line, the event, and two deltas against the previous step:
+frames (how many at the bottom of the stack are unchanged, plus the ones above
+them) and heap (objects that are new or changed, plus ids no longer reachable). Primitives are stored inline; everything else lives in the
 heap by a stable id, so aliasing is visible.
 """
 
@@ -150,6 +150,7 @@ class _Tracer:
         self.frame_ids = _Ids()
         self.encoder = _Encoder(_Ids())
         self.prev_heap = {}
+        self.prev_frames = []
 
     def user_frames(self, frame):
         chain = []
@@ -174,6 +175,15 @@ class _Tracer:
             "vars": [[k, self.encoder.value(v, heap)] for k, v in items],
         }
 
+    def frames_delta(self, frames):
+        prev = self.prev_frames
+        keep = 0
+        limit = min(len(prev), len(frames))
+        while keep < limit and prev[keep] == frames[keep]:
+            keep += 1
+        self.prev_frames = frames
+        return {"keep": keep, "push": frames[keep:]}
+
     def heap_delta(self, heap):
         prev = self.prev_heap
         changed = {oid: obj for oid, obj in heap.items() if prev.get(oid) != obj}
@@ -193,7 +203,7 @@ class _Tracer:
         step = {
             "line": frame.f_lineno,
             "event": event,
-            "frames": [self.encode_frame(f, heap) for f in self.user_frames(frame)],
+            "frames": self.frames_delta([self.encode_frame(f, heap) for f in self.user_frames(frame)]),
             "out": self.out.length,
         }
         if event == "return":

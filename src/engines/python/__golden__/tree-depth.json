@@ -3,111 +3,90 @@
   {
    "line": 1,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": []
-    }
-   ],
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 1,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": []
-    },
-    {
-     "id": 2,
-     "name": "Solution",
-     "line": 1,
-     "global": false,
-     "vars": []
-    }
-   ],
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Solution",
+      "line": 1,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": []
-    },
-    {
-     "id": 2,
-     "name": "Solution",
-     "line": 1,
-     "global": false,
-     "vars": []
-    }
-   ],
+   "frames": {
+    "keep": 2,
+    "push": []
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": []
-    },
-    {
-     "id": 2,
-     "name": "Solution",
-     "line": 2,
-     "global": false,
-     "vars": []
-    }
-   ],
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Solution",
+      "line": 2,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": []
-    },
-    {
-     "id": 2,
-     "name": "Solution",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Solution",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "maxDepth",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -128,23 +107,26 @@
   {
    "line": 9,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 9,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 9,
+      "global": true,
+      "vars": [
+       [
+        "Solution",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -169,30 +151,33 @@
   {
    "line": 10,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 10,
+      "global": true,
+      "vars": [
+       [
+        "Solution",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "tree",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -348,52 +333,33 @@
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 3,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -408,714 +374,277 @@
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 3,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 3,
+      "name": "Solution.maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 4,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 4,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 4,
+      "name": "Solution.maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 5,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 5,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 5,
+      "name": "Solution.maxDepth",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -1127,502 +656,153 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 4,
+      "name": "Solution.maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 6,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 6,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 6,
+      "name": "Solution.maxDepth",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -1634,180 +814,59 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 4,
+      "name": "Solution.maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 3,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -1819,1126 +878,351 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 3,
+      "name": "Solution.maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 7,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 7,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 7,
+      "name": "Solution.maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 8,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 8,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 8,
+      "name": "Solution.maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 9,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 9,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 9,
+      "name": "Solution.maxDepth",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -2950,652 +1234,153 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 8,
+      "name": "Solution.maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 10,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 10,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 10,
+      "name": "Solution.maxDepth",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -3607,240 +1392,59 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 8,
+      "name": "Solution.maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -3852,966 +1456,252 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 7,
+      "name": "Solution.maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 11,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "7"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 11,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "7"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 11,
+      "name": "Solution.maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "7"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 12,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 12,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "Solution.maxDepth",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 12,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 12,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -4823,692 +1713,153 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 11,
+      "name": "Solution.maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "7"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 13,
+      "name": "Solution.maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 13,
-     "name": "Solution.maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 13,
+      "name": "Solution.maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 13,
-     "name": "Solution.maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 13,
+      "name": "Solution.maxDepth",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 13,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 13,
-     "name": "Solution.maxDepth",
-     "line": 4,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "None"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -5520,256 +1871,59 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 11,
+      "name": "Solution.maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "7"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "7"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -5781,196 +1935,59 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 7,
+      "name": "Solution.maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 3,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -5982,136 +1999,59 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 3,
+      "name": "Solution.maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "self",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "Solution.maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "self",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 2,
+    "push": []
+   },
    "out": 0,
    "ret": {
     "t": "p",
@@ -6123,38 +2063,41 @@
   {
    "line": 10,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "Solution",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "result",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 10,
+      "global": true,
+      "vars": [
+       [
+        "Solution",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "tree",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "result",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "ret": {
     "t": "p",

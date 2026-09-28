@@ -3,38 +3,44 @@
   {
    "line": 1,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": []
-    }
-   ],
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 1,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 2,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 2,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -81,30 +87,33 @@
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 3,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 3,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -120,117 +129,126 @@
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 3,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"the\"",
-        "s": "the"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 3,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 4,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"the\"",
-        "s": "the"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 4,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 3,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"cat\"",
-        "s": "cat"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 3,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -260,78 +278,84 @@
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 4,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"cat\"",
-        "s": "cat"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 4,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 3,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"saw\"",
-        "s": "saw"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 3,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"saw\"",
+         "s": "saw"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -374,78 +398,84 @@
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 4,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"saw\"",
-        "s": "saw"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 4,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"saw\"",
+         "s": "saw"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 3,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"the\"",
-        "s": "the"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 3,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -501,78 +531,84 @@
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 4,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"the\"",
-        "s": "the"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 4,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 3,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"dog\"",
-        "s": "dog"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 3,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"dog\"",
+         "s": "dog"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -628,69 +664,75 @@
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 4,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "w",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "\"dog\"",
-        "s": "dog"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 4,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"dog\"",
+         "s": "dog"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 6,
+      "global": true,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -759,30 +801,10 @@
   {
    "line": 6,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "words",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "counts",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 1,
+    "push": []
+   },
    "out": 35,
    "heap": {},
    "ret": {

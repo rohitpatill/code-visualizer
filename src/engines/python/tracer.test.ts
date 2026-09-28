@@ -4,16 +4,23 @@ import { dirname } from 'node:path'
 import { loadPyodide, version } from 'pyodide'
 import { beforeAll, describe, expect, it } from 'vitest'
 import { joinSource } from '../../app/source'
-import type { RawTrace, Ref } from '../../trace/types'
+import { Trace } from '../../trace/Trace'
+import type { RawTrace, Ref, StepRecord } from '../../trace/types'
 import { python } from '.'
 import { PYODIDE_VERSION } from './pyodide'
 import { type RunTrace, installTracer } from './runtime'
 
 let runTrace: RunTrace
 
-const trace = (code: string, stdin = ''): RawTrace => JSON.parse(runTrace(code, stdin)) as RawTrace
+type Expanded = Omit<RawTrace, 'steps'> & { steps: readonly StepRecord[] }
 
-const refOf = (raw: RawTrace, step: number, name: string): Ref => {
+const raw = (code: string, stdin = ''): RawTrace => JSON.parse(runTrace(code, stdin)) as RawTrace
+const trace = (code: string, stdin = ''): Expanded => {
+  const r = raw(code, stdin)
+  return { ...r, steps: new Trace(r).records }
+}
+
+const refOf = (raw: Expanded, step: number, name: string): Ref => {
   const frames = raw.steps[step]!.frames
   const value = frames[frames.length - 1]!.vars.find(([n]) => n === name)![1]
   if (value.t !== 'r') throw new Error(`${name} is not a reference`)
@@ -34,10 +41,10 @@ describe('python tracer', () => {
   describe('golden traces', () => {
     for (const sample of python.samples) {
       it(sample.name, async () => {
-        const raw = trace(joinSource(sample.code, sample.call ?? ''))
-        expect(raw.error).toBeNull()
-        expect(raw.truncated).toBe(false)
-        await expect(`${JSON.stringify(raw, null, 1)}\n`).toMatchFileSnapshot(`__golden__/${sample.id}.json`)
+        const golden = raw(joinSource(sample.code, sample.call ?? ''))
+        expect(golden.error).toBeNull()
+        expect(golden.truncated).toBe(false)
+        await expect(`${JSON.stringify(golden, null, 1)}\n`).toMatchFileSnapshot(`__golden__/${sample.id}.json`)
       })
     }
   })

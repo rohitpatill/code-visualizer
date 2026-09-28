@@ -3,38 +3,44 @@
   {
    "line": 1,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": []
-    }
-   ],
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 1,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 4,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 4,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 4,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -51,145 +57,163 @@
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 5,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 5,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 6,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 6,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 7,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 7,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 8,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 8,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 8,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 3,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 3,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 10,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 10,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -361,37 +385,40 @@
   {
    "line": 11,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 11,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -414,44 +441,47 @@
   {
    "line": 12,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 12,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 12,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -474,51 +504,54 @@
   {
    "line": 13,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 13,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -534,111 +567,117 @@
   {
    "line": 14,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 14,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 14,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 15,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 15,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 15,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -654,60 +693,63 @@
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -730,207 +772,216 @@
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 18,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 18,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 18,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 19,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 19,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 19,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -959,69 +1010,72 @@
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -1044,207 +1098,216 @@
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 18,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 18,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 18,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 19,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 19,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 19,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -1279,69 +1342,72 @@
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -1370,207 +1436,216 @@
   {
    "line": 13,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 13,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 14,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 14,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 14,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 15,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 15,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 15,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -1593,69 +1668,72 @@
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -1684,345 +1762,360 @@
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 18,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 18,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 18,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 19,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 19,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 19,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -2063,69 +2156,72 @@
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -2154,207 +2250,216 @@
   {
    "line": 13,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 13,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 14,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 14,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 14,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 15,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 15,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 15,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -2377,69 +2482,72 @@
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -2474,483 +2582,504 @@
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'A'",
-        "s": "A"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 13,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 13,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 14,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 14,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 14,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 15,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 15,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 15,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -2966,69 +3095,72 @@
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -3069,483 +3201,504 @@
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'B'",
-        "s": "B"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'C'",
-        "s": "C"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 18,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 18,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 18,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 19,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 19,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 19,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -3592,69 +3745,72 @@
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -3677,207 +3833,216 @@
   {
    "line": 13,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 13,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 14,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 14,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 14,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 15,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 15,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 15,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -3893,69 +4058,72 @@
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -4002,345 +4170,298 @@
   {
    "line": 17,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 17,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 17,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 16,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 16,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 16,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 13,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 13,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 13,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 20,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 20,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 20,
+      "global": true,
+      "vars": [
+       [
+        "deque",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 20,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 20,
-     "global": true,
-     "vars": [
-      [
-       "deque",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "graph",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "visited",
-       {
-        "t": "r",
-        "id": "8"
-       }
-      ],
-      [
-       "queue",
-       {
-        "t": "r",
-        "id": "9"
-       }
-      ],
-      [
-       "order",
-       {
-        "t": "r",
-        "id": "10"
-       }
-      ],
-      [
-       "node",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'E'",
-        "s": "E"
-       }
-      ],
-      [
-       "nei",
-       {
-        "t": "p",
-        "k": "str",
-        "v": "'D'",
-        "s": "D"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 1,
+    "push": []
+   },
    "out": 26,
    "ret": {
     "t": "p",

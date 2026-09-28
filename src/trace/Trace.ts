@@ -1,4 +1,4 @@
-import type { Heap, HeapDelta, HeapObject, RawTrace, Step, StepRecord, TraceError } from './types'
+import type { Frame, Heap, HeapDelta, HeapObject, RawTrace, Step, StepRecord, TraceError, WireStep } from './types'
 
 // A full heap copy is kept every CHECKPOINT_EVERY steps, so rebuilding any
 // step replays at most that many deltas and memory stays O(steps / K * heap).
@@ -12,6 +12,15 @@ function applyDelta(heap: Map<string, HeapObject>, delta: HeapDelta): void {
   if (delta.del) for (const id of delta.del) heap.delete(id)
 }
 
+function expandFrames(steps: readonly WireStep[]): StepRecord[] {
+  let stack: Frame[] = []
+  return steps.map(({ frames, ...rest }) => {
+    if (frames.keep > stack.length) throw new Error(`Step keeps ${frames.keep} frames of ${stack.length}`)
+    stack = frames.keep === stack.length && !frames.push.length ? stack : [...stack.slice(0, frames.keep), ...frames.push]
+    return { ...rest, frames: stack }
+  })
+}
+
 export class Trace {
   readonly records: readonly StepRecord[]
   readonly stdout: string
@@ -22,13 +31,13 @@ export class Trace {
   private readonly cache = new Map<number, Step>()
 
   constructor(raw: RawTrace) {
-    this.records = raw.steps
+    this.records = expandFrames(raw.steps)
     this.stdout = raw.stdout
     this.error = raw.error
     this.truncated = raw.truncated
     this.maxSteps = raw.maxSteps
     const heap = new Map<string, HeapObject>()
-    raw.steps.forEach((record, i) => {
+    this.records.forEach((record, i) => {
       applyDelta(heap, record.heap)
       if (i % CHECKPOINT_EVERY === 0) this.checkpoints.push(new Map(heap))
     })

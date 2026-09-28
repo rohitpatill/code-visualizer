@@ -3,47 +3,53 @@
   {
    "line": 1,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 1,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "undefined"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 1,
+      "global": true,
+      "vars": [
+       [
+        "maxDepth",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "undefined"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 10,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 10,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 10,
+      "global": true,
+      "vars": [
+       [
+        "maxDepth",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -59,30 +65,33 @@
   {
    "line": 11,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 11,
+      "global": true,
+      "vars": [
+       [
+        "maxDepth",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "tree",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {
     "set": {
@@ -238,619 +247,247 @@
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 4,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -862,404 +499,125 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 5,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 5,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 5,
+      "name": "maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 5,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -1271,152 +629,52 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 3,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "3"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 3,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -1428,902 +686,281 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 6,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 6,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 6,
+      "name": "maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 7,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 7,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 7,
+      "name": "maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 8,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 8,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 8,
+      "name": "maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 8,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -2335,519 +972,125 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 7,
+      "name": "maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 9,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 9,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 9,
+      "name": "maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 9,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -2859,198 +1102,52 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 7,
+      "name": "maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 7,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "5"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -3062,777 +1159,203 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 6,
+      "name": "maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 5,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "maxDepth",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 11,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 11,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 11,
+      "name": "maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 5,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 11,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -3844,559 +1367,125 @@
   {
    "line": 6,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "maxDepth",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 1,
    "event": "call",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "maxDepth",
+      "line": 1,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 12,
-     "name": "maxDepth",
-     "line": 1,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 2,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "maxDepth",
+      "line": 2,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 12,
-     "name": "maxDepth",
-     "line": 2,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "maxDepth",
+      "line": 3,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "null"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 12,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 3,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 12,
-     "name": "maxDepth",
-     "line": 3,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "p",
-        "k": "none",
-        "v": "null"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -4408,214 +1497,52 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 10,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "6"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "0"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -4627,168 +1554,52 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 6,
+      "name": "maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 6,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 6,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "4"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 3,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -4800,122 +1611,52 @@
   {
    "line": 7,
    "event": "line",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
       ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {}
   },
   {
    "line": 7,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ]
-     ]
-    },
-    {
-     "id": 2,
-     "name": "maxDepth",
-     "line": 7,
-     "global": false,
-     "vars": [
-      [
-       "root",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "left",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "1"
-       }
-      ],
-      [
-       "right",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "2"
-       }
-      ]
-     ]
-    }
-   ],
+   "frames": {
+    "keep": 2,
+    "push": []
+   },
    "out": 0,
    "heap": {},
    "ret": {
@@ -4927,38 +1668,41 @@
   {
    "line": 11,
    "event": "return",
-   "frames": [
-    {
-     "id": 1,
-     "name": "module",
-     "line": 11,
-     "global": true,
-     "vars": [
-      [
-       "maxDepth",
-       {
-        "t": "r",
-        "id": "1"
-       }
-      ],
-      [
-       "tree",
-       {
-        "t": "r",
-        "id": "2"
-       }
-      ],
-      [
-       "result",
-       {
-        "t": "p",
-        "k": "int",
-        "v": "3"
-       }
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "module",
+      "line": 11,
+      "global": true,
+      "vars": [
+       [
+        "maxDepth",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "tree",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "result",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
       ]
-     ]
-    }
-   ],
+     }
+    ]
+   },
    "out": 0,
    "heap": {},
    "ret": {
