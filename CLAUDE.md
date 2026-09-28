@@ -65,6 +65,8 @@ These files exceed 300 lines and should be split when next touched:
   Answer "in short" when asked.
 - Rohit usually dictates by voice. Expect typos and misheard words.
 - No em dashes anywhere (docs, UI copy, comments, responses).
+- Commit messages are short and plain, written like a human ("Fix arrow
+  offset"). Never add Claude as co-author or any AI attribution.
 - Research subagents (web search or fetch) must use the Haiku model.
 - Writing this project's code is fine: it is a tool built for him, not a
   learning exercise (his learning work lives in `D:\Projects\python-groundwork`).
@@ -85,7 +87,8 @@ npm run dev
 Serves at http://localhost:5173. `.claude/launch.json` defines the
 `stepthrough` preview config for the same command. `npm run build` outputs to
 `dist/`. The first run needs internet (Pyodide loads from the jsdelivr CDN).
-Not a git repository yet.
+
+Git: `main` tracks https://github.com/rohitpatill/code-visualizer.
 
 ## Why it exists
 
