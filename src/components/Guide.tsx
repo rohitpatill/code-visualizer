@@ -1,9 +1,17 @@
-import { useEffect } from 'react'
+import { Fragment, useEffect } from 'react'
+import { useStore } from '../app/store'
+import type { EngineCopy } from '../engines/types'
 
-const SECTIONS = [
+interface Section {
+  title: string
+  body: string
+  keys?: readonly [string, string][]
+}
+
+const sections = (language: string, copy: EngineCopy): Section[] => [
   {
     title: 'Run your code',
-    body: 'Paste one Python file and press Visualize. For LeetCode code (a class Solution), put the call in the box on the right, for example result = Solution().reverseList(build_list([1, 2, 3])).',
+    body: `Paste one ${language} file and press Visualize. For LeetCode code (a class Solution), put the call in the box on the right, for example ${copy.callExample}.`,
   },
   {
     title: 'Read the screen',
@@ -38,23 +46,38 @@ const SECTIONS = [
   },
 ]
 
-export function Guide({ onClose }) {
+function HelperList({ helpers }: { helpers: readonly string[] }) {
+  return helpers.map((h, i) => (
+    <Fragment key={h}>
+      {i > 0 && (i === helpers.length - 1 ? ' and ' : ', ')}
+      <code>{h}</code>
+    </Fragment>
+  ))
+}
+
+export function Guide() {
+  const engine = useStore((s) => s.engine)
+  const setGuideOpen = useStore((s) => s.setGuideOpen)
+  const close = () => setGuideOpen(false)
+
   useEffect(() => {
-    const onKey = (e) => e.key === 'Escape' && onClose()
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setGuideOpen(false)
+    }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [onClose])
+  }, [setGuideOpen])
 
   return (
-    <div className="guide-backdrop" onClick={onClose}>
+    <div className="guide-backdrop" onClick={close}>
       <aside className="guide" role="dialog" aria-label="How to use" onClick={(e) => e.stopPropagation()}>
         <header className="guide-head">
           <h2>How to use</h2>
-          <button className="btn" onClick={onClose} autoFocus>
+          <button className="btn" onClick={close} autoFocus>
             Close
           </button>
         </header>
-        {SECTIONS.map((s) => (
+        {sections(engine.label, engine.copy).map((s) => (
           <section key={s.title} className="guide-section">
             <h3>{s.title}</h3>
             {s.keys && (
@@ -72,14 +95,14 @@ export function Guide({ onClose }) {
             <p>{s.body}</p>
           </section>
         ))}
-        <section className="guide-section">
-          <h3>Built-in helpers</h3>
-          <p>
-            <code>ListNode</code>, <code>TreeNode</code>, <code>build_list([1, 2, 3])</code> and{' '}
-            <code>build_tree([1, 2, 3, None, 4])</code> work without defining them. If your code defines its own, yours
-            wins.
-          </p>
-        </section>
+        {engine.copy.helpers.length > 0 && (
+          <section className="guide-section">
+            <h3>Built-in helpers</h3>
+            <p>
+              <HelperList helpers={engine.copy.helpers} /> work without defining them. If your code defines its own, yours wins.
+            </p>
+          </section>
+        )}
       </aside>
     </div>
   )

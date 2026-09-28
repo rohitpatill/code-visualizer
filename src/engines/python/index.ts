@@ -15,6 +15,7 @@ export const python: Engine = {
     callPlaceholder: 'result = Solution().maxDepth(build_tree([3, 9, 20]))',
     callHint: 'For LeetCode code that only defines a class. It runs after your code. build_list and build_tree are built in.',
     callExample: 'result = Solution().reverseList(build_list([1, 2, 3]))',
+    nullLiteral: 'None',
     inputCall: 'input()',
     helpers: ['ListNode', 'TreeNode', 'build_list([1, 2, 3])', 'build_tree([1, 2, 3, None, 4])'],
   },

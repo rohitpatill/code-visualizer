@@ -9,11 +9,11 @@
 }
 .prim-int,
 .prim-float,
-.prim-complex {
+.prim-other {
   color: #f7c97a;
 }
 .prim-bool,
-.prim-NoneType {
+.prim-none {
   color: #f08fb4;
 }
 

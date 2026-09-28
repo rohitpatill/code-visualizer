@@ -19,6 +19,8 @@ export interface EngineCopy {
   callPlaceholder: string
   callHint: string
   callExample: string
+  /** The language's null literal, e.g. None. */
+  nullLiteral: string
   /** How user code reads a line of input, e.g. input(). */
   inputCall: string
   /** Helpers available without defining them, as code snippets. */
