@@ -12,7 +12,6 @@ export interface ArrayData {
   pointers: Pointer[]
   offArray: Pointer[]
   window: { lo: number; hi: number; names: [string, string] } | null
-  isString: boolean
 }
 
 export interface GridData {

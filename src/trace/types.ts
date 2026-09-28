@@ -31,6 +31,8 @@ export type HeapObject =
 
 export type HeapKind = HeapObject['kind']
 
+export type SequenceObject = Extract<HeapObject, { items: Value[] }>
+
 export type Heap = ReadonlyMap<string, HeapObject>
 
 export type Var = [name: string, value: Value]
