@@ -1,0 +1,6175 @@
+{
+ "steps": [
+  {
+   "line": 1,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 1,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    },
+    {
+     "id": 2,
+     "name": "Solution",
+     "line": 1,
+     "global": false,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 1,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    },
+    {
+     "id": 2,
+     "name": "Solution",
+     "line": 1,
+     "global": false,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    },
+    {
+     "id": 2,
+     "name": "Solution",
+     "line": 2,
+     "global": false,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    },
+    {
+     "id": 2,
+     "name": "Solution",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "maxDepth",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "None"
+   },
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "function",
+      "type": "function",
+      "name": "Solution.maxDepth",
+      "sig": "(self, root)"
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 9,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "class",
+      "type": "type",
+      "name": "Solution",
+      "bases": [],
+      "attrs": [
+       [
+        "maxDepth",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
+      ]
+     },
+     "4": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "9"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
+      ]
+     },
+     "5": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "20"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "r",
+         "id": "7"
+        }
+       ]
+      ]
+     },
+     "6": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "15"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
+      ]
+     },
+     "7": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "7"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "8": {
+      "kind": "instance",
+      "type": "Solution",
+      "attrs": []
+     }
+    }
+   }
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   },
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   },
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 4,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "1"
+   },
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   },
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 10,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 10,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 10,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 10,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   },
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "1"
+   },
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 12,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   },
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 13,
+     "name": "Solution.maxDepth",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 13,
+     "name": "Solution.maxDepth",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 13,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 13,
+     "name": "Solution.maxDepth",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   },
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 11,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "1"
+   },
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "2"
+   },
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.maxDepth",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "8"
+       }
+      ],
+      [
+       "root",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "left",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ],
+      [
+       "right",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "3"
+   },
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 10,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "tree",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "result",
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "None"
+   },
+   "heap": {
+    "del": [
+     "8"
+    ]
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "",
+ "maxSteps": 3000
+}

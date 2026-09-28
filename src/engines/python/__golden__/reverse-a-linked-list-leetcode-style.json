@@ -1,0 +1,2067 @@
+{
+ "steps": [
+  {
+   "line": 1,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 1,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    },
+    {
+     "id": 2,
+     "name": "Solution",
+     "line": 1,
+     "global": false,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 1,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    },
+    {
+     "id": 2,
+     "name": "Solution",
+     "line": 1,
+     "global": false,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    },
+    {
+     "id": 2,
+     "name": "Solution",
+     "line": 2,
+     "global": false,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    },
+    {
+     "id": 2,
+     "name": "Solution",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "reverseList",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "None"
+   },
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "function",
+      "type": "function",
+      "name": "Solution.reverseList",
+      "sig": "(self, head)"
+     }
+    }
+   }
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "class",
+      "type": "type",
+      "name": "Solution",
+      "bases": [],
+      "attrs": [
+       [
+        "reverseList",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "line": 2,
+   "event": "call",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 2,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "instance",
+      "type": "Solution",
+      "attrs": []
+     },
+     "4": {
+      "kind": "instance",
+      "type": "ListNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "next",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
+      ]
+     },
+     "5": {
+      "kind": "instance",
+      "type": "ListNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "next",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ]
+      ]
+     },
+     "6": {
+      "kind": "instance",
+      "type": "ListNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "next",
+        {
+         "t": "r",
+         "id": "7"
+        }
+       ]
+      ]
+     },
+     "7": {
+      "kind": "instance",
+      "type": "ListNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ],
+       [
+        "next",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 3,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 4,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 8,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "4": {
+      "kind": "instance",
+      "type": "ListNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "next",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "None"
+        }
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 9,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 8,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "5": {
+      "kind": "instance",
+      "type": "ListNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "next",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 9,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 8,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "5"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "6": {
+      "kind": "instance",
+      "type": "ListNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "next",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 9,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 6,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 7,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 8,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "6"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "7": {
+      "kind": "instance",
+      "type": "ListNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ],
+       [
+        "next",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 9,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 5,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 10,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Solution.reverseList",
+     "line": 10,
+     "global": false,
+     "vars": [
+      [
+       "self",
+       {
+        "t": "r",
+        "id": "3"
+       }
+      ],
+      [
+       "head",
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      [
+       "prev",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ],
+      [
+       "curr",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ],
+      [
+       "nxt",
+       {
+        "t": "p",
+        "k": "none",
+        "v": "None"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "r",
+    "id": "7"
+   },
+   "heap": {}
+  },
+  {
+   "line": 12,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "Solution",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "result",
+       {
+        "t": "r",
+        "id": "7"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "None"
+   },
+   "heap": {
+    "del": [
+     "3"
+    ]
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "",
+ "maxSteps": 3000
+}

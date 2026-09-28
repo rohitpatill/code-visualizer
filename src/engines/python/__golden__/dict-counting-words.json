@@ -1,0 +1,817 @@
+{
+ "steps": [
+  {
+   "line": 1,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 2,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "list",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'the'",
+        "s": "the"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'cat'",
+        "s": "cat"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'saw'",
+        "s": "saw"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'the'",
+        "s": "the"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'dog'",
+        "s": "dog"
+       }
+      ],
+      "size": 5
+     }
+    }
+   }
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 3,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "dict",
+      "entries": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 4,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'the'",
+        "s": "the"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 3,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'the'",
+        "s": "the"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "dict",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'the'",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 4,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'cat'",
+        "s": "cat"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 3,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'cat'",
+        "s": "cat"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "dict",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'the'",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'cat'",
+         "s": "cat"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 4,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'saw'",
+        "s": "saw"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 3,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'saw'",
+        "s": "saw"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "dict",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'the'",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'cat'",
+         "s": "cat"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'saw'",
+         "s": "saw"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 4,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'the'",
+        "s": "the"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 3,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'the'",
+        "s": "the"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "dict",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'the'",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'cat'",
+         "s": "cat"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'saw'",
+         "s": "saw"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 4,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'dog'",
+        "s": "dog"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 3,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'dog'",
+        "s": "dog"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "dict",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'the'",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'cat'",
+         "s": "cat"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'saw'",
+         "s": "saw"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'dog'",
+         "s": "dog"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'dog'",
+        "s": "dog"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "words",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "counts",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "w",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'dog'",
+        "s": "dog"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 41,
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "None"
+   },
+   "heap": {}
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "{'the': 2, 'cat': 1, 'saw': 1, 'dog': 1}\n",
+ "maxSteps": 3000
+}
