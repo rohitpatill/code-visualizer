@@ -8,6 +8,11 @@ import { isTypeStart, parseBaseType, parseDeclarator } from './typeSpec'
 type Without<T, K extends PropertyKey> = T extends unknown ? Omit<T, K> : never
 const node = (line: number, s: Without<Stmt, 'line'>): Stmt => ({ ...s, line }) as Stmt
 
+const KEYWORDS = new Set([
+  'delete', 'new', 'sizeof', 'case', 'default', 'else', 'do', 'return', 'throw', 'goto', 'typedef', 'using', 'namespace',
+  'struct', 'class', 'template', 'operator', 'if', 'while', 'for', 'switch', 'break', 'continue',
+])
+
 const UNSUPPORTED: Readonly<Record<string, string>> = {
   try: 'exceptions (try/catch) are not supported',
   throw: 'exceptions (throw) are not supported',
@@ -191,5 +196,9 @@ export function parseStatement(c: Cursor): Stmt {
       }
       break
   }
-  return isDeclaration(c) ? parseDeclaration(c) : parseExpressionStatement(c)
+  if (isDeclaration(c)) return parseDeclaration(c)
+  if (word && !KEYWORDS.has(word) && c.peek(1).kind === 'ident' && !isTypeStart(c)) {
+    throw new CompileError(`unknown type '${word}': it is not declared, or not supported by this visualizer`, line)
+  }
+  return parseExpressionStatement(c)
 }

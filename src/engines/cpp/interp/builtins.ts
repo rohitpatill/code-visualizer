@@ -50,7 +50,7 @@ const CTYPE: Readonly<Record<string, (c: string) => boolean>> = {
 
 const OTHER = new Set([
   'max', 'min', 'swap', 'abs', 'llabs', 'to_string', 'stoi', 'stol', 'stoll', 'stoul', 'stoull', 'stod', 'stof', 'tolower',
-  'toupper', '__gcd', 'gcd', 'lcm', 'make_pair', 'printf', 'puts', 'getline', 'setprecision', 'setw',
+  'toupper', '__gcd', 'gcd', 'lcm', 'make_pair', 'printf', 'puts', 'getline', 'setprecision', 'setw', 'sync_with_stdio',
 ])
 
 export const builtinConstant = (name: string): R | undefined => CONSTANTS[name]
@@ -157,6 +157,8 @@ export function callBuiltin(m: Machine, name: string, args: readonly R[]): R {
       b.cell.value = convert(m, { type: T.string, value: new StrVal(line ?? '') }, T.string)
       return a!
     }
+    case 'sync_with_stdio':
+      return VOID
     case 'setprecision':
     case 'setw':
       return { type: T.fn, value: { fn: 'builtin', name, arg: intArg(a, name) } }

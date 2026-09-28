@@ -223,5 +223,10 @@ function parsePrimary(c: Cursor): Expr {
   }
   if (isTypeStart(c) || c.at('numeric_limits')) return parseTypeExpression(c)
   if (c.peek().kind !== 'ident') throw c.error('expected an expression')
-  return node(line, { k: 'name', name: c.next().text })
+  let name = c.next().text
+  while (c.at('::') && c.peek(1).kind === 'ident') {
+    c.next()
+    name = c.next().text
+  }
+  return node(line, { k: 'name', name })
 }
