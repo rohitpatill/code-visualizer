@@ -1,0 +1,339 @@
+{
+ "steps": [
+  {
+   "line": 1,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 2,
+     "global": true,
+     "vars": [
+      [
+       "a",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "Array",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       }
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 3,
+     "global": true,
+     "vars": [
+      [
+       "a",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "b",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 4,
+     "global": true,
+     "vars": [
+      [
+       "a",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "b",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "c",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "Array",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       }
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "a",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "b",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "c",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "Array",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "4"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 6,
+     "global": true,
+     "vars": [
+      [
+       "a",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "b",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "c",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "Array",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "99"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 6,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 6,
+     "global": true,
+     "vars": [
+      [
+       "a",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "b",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "c",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 46,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "undefined"
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "[ 1, 2, 3, 4 ] [ 1, 2, 3, 4 ] [ 1, 2, 3, 99 ]\n",
+ "maxSteps": 3000
+}

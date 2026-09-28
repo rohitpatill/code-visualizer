@@ -1,7 +1,9 @@
+import type { Extension } from '@codemirror/state'
 import { EditorView } from '@codemirror/view'
 import CodeMirror from '@uiw/react-codemirror'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useStore } from '../../app/store'
+import type { Engine } from '../../engines/types'
 
 const editorTheme = EditorView.theme(
   {
@@ -16,6 +18,22 @@ const editorTheme = EditorView.theme(
 
 const BASIC_SETUP = { foldGutter: false }
 
+/** The engine's editor grammar once its chunk has loaded; plain text until then. */
+function useEditorLanguage(engine: Engine): Extension | null {
+  const [loaded, setLoaded] = useState<{ id: string; extension: Extension } | null>(null)
+  useEffect(() => {
+    let current = true
+    engine.editorLanguage().then(
+      (extension) => current && setLoaded({ id: engine.id, extension }),
+      () => current && setLoaded(null),
+    )
+    return () => {
+      current = false
+    }
+  }, [engine])
+  return loaded?.id === engine.id ? loaded.extension : null
+}
+
 export function EditPane() {
   const engine = useStore((s) => s.engine)
   const code = useStore((s) => s.code)
@@ -25,7 +43,8 @@ export function EditPane() {
   const setCall = useStore((s) => s.setCall)
   const setStdin = useStore((s) => s.setStdin)
   const [showStdin, setShowStdin] = useState(false)
-  const extensions = useMemo(() => [engine.editorLanguage(), editorTheme], [engine])
+  const language = useEditorLanguage(engine)
+  const extensions = useMemo(() => (language ? [language, editorTheme] : [editorTheme]), [language])
   const { copy } = engine
 
   return (

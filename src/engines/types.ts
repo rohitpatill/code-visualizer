@@ -39,7 +39,8 @@ export interface Engine {
   id: string
   label: string
   createRunner(): Runner
-  editorLanguage(): Extension
+  /** Loaded on demand, so each language's grammar is its own chunk. */
+  editorLanguage(): Promise<Extension>
   highlight(line: string): Token[]
   samples: readonly Sample[]
   starterSample: Sample

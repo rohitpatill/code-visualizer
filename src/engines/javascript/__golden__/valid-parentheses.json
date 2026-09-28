@@ -1,0 +1,1435 @@
+{
+ "steps": [
+  {
+   "line": 1,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 1,
+     "global": true,
+     "vars": []
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 2,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 2,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 3,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 3,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "dict",
+      "type": "Object",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\")\"",
+         "s": ")"
+        },
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"(\"",
+         "s": "("
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"]\"",
+         "s": "]"
+        },
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"[\"",
+         "s": "["
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"}\"",
+         "s": "}"
+        },
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"{\"",
+         "s": "{"
+        }
+       ]
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 4,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 4,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "Array",
+      "items": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"(\"",
+        "s": "("
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 6,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"(\"",
+        "s": "("
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"(\"",
+        "s": "("
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"[\"",
+        "s": "["
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "Array",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"(\"",
+        "s": "("
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 6,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"[\"",
+        "s": "["
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"[\"",
+        "s": "["
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"]\"",
+        "s": "]"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "Array",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"(\"",
+        "s": "("
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"[\"",
+        "s": "["
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 6,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"]\"",
+        "s": "]"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 7,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"]\"",
+        "s": "]"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"{\"",
+        "s": "{"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "Array",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"(\"",
+        "s": "("
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 6,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"{\"",
+        "s": "{"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 12,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"{\"",
+        "s": "{"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"}\"",
+        "s": "}"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "Array",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"(\"",
+        "s": "("
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"{\"",
+        "s": "{"
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 6,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"}\"",
+        "s": "}"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 7,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"}\"",
+        "s": "}"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 5,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\")\"",
+        "s": ")"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "Array",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"(\"",
+        "s": "("
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 6,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\")\"",
+        "s": ")"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 7,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ],
+      [
+       "ch",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\")\"",
+        "s": ")"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 15,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "Array",
+      "items": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": [
+    {
+     "id": 1,
+     "name": "module",
+     "line": 15,
+     "global": true,
+     "vars": [
+      [
+       "s",
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"([]{})\"",
+        "s": "([]{})"
+       }
+      ],
+      [
+       "pairs",
+       {
+        "t": "r",
+        "id": "1"
+       }
+      ],
+      [
+       "stack",
+       {
+        "t": "r",
+        "id": "2"
+       }
+      ],
+      [
+       "valid",
+       {
+        "t": "p",
+        "k": "bool",
+        "v": "true"
+       }
+      ]
+     ]
+    }
+   ],
+   "out": 5,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "undefined"
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "true\n",
+ "maxSteps": 3000
+}
