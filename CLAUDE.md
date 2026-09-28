@@ -1,6 +1,6 @@
 # Stepthrough
 
-A local, step-by-step code visualizer (Python and JavaScript so far) for
+A local, step-by-step code visualizer (Python, JavaScript and C++) for
 learning programming and DSA.
 `README.md` is the user guide. This file is the builder's memory and the
 engineering contract. Keep it in sync with the code (see "Keeping this file
@@ -129,10 +129,10 @@ common data structure or pattern.
     and builder tests catch drift.
 13. **State in a zustand store with narrow selectors**, so a hover or a step
     re-renders only what depends on it.
-14. **Engines run behind a `Runner` interface**, not a worker. Python and
-    JavaScript use `WorkerRunner` (browser Web Worker). C++ and Java will need
-    a sandboxed server; that becomes another `Runner` and nothing above it
-    changes.
+14. **Engines run behind a `Runner` interface**, not a worker. Every engine
+    so far uses `WorkerRunner` (browser Web Worker). Languages that need a real
+    toolchain (Java, full C++) will need a sandboxed server; that becomes
+    another `Runner` and nothing above it changes.
 15. **One sample catalog for every language** (`src/samples/catalog.ts`).
     Each engine supplies a `SampleSet` keyed by catalog id, so TypeScript
     fails the build if a language misses a sample (it may mark one `null`).
@@ -147,6 +147,13 @@ common data structure or pattern.
     regenerates it, and it runs with `new Function` in a worker. v1 is plain
     modern JS; async functions, generators and `await` are refused with a
     clear message.
+18. **C++ runs on our own interpreter**, in the browser, for the DSA subset.
+    A real compiler in WebAssembly is tens of MB and not traceable. Owning the
+    interpreter gives exact C++ value semantics and turns undefined behavior
+    into teaching errors. A server runner with a real compiler can replace it
+    later behind the same `Runner`.
+19. **Engines build their own program** from code and call box
+    (`Engine.buildProgram`): C++ wraps the call in `main()`.
 
 ## Architecture
 
@@ -194,6 +201,23 @@ src/
                             helpers.js (ListNode, TreeNode, buildList,
                             buildTree, evaluated from source)
       highlight.ts, samples.ts, __golden__/
+    cpp/
+      index.ts              engine definition and copy
+      worker.ts             module worker, runs interp/run.ts
+      source.ts             buildCppProgram: call box becomes main()
+      prelude.cpp           ListNode, TreeNode, buildList, buildTree
+      lang/                 types (CType), lexer, ast, parser/ (cursor,
+                            typeSpec, expressions, statements, params,
+                            declarations)
+      interp/               values (Cell, containers, pointers), arith,
+                            compare, init (convert, construct, defaults),
+                            access, ops, eval, exec, calls, builtins, io,
+                            encode, machine (frames, lookup, recording), run
+      interp/stl/           sequences, strings, adapters, associative,
+                            heap, iterators, ordering, algorithms, methods
+      highlight.ts, samples.ts, semantics/patterns/tracer tests, __golden__/
+    shared/recorder.ts      Recorder: frame and heap deltas, output, step
+                            budget; used by the JavaScript and C++ tracers
   model/                    pure logic: describe, diff, heapLayout,
                             callTree, guess
   structures/               view suggestions and data builders: common,
@@ -271,6 +295,38 @@ src/
   evaluated from source so their names survive minification and they are
   never instrumented. Names starting with `__st` are reserved.
 
+### C++ interpreter (`src/engines/cpp/`)
+
+- There is no C++ compiler in the browser, so C++ runs on our own
+  tree-walking interpreter for the subset DSA and LeetCode code uses. It is
+  lexer (`lang/lexer.ts`, with `#include` ignored and `#define` constants),
+  recursive-descent parser (`lang/parser/`), and interpreter (`interp/`).
+- Every variable, element, map value and field is a `Cell`, so references
+  share a cell, `&x` points at one, and copies are real copies. Values carry
+  their C++ type: 32-bit `int` wraps (products via `Math.imul`), 64-bit types
+  are BigInt, division truncates, `size_t` underflows, signed/unsigned
+  comparisons behave like C++.
+- Undefined behavior becomes a clear runtime error instead of a crash or
+  garbage: out-of-range index, reading an uninitialized variable (shown as
+  `?`), null dereference, use after delete, division by zero, popping an
+  empty container, stack overflow.
+- Supported: fundamental types, `auto`, `typedef`/`using`, pointers,
+  references, `new`/`delete`, C arrays (including runtime sizes), structs and
+  classes (fields with defaults, constructors with init lists, methods,
+  `this`, `operator<`/`==` and friends), free functions with overloading by
+  arity and type, default arguments, lambdas (`[&]`, `[=]`, explicit
+  captures, recursive `std::function`), range-for with structured bindings,
+  switch, `string`, `vector`, `deque`, `queue`, `stack`, `priority_queue`
+  (real binary heap, `greater`), `map`, `unordered_map`, `set`,
+  `unordered_set`, `pair`, iterators, `<algorithm>` basics, math, `<cctype>`,
+  `cin`/`cout` with manipulators, `getline`, `printf`.
+- The call box becomes the body of `main()` when the code has none
+  (`buildCppProgram`), and the wrapper is visible in the code view.
+- Prelude (`prelude.cpp`): `ListNode`, `TreeNode`, `buildList({...})`,
+  `buildTree("[3,9,20,null,null,15,7]")`, parsed before user code and run
+  silently. User definitions replace them.
+- Frames: a global frame, then `main`, then calls named `Class::method`.
+
 ### Frontend data flow
 
 1. Edit mode: code, call and views live in the store. Each language keeps its
@@ -299,7 +355,9 @@ src/
 1. Emit `RawTrace` exactly as in `trace/types.ts`, including both deltas.
 2. Add `src/engines/<id>/` with a `Runner` (a worker speaking
    `engines/protocol.ts`, or a remote runner), an `Engine` with its copy,
-   highlighter and lazy grammar, and register it in `engines/registry.ts`.
+   `buildProgram`, highlighter and lazy grammar, and register it in
+   `engines/registry.ts`. A tracer written in TypeScript should record
+   through `engines/shared/recorder.ts`.
 3. Implement the whole `SampleSet` (TypeScript enforces it), using the
    catalog's variable names for preset views.
 4. Add tracer tests that write `__golden__/<sample id>.json`. The builder,
@@ -324,7 +382,7 @@ src/
 
 ## Verification status
 
-- `npm test` (Vitest, 168 tests):
+- `npm test` (Vitest, 272 tests):
   - Python golden traces for all 13 samples in real Pyodide 0.26.4 from npm
     (`PYTHONHASHSEED=0`, since set order depends on string hashing), plus
     errors, step limit, `input()`, UTF-16 output, stable ids, deltas;
@@ -333,6 +391,15 @@ src/
     temporal dead zone, per-iteration bindings, same-line merging,
     call/return frames, `this`, aliasing, value kinds, Node-style printing,
     `prompt()`, getters never run, user-defined helpers;
+  - C++ golden traces for all 13 samples, 27 semantics tests (integer
+    division, overflow, `size_t` underflow, signed/unsigned comparison, char
+    arithmetic, `cout` formatting, copies vs references, pointers, classes,
+    operator overloads, every container, strings, lambdas and captures,
+    algorithms, arrays, control flow, `cin`/`getline`/`printf`, aliases and
+    macros, runtime and compile errors), 8 LeetCode/competitive patterns
+    (two sum, Dijkstra, grid BFS, trie, dummy node, iterators, fast io,
+    unknown types), and trace-shape checks (frames, `?`, literals, heap
+    kinds, `this`, `&x`, same-line merging, silent prelude);
   - `Trace` rebuilding (heap and frames) against forward replay;
   - `WorkerRunner` with a fake worker: ready, results, busy, timeout and
     restart, crash, load failure, stale results;
@@ -341,12 +408,14 @@ src/
     language, and a check that preset view names exist in each trace;
   - every step of every sample in every language rendered in jsdom, both
     tabs, guess mode, empty-run error, top bar and guide, no React warnings.
-- `npm run build` runs `tsc` then Vite. Main chunk about 614 kB (CodeMirror);
-  acorn and astring live only in the JavaScript worker (150 kB).
+- `npm run build` runs `tsc` then Vite. Main chunk about 622 kB (CodeMirror);
+  acorn and astring live only in the JavaScript worker (150 kB), the C++
+  interpreter only in its worker (79 kB), and each editor grammar is its own
+  lazy chunk.
 - A test asserts the npm Pyodide version equals the CDN version the browser
   loads; bump `pyodide.ts` and `package.json` together.
-- Not yet checked by eye in a browser since the TypeScript migration and the
-  JavaScript engine.
+- Not yet checked by eye in a browser since the TypeScript migration, the
+  JavaScript engine and the C++ engine.
 - `npm audit`: dev-tooling vulnerabilities, deliberately not force-fixed
   (would jump Vite a major version; local-only tool).
 
@@ -360,6 +429,13 @@ src/
   declared directly in a `switch` body are not shown. Hoisted `var` shows as
   `undefined` before assignment (true to JS). Exceptions are recorded when
   they leave a function, not where they are thrown and caught locally.
+- C++ is a subset: no templates, inheritance, exceptions, `sizeof`,
+  `static` members, `stringstream`, `tuple`, `operator()` functors or
+  multi-file code. Unordered containers show insertion order (real order is
+  unspecified). A pointer into an array draws its arrow to the array, not
+  the element. Structs held by value draw in the heap area with an arrow.
+  `new T[n]` is zero-filled. Unsupported syntax fails with a named compile
+  error.
 - Flash may not replay if the same thing changes on consecutive steps.
 - Python generators and iterators render as opaque `other` boxes.
 - Python set display order follows real iteration order, which changes
@@ -375,9 +451,10 @@ src/
 ## Roadmap
 
 Agreed order: (1) language-neutral foundation, done; (2) JavaScript engine,
-done; (3) better structure views; (4) backend with sandboxed runners for C++,
-Java and C, each a new `Runner`; (5) accounts and progress on that same
-backend.
+done; C++ engine (in-browser interpreter), done ahead of plan; (3) better
+structure views; (4) backend with sandboxed runners for Java (and a
+real-compiler C++ if the subset is outgrown), each a new `Runner`; (5)
+accounts and progress on that same backend.
 
 ## Backlog
 
@@ -388,5 +465,7 @@ backend.
 - Edge-list graph input, better layout for large graphs.
 - Hide constructors and other noise in the call tree.
 - JavaScript async functions and generators.
+- C++: templates, inheritance, `stringstream`, `tuple`, pointer offsets into
+  arrays drawn on the element.
 - Split CodeMirror into its own chunk (only edit mode needs it).
 - More learning-first features in the spirit of guess mode.

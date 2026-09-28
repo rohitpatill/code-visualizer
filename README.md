@@ -1,6 +1,6 @@
 # Stepthrough
 
-A step-by-step code execution visualizer for Python and JavaScript. Pick a
+A step-by-step code execution visualizer for Python, JavaScript and C++. Pick a
 language, paste a single file, press Visualize, and move through every step
 of the run while watching the stack, the heap and the references between
 them. Data structures can be drawn in
@@ -20,7 +20,7 @@ npm run dev
 Open the URL Vite prints (http://localhost:5173). Choose the language in the
 top bar; each language keeps its own code. The first Python run takes a few
 seconds while Python loads in the browser (needs internet for the Pyodide
-download, cached after). JavaScript starts instantly.
+download, cached after). JavaScript and C++ start instantly.
 
 ## The default view
 
@@ -89,12 +89,14 @@ by `node` / `cur` / `u` / `v` / `nei` is solid amber.
 Put code that calls your solution in the "Code that calls your solution" box;
 it runs after your code. These are built in (your own definitions win):
 
-| | Python | JavaScript |
-| --- | --- | --- |
-| Nodes | `ListNode(val, next)`, `TreeNode(val, left, right)` | `new ListNode(val, next)`, `new TreeNode(val, left, right)` |
-| List from values | `build_list([1, 2, 3])` | `buildList([1, 2, 3])` |
-| Tree, LeetCode order | `build_tree([3, 9, 20, None, None, 15, 7])` | `buildTree([3, 9, 20, null, null, 15, 7])` |
-| Example call | `result = Solution().reverseList(build_list([1, 2]))` | `const result = reverseList(buildList([1, 2]))` |
+| | Python | JavaScript | C++ |
+| --- | --- | --- | --- |
+| Nodes | `ListNode(val, next)`, `TreeNode(val, left, right)` | `new ListNode(val, next)`, `new TreeNode(...)` | `new ListNode(val)`, `new TreeNode(val)` |
+| List from values | `build_list([1, 2, 3])` | `buildList([1, 2, 3])` | `buildList({1, 2, 3})` |
+| Tree, LeetCode order | `build_tree([3, 9, 20, None, None, 15, 7])` | `buildTree([3, 9, 20, null, null, 15, 7])` | `buildTree("[3,9,20,null,null,15,7]")` |
+| Example call | `result = Solution().reverseList(build_list([1, 2]))` | `const result = reverseList(buildList([1, 2]))` | `ListNode* r = Solution().reverseList(buildList({1, 2}));` |
+
+In C++, code without a `main()` gets one: the call box becomes its body.
 
 ## Limits
 
@@ -102,6 +104,12 @@ it runs after your code. These are built in (your own definitions win):
 - `input()` (Python) and `prompt()` (JavaScript) read from the input lines
   box, one line per call.
 - JavaScript: async functions, generators and `await` are not supported yet.
+- C++ runs on a built-in interpreter for the subset DSA code uses: the common
+  types, pointers and references, structs and classes, lambdas, and the usual
+  STL containers and algorithms. No templates, inheritance or exceptions.
+  Undefined behavior (out-of-range index, uninitialized reads, null
+  pointers) stops the run with a clear message instead of crashing.
+- `cin` reads values from the input box, separated by spaces or lines.
 - Stops after 3000 steps, with a 15 second hard timeout.
 - Pointer markers are name based. A variable called `x` won't show on an
   array, by design, to avoid noise.
@@ -114,6 +122,7 @@ src/engines/            one engine per language behind a shared Runner interface
   python/helpers.py     ListNode, TreeNode, build_list, build_tree
   python/worker.ts      loads Pyodide in a Web Worker and runs the tracer
   javascript/           acorn instrumenter + runtime tracer, runs in a Web Worker
+  cpp/                  C++ lexer, parser and interpreter, runs in a Web Worker
   workerRunner.ts       talks to a worker, restarts it on timeout
 src/trace/              the shared trace format and Trace, which rebuilds any step
 src/samples/catalog.ts  the examples every language implements
