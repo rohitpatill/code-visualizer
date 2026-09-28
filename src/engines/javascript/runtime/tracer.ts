@@ -1,9 +1,7 @@
-import type { Frame, FrameDelta, HeapDelta, HeapObject, StepEvent, Value, WireStep } from '../../../trace/types'
-import { type HeapDraft, Encoder } from './encode'
+import type { Frame, StepEvent, Value } from '../../../trace/types'
+import { type HeapDraft, Recorder, StepLimit } from '../../shared/recorder'
+import { Encoder } from './encode'
 import { describeError } from './format'
-
-/** Thrown from a hook once the step budget is spent; the run stops as truncated. */
-export class StepLimit extends Error {}
 
 /** What instrumented code passes for each scope: an id into `scopes` and a getter by index. */
 export interface Reader {
@@ -21,36 +19,21 @@ export interface LiveFrame {
   done: boolean
 }
 
-export class Output {
-  private readonly parts: string[] = []
-  length = 0
-
-  write(text: string): void {
-    this.parts.push(text)
-    this.length += text.length
-  }
-
-  text(): string {
-    return this.parts.join('')
-  }
-}
-
 export class Tracer {
-  readonly steps: WireStep[] = []
-  readonly out = new Output()
+  readonly recorder: Recorder
   /** The deepest line an escaping error was raised on. */
   errorLine: number | null = null
   private readonly stack: LiveFrame[] = []
   private readonly encoder = new Encoder()
-  private prevHeap = new Map<string, string>()
-  private prevFrames: string[] = []
   private nextFrameId = 1
   private lastError: unknown = undefined
 
   constructor(
     private readonly scopes: readonly (readonly string[])[],
-    private readonly maxSteps: number,
-  ) {}
+    maxSteps: number,
+  ) {
+    this.recorder = new Recorder(maxSteps)
+  }
 
   /** The hooks instrumented code calls, as `__st.enter(...)` and so on. */
   readonly hooks = {
@@ -108,37 +91,8 @@ export class Tracer {
     return [...live].map(([name, v]) => [name, this.encoder.value(v, heap)])
   }
 
-  private framesDelta(frames: Frame[]): FrameDelta {
-    const json = frames.map((f) => JSON.stringify(f))
-    let keep = 0
-    const limit = Math.min(json.length, this.prevFrames.length)
-    while (keep < limit && json[keep] === this.prevFrames[keep]) keep++
-    this.prevFrames = json
-    return { keep, push: frames.slice(keep) }
-  }
-
-  private heapDelta(heap: HeapDraft): HeapDelta {
-    const next = new Map<string, string>()
-    const set: Record<string, HeapObject> = {}
-    let changed = false
-    for (const id in heap) {
-      const json = JSON.stringify(heap[id])
-      next.set(id, json)
-      if (this.prevHeap.get(id) !== json) {
-        set[id] = heap[id]!
-        changed = true
-      }
-    }
-    const del = [...this.prevHeap.keys()].filter((id) => !next.has(id))
-    this.prevHeap = next
-    const delta: HeapDelta = {}
-    if (changed) delta.set = set
-    if (del.length) delta.del = del
-    return delta
-  }
-
   private record(event: StepEvent, line: number, extra: { ret?: unknown; exc?: string } = {}): void {
-    if (this.steps.length >= this.maxSteps) throw new StepLimit()
+    this.recorder.ensureBudget()
     const heap: HeapDraft = {}
     const frames: Frame[] = this.stack.map((f) => ({
       id: f.id,
@@ -147,10 +101,7 @@ export class Tracer {
       global: f.global,
       vars: this.frameVars(f, heap),
     }))
-    const step: WireStep = { line, event, frames: this.framesDelta(frames), out: this.out.length, heap: {} }
-    if ('ret' in extra) step.ret = this.encoder.value(extra.ret, heap)
-    if (extra.exc !== undefined) step.exc = extra.exc
-    step.heap = this.heapDelta(heap)
-    this.steps.push(step)
+    const ret = 'ret' in extra ? this.encoder.value(extra.ret, heap) : undefined
+    this.recorder.push(event, line, frames, heap, { ret, exc: extra.exc })
   }
 }

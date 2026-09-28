@@ -3,7 +3,8 @@ import { HOOK } from '../instrument/builders'
 import { instrument } from '../instrument'
 import { describeError, formatArgs } from './format'
 import helpersSource from './helpers.js?raw'
-import { type Output, StepLimit, Tracer } from './tracer'
+import { type Output, StepLimit } from '../../shared/recorder'
+import { Tracer } from './tracer'
 
 export const MAX_STEPS = 3000
 
@@ -47,10 +48,11 @@ export function runTrace(source: string, stdin: string): string {
   let error: TraceError | null = null
   let truncated = false
   try {
-    program(tracer.hooks, makeConsole(tracer.out), makePrompt(tracer.out, stdin), ...HELPER_NAMES.map((n) => helpers[n]))
+    const { out } = tracer.recorder
+    program(tracer.hooks, makeConsole(out), makePrompt(out, stdin), ...HELPER_NAMES.map((n) => helpers[n]))
   } catch (err) {
     if (err instanceof StepLimit) truncated = true
     else error = { message: describeError(err), line: tracer.errorLine }
   }
-  return result(tracer.steps, truncated, error, tracer.out.text())
+  return result(tracer.recorder.steps, truncated, error, tracer.recorder.out.text())
 }

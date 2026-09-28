@@ -2,7 +2,6 @@
 import { act } from 'react'
 import { type Root, createRoot } from 'react-dom/client'
 import { afterEach, beforeAll, beforeEach, describe, expect, it } from 'vitest'
-import { joinSource } from '../../app/source'
 import { useStore } from '../../app/store'
 import { engines } from '../../engines/registry'
 import type { Engine, Sample } from '../../engines/types'
@@ -56,7 +55,7 @@ describe('view layout renders every sample', () => {
       act(() => {
         useStore.getState().setEngine(engine.id)
         useStore.getState().loadSample(sample)
-        useStore.getState().openRun(trace, joinSource(sample.code, sample.call ?? ''))
+        useStore.getState().openRun(trace, engine.buildProgram(sample.code, sample.call ?? ''))
       })
       show()
       for (let i = 0; i < trace.length; i++) {

@@ -1,3 +1,4 @@
+import { joinSource } from '../../app/source'
 import { resolveSamples } from '../../samples/catalog'
 import type { Engine } from '../types'
 import { WorkerRunner } from '../workerRunner'
@@ -10,6 +11,7 @@ export const python: Engine = {
   id: 'python',
   label: 'Python',
   createRunner: () => new WorkerRunner(() => new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' }), 'Python'),
+  buildProgram: joinSource,
   editorLanguage: () => import('@codemirror/lang-python').then((m) => m.python()),
   highlight: highlightPython,
   samples,

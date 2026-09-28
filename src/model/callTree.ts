@@ -53,7 +53,7 @@ export function buildCallTree(trace: Trace): CallTree {
       const caller = record.frames[record.frames.length - 2]
       const parent = (caller && !caller.global && byId.get(caller.id)) || root
       const args = top.vars.map(([, v]) => shortValue(v, heap)).join(', ')
-      const label = `${top.name.split('.').pop()}(${args})`
+      const label = `${top.name.split(/\.|::/).pop()}(${args})`
       const node: CallNode = { id: top.id, label, parent: parent.id, children: [], callStep: i, depth: 0, x: 0 }
       byId.set(top.id, node)
       parent.children.push(node)

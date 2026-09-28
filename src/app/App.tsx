@@ -4,7 +4,6 @@ import { Guide } from '../components/Guide'
 import { TopBar } from '../components/TopBar'
 import { ViewLayout } from '../components/view/ViewLayout'
 import { useRunner } from '../engines/useRunner'
-import { joinSource } from './source'
 import { useStore } from './store'
 import { useKeyboard } from './useKeyboard'
 import { usePlayback } from './usePlayback'
@@ -19,9 +18,9 @@ export default function App() {
 
   const visualize = useCallback(async () => {
     const { code, call, stdin, openRun } = useStore.getState()
-    const source = joinSource(code, call)
+    const source = engine.buildProgram(code, call)
     openRun(await execute(source, stdin), source)
-  }, [execute])
+  }, [engine, execute])
 
   return (
     <div className="app">

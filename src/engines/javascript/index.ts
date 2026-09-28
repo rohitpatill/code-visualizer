@@ -1,3 +1,4 @@
+import { joinSource } from '../../app/source'
 import { resolveSamples } from '../../samples/catalog'
 import type { Engine } from '../types'
 import { WorkerRunner } from '../workerRunner'
@@ -11,6 +12,7 @@ export const javascript: Engine = {
   label: 'JavaScript',
   createRunner: () =>
     new WorkerRunner(() => new Worker(new URL('./worker.ts', import.meta.url), { type: 'module' }), 'JavaScript'),
+  buildProgram: joinSource,
   editorLanguage: () => import('@codemirror/lang-javascript').then((m) => m.javascript()),
   highlight: highlightJavaScript,
   samples,

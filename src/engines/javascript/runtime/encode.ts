@@ -1,10 +1,9 @@
 import type { HeapObject, Prim, Value } from '../../../trace/types'
+import type { HeapDraft } from '../../shared/recorder'
 
 export const MAX_ITEMS = 100
 const MAX_REPR = 200
 const GETTER: Prim = { t: 'p', k: 'other', v: '[getter]' }
-
-export type HeapDraft = Record<string, HeapObject>
 
 const clip = (text: string) => (text.length <= MAX_REPR ? text : `${text.slice(0, MAX_REPR)}...`)
 

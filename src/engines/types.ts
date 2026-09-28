@@ -39,6 +39,8 @@ export interface Engine {
   id: string
   label: string
   createRunner(): Runner
+  /** The program that actually runs, from the editor code and the call box. */
+  buildProgram(code: string, call: string): string
   /** Loaded on demand, so each language's grammar is its own chunk. */
   editorLanguage(): Promise<Extension>
   highlight(line: string): Token[]

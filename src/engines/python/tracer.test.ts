@@ -3,7 +3,6 @@ import { createRequire } from 'node:module'
 import { dirname } from 'node:path'
 import { loadPyodide, version } from 'pyodide'
 import { beforeAll, describe, expect, it } from 'vitest'
-import { joinSource } from '../../app/source'
 import { Trace } from '../../trace/Trace'
 import type { RawTrace, Ref, StepRecord } from '../../trace/types'
 import { python } from '.'
@@ -41,7 +40,7 @@ describe('python tracer', () => {
   describe('golden traces', () => {
     for (const sample of python.samples) {
       it(sample.name, async () => {
-        const golden = raw(joinSource(sample.code, sample.call ?? ''))
+        const golden = raw(python.buildProgram(sample.code, sample.call ?? ''))
         expect(golden.error).toBeNull()
         expect(golden.truncated).toBe(false)
         await expect(`${JSON.stringify(golden, null, 1)}\n`).toMatchFileSnapshot(`__golden__/${sample.id}.json`)

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { joinSource } from '../../app/source'
+import { javascript } from '.'
 import { resolveSamples } from '../../samples/catalog'
 import { Trace } from '../../trace/Trace'
 import type { Frame, RawTrace, Ref, StepRecord, Value } from '../../trace/types'
@@ -23,7 +23,7 @@ describe('javascript tracer', () => {
   describe('golden traces', () => {
     for (const sample of resolveSamples(javascriptSamples)) {
       it(sample.name, async () => {
-        const golden = raw(joinSource(sample.code, sample.call ?? ''))
+        const golden = raw(javascript.buildProgram(sample.code, sample.call ?? ''))
         expect(golden.error).toBeNull()
         expect(golden.truncated).toBe(false)
         await expect(`${JSON.stringify(golden, null, 1)}\n`).toMatchFileSnapshot(`__golden__/${sample.id}.json`)
