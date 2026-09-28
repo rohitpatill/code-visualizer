@@ -7,9 +7,9 @@ import { joinSource } from '../../app/source'
 import type { RawTrace, Ref } from '../../trace/types'
 import { PYODIDE_VERSION } from './pyodide'
 import { samples } from './samples'
-import tracerSource from './tracer.py?raw'
+import { type RunTrace, installTracer } from './runtime'
 
-let runTrace: (code: string, stdin: string) => string
+let runTrace: RunTrace
 
 const trace = (code: string, stdin = ''): RawTrace => JSON.parse(runTrace(code, stdin)) as RawTrace
 
@@ -25,8 +25,7 @@ const refOf = (raw: RawTrace, step: number, name: string): Ref => {
 beforeAll(async () => {
   const indexURL = `${dirname(createRequire(import.meta.url).resolve('pyodide/package.json'))}/`
   const pyodide = await loadPyodide({ indexURL, env: { PYTHONHASHSEED: '0' } })
-  pyodide.runPython(tracerSource)
-  runTrace = pyodide.globals.get('run_trace')
+  runTrace = installTracer(pyodide)
 })
 
 describe('python tracer', () => {
