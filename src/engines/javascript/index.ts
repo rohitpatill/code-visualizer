@@ -25,6 +25,7 @@ export const javascript: Engine = {
     containers: 'arrays, objects, maps and sets',
     nullLiteral: 'null',
     inputCall: 'prompt()',
+    inputPlaceholder: 'One line per prompt() call',
     helpers: ['ListNode', 'TreeNode', 'buildList([1, 2, 3])', 'buildTree([1, 2, 3, null, 4])'],
   },
 }

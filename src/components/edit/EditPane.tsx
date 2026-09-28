@@ -74,7 +74,7 @@ export function EditPane() {
             className="stdin"
             value={stdin}
             onChange={(e) => setStdin(e.target.value)}
-            placeholder={`One line per ${copy.inputCall} call`}
+            placeholder={copy.inputPlaceholder}
             rows={4}
           />
         )}

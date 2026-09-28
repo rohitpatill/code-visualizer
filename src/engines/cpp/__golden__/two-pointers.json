@@ -1,0 +1,962 @@
+{
+ "steps": [
+  {
+   "line": 5,
+   "event": "call",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 1,
+      "global": true,
+      "vars": []
+     },
+     {
+      "id": 2,
+      "name": "main",
+      "line": 5,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 6,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "6"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "6"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "6"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "6"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 16,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "6"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "5"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "5"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "5"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 16,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "5"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 16,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 19,
+   "event": "return",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"racecar\"",
+         "s": "racecar"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "ok",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 5,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 19,
+   "event": "return",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 19,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
+   "out": 5,
+   "heap": {}
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "true\n",
+ "maxSteps": 3000
+}

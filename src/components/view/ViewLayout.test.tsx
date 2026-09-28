@@ -97,8 +97,7 @@ describe.each(engines)('view layout states: $label', (engine) => {
       useStore.getState().toggleGuess()
     })
     show()
-    act(() => useStore.getState().next())
-    act(() => useStore.getState().next())
+    for (let i = 0; i < 20 && !useStore.getState().quiz; i++) act(() => useStore.getState().next())
     expect(text()).toContain('What will')
   })
 

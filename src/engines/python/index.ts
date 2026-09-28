@@ -24,6 +24,7 @@ export const python: Engine = {
     containers: 'lists, dicts and objects',
     nullLiteral: 'None',
     inputCall: 'input()',
+    inputPlaceholder: 'One line per input() call',
     helpers: ['ListNode', 'TreeNode', 'build_list([1, 2, 3])', 'build_tree([1, 2, 3, None, 4])'],
   },
 }

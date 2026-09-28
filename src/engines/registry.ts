@@ -1,8 +1,9 @@
+import { cpp } from './cpp'
 import { javascript } from './javascript'
 import { python } from './python'
 import type { Engine } from './types'
 
-export const engines: readonly Engine[] = [python, javascript]
+export const engines: readonly Engine[] = [python, javascript, cpp]
 
 export const defaultEngine: Engine = python
 

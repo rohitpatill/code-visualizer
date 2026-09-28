@@ -1,0 +1,1292 @@
+{
+ "steps": [
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 1,
+      "global": true,
+      "vars": []
+     },
+     {
+      "id": 2,
+      "name": "main",
+      "line": 7,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "vector<string>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"the\"",
+        "s": "the"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"cat\"",
+        "s": "cat"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"saw\"",
+        "s": "saw"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"the\"",
+        "s": "the"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "\"dog\"",
+        "s": "dog"
+       }
+      ],
+      "size": 5
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "map<string, int>",
+      "entries": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "map<string, int>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"saw\"",
+         "s": "saw"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "map<string, int>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"saw\"",
+         "s": "saw"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "map<string, int>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"saw\"",
+         "s": "saw"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"dog\"",
+         "s": "dog"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "map<string, int>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"saw\"",
+         "s": "saw"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "w",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"dog\"",
+         "s": "dog"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "map<string, int>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"dog\"",
+         "s": "dog"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"saw\"",
+         "s": "saw"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        },
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "word",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        }
+       ],
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "word",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"cat\"",
+         "s": "cat"
+        }
+       ],
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "word",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"dog\"",
+         "s": "dog"
+        }
+       ],
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 7,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "word",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"dog\"",
+         "s": "dog"
+        }
+       ],
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 7,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "word",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"saw\"",
+         "s": "saw"
+        }
+       ],
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 14,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "word",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"saw\"",
+         "s": "saw"
+        }
+       ],
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 14,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "word",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ],
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 21,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "word",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"the\"",
+         "s": "the"
+        }
+       ],
+       [
+        "n",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 21,
+   "heap": {}
+  },
+  {
+   "line": 16,
+   "event": "return",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "words",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "counts",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 28,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 16,
+   "event": "return",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 16,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
+   "out": 28,
+   "heap": {
+    "del": [
+     "1",
+     "2"
+    ]
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "cat: 1\ndog: 1\nsaw: 1\nthe: 2\n",
+ "maxSteps": 3000
+}

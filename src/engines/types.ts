@@ -31,6 +31,8 @@ export interface EngineCopy {
   nullLiteral: string
   /** How user code reads a line of input, e.g. input(). */
   inputCall: string
+  /** Placeholder for the input box. */
+  inputPlaceholder: string
   /** Helpers available without defining them, as code snippets. */
   helpers: readonly string[]
 }

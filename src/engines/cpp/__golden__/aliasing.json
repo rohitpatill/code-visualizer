@@ -1,0 +1,408 @@
+{
+ "steps": [
+  {
+   "line": 5,
+   "event": "call",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 1,
+      "global": true,
+      "vars": []
+     },
+     {
+      "id": 2,
+      "name": "main",
+      "line": 5,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 6,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "a",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       }
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "a",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "b",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "a",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "b",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       }
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "a",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "b",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "4"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "a",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "b",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "99"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 12,
+   "event": "return",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 12,
+      "global": false,
+      "vars": [
+       [
+        "a",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "b",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 6,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 12,
+   "event": "return",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 12,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
+   "out": 6,
+   "heap": {
+    "del": [
+     "1",
+     "2"
+    ]
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "4 4 4\n",
+ "maxSteps": 3000
+}

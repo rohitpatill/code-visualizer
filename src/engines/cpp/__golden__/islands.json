@@ -1,0 +1,6120 @@
+{
+ "steps": [
+  {
+   "line": 5,
+   "event": "line",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 5,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 10,
+      "global": true,
+      "vars": [
+       [
+        "grid",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "vector<vector<int>>",
+      "items": [
+       {
+        "t": "r",
+        "id": "2"
+       },
+       {
+        "t": "r",
+        "id": "3"
+       },
+       {
+        "t": "r",
+        "id": "4"
+       }
+      ],
+      "size": 3
+     },
+     "2": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      "size": 4
+     },
+     "3": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ],
+      "size": 4
+     },
+     "4": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 11,
+      "global": true,
+      "vars": [
+       [
+        "grid",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "rows",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 24,
+   "event": "call",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 11,
+      "global": true,
+      "vars": [
+       [
+        "grid",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "rows",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "cols",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     },
+     {
+      "id": 2,
+      "name": "main",
+      "line": 24,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 25,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 25,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 26,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 26,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 29,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 29,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 30,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 30,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "sink",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "sink",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "sink",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "sink",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 5,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 5,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 5,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "sink",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 6,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 6,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 6,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "sink",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 7,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 7,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 7,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "sink",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 8,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 8,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 8,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 22,
+   "event": "return",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 4,
+      "name": "sink",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "sink",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 9,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 9,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 9,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "sink",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "sink",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "sink",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 11,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 11,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 11,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "sink",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "sink",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 13,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 13,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 13,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "sink",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 14,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 14,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 14,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 22,
+   "event": "return",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "sink",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "sink",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 15,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 15,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 15,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "-1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 22,
+   "event": "return",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 3,
+      "name": "sink",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 26,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 26,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 29,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 29,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 30,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 30,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 16,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 16,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 16,
+      "name": "sink",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 16,
+      "name": "sink",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 17,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 17,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 17,
+      "name": "sink",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 17,
+      "name": "sink",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "4": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 18,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 18,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 18,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 17,
+      "name": "sink",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 19,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 19,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 19,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 17,
+      "name": "sink",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 20,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 20,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 20,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 17,
+      "name": "sink",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 21,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 21,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 21,
+      "name": "sink",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 21,
+      "name": "sink",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "4": {
+      "kind": "list",
+      "type": "vector<int>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "0"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 22,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 22,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 22,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 6,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 21,
+      "name": "sink",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 23,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 23,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 23,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 6,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 21,
+      "name": "sink",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 24,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 24,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 24,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 6,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 21,
+      "name": "sink",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 25,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 25,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 25,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 6,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 22,
+   "event": "return",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 21,
+      "name": "sink",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 22,
+   "event": "return",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 17,
+      "name": "sink",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 16,
+      "name": "sink",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 26,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 26,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 26,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 16,
+      "name": "sink",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 27,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 27,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 27,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 16,
+      "name": "sink",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 28,
+      "name": "sink",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 28,
+      "name": "sink",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 28,
+      "name": "sink",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "return",
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 22,
+   "event": "return",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 16,
+      "name": "sink",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "none",
+    "v": "void"
+   }
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 26,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 26,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 28,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "c",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 26,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 26,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ],
+       [
+        "r",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 34,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 34,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 35,
+   "event": "return",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 35,
+      "global": false,
+      "vars": [
+       [
+        "islands",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 2,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 35,
+   "event": "return",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 35,
+      "global": true,
+      "vars": [
+       [
+        "grid",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "rows",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "cols",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 2,
+   "heap": {}
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "2\n",
+ "maxSteps": 3000
+}

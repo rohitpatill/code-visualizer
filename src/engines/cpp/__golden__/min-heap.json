@@ -1,0 +1,849 @@
+{
+ "steps": [
+  {
+   "line": 6,
+   "event": "call",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 1,
+      "global": true,
+      "vars": []
+     },
+     {
+      "id": 2,
+      "name": "main",
+      "line": 6,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 7,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "priority_queue<int, greater>",
+      "items": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "5"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "5"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "priority_queue<int, greater>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "5"
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "8"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "priority_queue<int, greater>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "5"
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "8"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "priority_queue<int, greater>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "5"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "8"
+       }
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "9"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "priority_queue<int, greater>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "8"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "5"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "9"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "priority_queue<int, greater>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "8"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "5"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "9"
+       }
+      ],
+      "size": 5
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "x",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "priority_queue<int, greater>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "1"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "5"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "9"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "8"
+       }
+      ],
+      "size": 6
+     }
+    }
+   }
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 12,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "smallest",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "smallest",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "priority_queue<int, greater>",
+      "items": [
+       {
+        "t": "p",
+        "k": "int",
+        "v": "2"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "3"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "8"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "5"
+       },
+       {
+        "t": "p",
+        "k": "int",
+        "v": "9"
+       }
+      ],
+      "size": 5
+     }
+    }
+   }
+  },
+  {
+   "line": 14,
+   "event": "return",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "heap",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "smallest",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 4,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 14,
+   "event": "return",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 14,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
+   "out": 4,
+   "heap": {
+    "del": [
+     "1"
+    ]
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "1 5\n",
+ "maxSteps": 3000
+}

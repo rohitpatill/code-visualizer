@@ -91,7 +91,8 @@ describe.each(engines)('structure builders: $label', (engine) => {
   })
 
   it('counts every call in the call tree', () => {
-    expect(buildCallTree(load(engine, 'factorial').trace).callCount).toBe(4)
-    expect(buildCallTree(load(engine, 'fibonacci').trace).callCount).toBe(9)
+    const calls = (id: SampleId) => buildCallTree(load(engine, id).trace).nodes.filter((n) => n.parent !== null && !n.label.startsWith('main(')).length
+    expect(calls('factorial')).toBe(4)
+    expect(calls('fibonacci')).toBe(9)
   })
 })

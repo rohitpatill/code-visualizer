@@ -1,0 +1,2025 @@
+{
+ "steps": [
+  {
+   "line": 17,
+   "event": "call",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 1,
+      "global": true,
+      "vars": []
+     },
+     {
+      "id": 2,
+      "name": "main",
+      "line": 17,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 18,
+      "global": false,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "tree",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
+      ]
+     },
+     "2": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "9"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     },
+     "3": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "20"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
+      ]
+     },
+     "4": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "15"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     },
+     "5": {
+      "kind": "instance",
+      "type": "TreeNode",
+      "attrs": [
+       [
+        "val",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "7"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    }
+   }
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 9,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "6": {
+      "kind": "instance",
+      "type": "Solution",
+      "attrs": []
+     }
+    }
+   }
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 9,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 9,
+      "name": "Solution::maxDepth",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "Solution::maxDepth",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 11,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 11,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 11,
+      "name": "Solution::maxDepth",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "Solution::maxDepth",
+      "line": 12,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 12,
+      "name": "Solution::maxDepth",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 10,
+      "name": "Solution::maxDepth",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "return",
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "1"
+   }
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 9,
+      "name": "Solution::maxDepth",
+      "line": 12,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 13,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 13,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 13,
+      "name": "Solution::maxDepth",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 14,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 14,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 14,
+      "name": "Solution::maxDepth",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 15,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 15,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 15,
+      "name": "Solution::maxDepth",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "return",
+   "frames": {
+    "keep": 6,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 14,
+      "name": "Solution::maxDepth",
+      "line": 12,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 16,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 16,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 16,
+      "name": "Solution::maxDepth",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "return",
+   "frames": {
+    "keep": 6,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 14,
+      "name": "Solution::maxDepth",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "1"
+   }
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 13,
+      "name": "Solution::maxDepth",
+      "line": 12,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 17,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 17,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 17,
+      "name": "Solution::maxDepth",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 18,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 18,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 18,
+      "name": "Solution::maxDepth",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "return",
+   "frames": {
+    "keep": 6,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 17,
+      "name": "Solution::maxDepth",
+      "line": 12,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "call",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 19,
+      "name": "Solution::maxDepth",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 19,
+      "name": "Solution::maxDepth",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 5,
+    "push": [
+     {
+      "id": 19,
+      "name": "Solution::maxDepth",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "p",
+         "k": "none",
+         "v": "nullptr"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "return",
+   "frames": {
+    "keep": 6,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 4,
+    "push": [
+     {
+      "id": 17,
+      "name": "Solution::maxDepth",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "0"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "return",
+   "frames": {
+    "keep": 5,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "1"
+   }
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 3,
+    "push": [
+     {
+      "id": 13,
+      "name": "Solution::maxDepth",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "return",
+   "frames": {
+    "keep": 4,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "2"
+   }
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 2,
+    "push": [
+     {
+      "id": 9,
+      "name": "Solution::maxDepth",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "this",
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        "root",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "left",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "1"
+        }
+       ],
+       [
+        "right",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 13,
+   "event": "return",
+   "frames": {
+    "keep": 3,
+    "push": []
+   },
+   "out": 0,
+   "heap": {},
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "3"
+   }
+  },
+  {
+   "line": 20,
+   "event": "return",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "tree",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "result",
+        {
+         "t": "p",
+         "k": "int",
+         "v": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "del": [
+     "6"
+    ]
+   },
+   "ret": {
+    "t": "p",
+    "k": "int",
+    "v": "0"
+   }
+  },
+  {
+   "line": 20,
+   "event": "return",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 20,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "del": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ]
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "",
+ "maxSteps": 3000
+}
