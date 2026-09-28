@@ -21,7 +21,7 @@ export function TopBar({ status, onVisualize }: Props) {
   const setGuideOpen = useStore((s) => s.setGuideOpen)
   return (
     <header className="topbar">
-      <h1 className="brand">Stepthrough</h1>
+      <h1 className="brand">Code Visualizer</h1>
       <div className="topbar-actions">
         {!viewing && <LanguagePicker />}
         {!viewing && <SamplePicker />}

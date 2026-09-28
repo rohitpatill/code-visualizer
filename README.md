@@ -1,4 +1,4 @@
-# Stepthrough
+# Code Visualizer
 
 A step-by-step code execution visualizer for Python, JavaScript and C++. Pick a
 language, paste a single file, press Visualize, and move through every step

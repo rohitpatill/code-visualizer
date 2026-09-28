@@ -1,4 +1,4 @@
-# Stepthrough
+# Code Visualizer
 
 A local, step-by-step code visualizer (Python, JavaScript and C++) for
 learning programming and DSA.
