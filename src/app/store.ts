@@ -1,11 +1,12 @@
 import { create } from 'zustand'
-import { defaultEngine } from '../engines/registry'
+import { findEngine } from '../engines/registry'
 import type { Engine, Sample } from '../engines/types'
 import { type Question, questionFor, sameAnswer } from '../model/guess'
 import type { ViewName, Views } from '../structures/types'
 import type { Trace } from '../trace/Trace'
 import { findStep, isBreakpointHit, stepOutTarget, stepOverTarget } from './navigation'
-import { KEYS, readJSON, readText, write } from './storage'
+import { loadDraft, saveDraft } from './drafts'
+import { KEYS, readText, write } from './storage'
 
 export const SPEEDS = [
   { label: 'Slow', ms: 1200 },
@@ -46,6 +47,7 @@ interface State {
 }
 
 interface Actions {
+  setEngine(id: string): void
   setCode(code: string): void
   setCall(call: string): void
   setStdin(stdin: string): void
@@ -74,12 +76,12 @@ export type Store = State & Actions
 
 const lastIndex = (run: Run | null) => (run ? run.trace.length - 1 : 0)
 
+const initialEngine = findEngine(readText(KEYS.language) ?? '')
+
 export const useStore = create<Store>()((set, get) => ({
-  engine: defaultEngine,
-  code: readText(KEYS.code) ?? defaultEngine.starterSample.code,
-  call: readText(KEYS.call) ?? '',
+  engine: initialEngine,
+  ...loadDraft(initialEngine),
   stdin: '',
-  views: readJSON<Views>(KEYS.views, {}),
   run: null,
   index: 0,
   playing: false,
@@ -92,6 +94,11 @@ export const useStore = create<Store>()((set, get) => ({
   hovered: null,
   guideOpen: readText(KEYS.seenGuide) === null,
 
+  setEngine: (id) => {
+    const engine = findEngine(id)
+    if (engine === get().engine) return
+    set({ engine, ...loadDraft(engine), stdin: '', run: null, playing: false, quiz: null, breakpoints: new Set() })
+  },
   setCode: (code) => set({ code }),
   setCall: (call) => set({ call }),
   setStdin: (stdin) => set({ stdin }),
@@ -171,11 +178,15 @@ export const useStore = create<Store>()((set, get) => ({
   },
 }))
 
-/** Saves drafts and view choices whenever they change. */
+/** Saves the language choice and the active draft whenever they change. */
 export function persistDrafts(): () => void {
   return useStore.subscribe((s, prev) => {
-    if (s.code !== prev.code) write(KEYS.code, s.code)
-    if (s.call !== prev.call) write(KEYS.call, s.call)
-    if (s.views !== prev.views) write(KEYS.views, JSON.stringify(s.views))
+    if (s.engine !== prev.engine) {
+      write(KEYS.language, s.engine.id)
+      return
+    }
+    if (s.code !== prev.code || s.call !== prev.call || s.views !== prev.views) {
+      saveDraft(s.engine.id, { code: s.code, call: s.call, views: s.views })
+    }
   })
 }

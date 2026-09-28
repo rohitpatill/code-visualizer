@@ -1,9 +1,7 @@
-import type { Sample } from '../types'
+import type { SampleSet } from '../../samples/catalog'
 
-export const samples: readonly Sample[] = [
-  {
-    group: 'Basics',
-    name: 'Aliasing: two names, one list',
+export const pythonSamples: SampleSet = {
+  aliasing: {
     code: `a = [1, 2, 3]
 b = a
 c = a[:]
@@ -12,9 +10,7 @@ c.append(99)
 print(a, b, c)
 `,
   },
-  {
-    group: 'Basics',
-    name: 'Dict: counting words',
+  'counting-words': {
     code: `words = ["the", "cat", "saw", "the", "dog"]
 counts = {}
 for w in words:
@@ -22,9 +18,7 @@ for w in words:
 print(counts)
 `,
   },
-  {
-    group: 'Recursion',
-    name: 'Factorial',
+  factorial: {
     code: `def fact(n):
     if n <= 1:
         return 1
@@ -34,9 +28,7 @@ result = fact(4)
 print(result)
 `,
   },
-  {
-    group: 'Recursion',
-    name: 'Fibonacci (try the Call tree tab)',
+  fibonacci: {
     code: `def fib(n):
     if n < 2:
         return n
@@ -45,10 +37,7 @@ print(result)
 print(fib(4))
 `,
   },
-  {
-    group: 'Arrays',
-    name: 'Binary search',
-    views: { nums: 'array' },
+  'binary-search': {
     code: `nums = [1, 3, 5, 7, 9, 11, 13]
 target = 11
 lo, hi = 0, len(nums) - 1
@@ -63,10 +52,7 @@ while lo <= hi:
 print("found at", mid)
 `,
   },
-  {
-    group: 'Arrays',
-    name: 'Sliding window: best sum of k',
-    views: { nums: 'array' },
+  'sliding-window': {
     code: `nums = [2, 1, 5, 1, 3, 2]
 k = 3
 window = best = sum(nums[:k])
@@ -77,10 +63,7 @@ for right in range(k, len(nums)):
 print(best)
 `,
   },
-  {
-    group: 'Arrays',
-    name: 'Two pointers: palindrome',
-    views: { s: 'array' },
+  'two-pointers': {
     code: `s = "racecar"
 left, right = 0, len(s) - 1
 ok = True
@@ -93,10 +76,7 @@ while left < right:
 print(ok)
 `,
   },
-  {
-    group: 'Linked lists',
-    name: 'Reverse a linked list (LeetCode style)',
-    views: { head: 'list', prev: 'list' },
+  'reverse-list': {
     code: `class Solution:
     def reverseList(self, head):
         prev = None
@@ -110,10 +90,7 @@ print(ok)
 `,
     call: `result = Solution().reverseList(build_list([1, 2, 3, 4]))`,
   },
-  {
-    group: 'Trees',
-    name: 'Max depth of a binary tree',
-    views: { root: 'tree' },
+  'tree-depth': {
     code: `class Solution:
     def maxDepth(self, root):
         if not root:
@@ -125,10 +102,7 @@ print(ok)
     call: `tree = build_tree([3, 9, 20, None, None, 15, 7])
 result = Solution().maxDepth(tree)`,
   },
-  {
-    group: 'Grids',
-    name: 'Count islands (DFS on a grid)',
-    views: { grid: 'grid' },
+  islands: {
     code: `grid = [
     [1, 1, 0, 0],
     [1, 0, 0, 1],
@@ -154,10 +128,7 @@ for r in range(rows):
 print(islands)
 `,
   },
-  {
-    group: 'Graphs',
-    name: 'Breadth-first search',
-    views: { graph: 'graph', queue: 'queue' },
+  bfs: {
     code: `from collections import deque
 
 graph = {
@@ -180,10 +151,7 @@ while queue:
 print(order)
 `,
   },
-  {
-    group: 'Stacks and heaps',
-    name: 'Valid parentheses (stack)',
-    views: { stack: 'stack' },
+  'valid-parentheses': {
     code: `s = "([]{})"
 pairs = {")": "(", "]": "[", "}": "{"}
 stack = []
@@ -198,10 +166,8 @@ for ch in s:
 print(valid and not stack)
 `,
   },
-  {
-    group: 'Stacks and heaps',
+  'min-heap': {
     name: 'Min-heap with heapq',
-    views: { heap: 'heap' },
     code: `import heapq
 
 heap = []
@@ -211,4 +177,4 @@ smallest = heapq.heappop(heap)
 print(smallest, heap)
 `,
   },
-]
+}

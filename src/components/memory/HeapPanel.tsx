@@ -7,6 +7,8 @@ import type { Step } from '../../trace/types'
 import { StructureCard } from '../structures/StructureCard'
 import { HeapObject } from './HeapObject'
 
+const sentence = (text: string) => text.charAt(0).toUpperCase() + text.slice(1)
+
 interface Props {
   step: Step
   prevStep: Step | null
@@ -18,6 +20,7 @@ interface Props {
 
 export function HeapPanel({ step, prevStep, changed, built, prevStructures, tags }: Props) {
   const setView = useStore((s) => s.setView)
+  const containers = useStore((s) => s.engine.copy.containers)
   const rows = useMemo(() => layoutHeap(step, new Set(built.coveredBy.keys())), [step, built])
   const prevByKey = useMemo(() => new Map(prevStructures.map((s) => [s.key, s])), [prevStructures])
   return (
@@ -34,7 +37,7 @@ export function HeapPanel({ step, prevStep, changed, built, prevStructures, tags
         />
       ))}
       {rows.length === 0 && built.structures.length === 0 && (
-        <p className="heap-empty">Lists, dicts and objects appear here once a variable points at one.</p>
+        <p className="heap-empty">{sentence(containers)} appear here once a variable points at one.</p>
       )}
       {rows.map((row) => (
         <div className="heap-row" key={row[0]}>

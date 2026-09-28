@@ -1,13 +1,13 @@
 import { useStore } from '../app/store'
-import type { EngineStatus } from '../engines/useEngine'
+import type { RunnerStatus } from '../engines/runner'
 import { SamplePicker } from './edit/SamplePicker'
 
 interface Props {
-  status: EngineStatus
+  status: RunnerStatus
   onVisualize: () => void
 }
 
-function visualizeLabel(status: EngineStatus, language: string): string {
+function visualizeLabel(status: RunnerStatus, language: string): string {
   if (status === 'loading') return `Loading ${language}…`
   if (status === 'running') return 'Running…'
   return 'Visualize'

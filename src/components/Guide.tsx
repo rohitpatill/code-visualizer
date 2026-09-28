@@ -11,11 +11,11 @@ interface Section {
 const sections = (language: string, copy: EngineCopy): Section[] => [
   {
     title: 'Run your code',
-    body: `Paste one ${language} file and press Visualize. For LeetCode code (a class Solution), put the call in the box on the right, for example ${copy.callExample}.`,
+    body: `Paste one ${language} file and press Visualize. For LeetCode code (${copy.solutionShape}), put the call in the box on the right, for example ${copy.callExample}.`,
   },
   {
     title: 'Read the screen',
-    body: 'Left: your code. ▶ runs next, ▷ just ran. Middle: the stack, one box per running function. Right: the heap, where lists, dicts and objects live. A teal dot is a reference; its arrow shows what it points at. Coral means it just changed.',
+    body: `Left: your code. ▶ runs next, ▷ just ran. Middle: the stack, one box per running function. Right: the heap, where ${copy.containers} live. A teal dot is a reference; its arrow shows what it points at. Coral means it just changed.`,
   },
   {
     title: 'Move through the run',
@@ -30,7 +30,7 @@ const sections = (language: string, copy: EngineCopy): Section[] => [
   },
   {
     title: 'See data as a structure',
-    body: 'Click ⋯ next to any list, dict, object or string in the stack and pick how to draw it: array, grid, linked list, tree, graph, stack, queue or heap. When the shape is obvious, a "show as ..." pill offers it. The × on a structure goes back to the plain view.',
+    body: `Click ⋯ next to a variable in the stack (${copy.containers}, or a string) and pick how to draw it: array, grid, linked list, tree, graph, stack, queue or heap. When the shape is obvious, a "show as ..." pill offers it. The × on a structure goes back to the plain view.`,
   },
   {
     title: 'Pointers and windows',

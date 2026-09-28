@@ -3,7 +3,7 @@ import { EditPane } from '../components/edit/EditPane'
 import { Guide } from '../components/Guide'
 import { TopBar } from '../components/TopBar'
 import { ViewLayout } from '../components/view/ViewLayout'
-import { useEngine } from '../engines/useEngine'
+import { useRunner } from '../engines/useRunner'
 import { joinSource } from './source'
 import { useStore } from './store'
 import { useKeyboard } from './useKeyboard'
@@ -13,7 +13,7 @@ export default function App() {
   const engine = useStore((s) => s.engine)
   const run = useStore((s) => s.run)
   const guideOpen = useStore((s) => s.guideOpen)
-  const { status, loadError, run: execute } = useEngine(engine)
+  const { status, error: loadError, run: execute } = useRunner(engine)
   usePlayback()
   useKeyboard()
 

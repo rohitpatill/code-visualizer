@@ -5,15 +5,13 @@ import { loadPyodide, version } from 'pyodide'
 import { beforeAll, describe, expect, it } from 'vitest'
 import { joinSource } from '../../app/source'
 import type { RawTrace, Ref } from '../../trace/types'
+import { python } from '.'
 import { PYODIDE_VERSION } from './pyodide'
-import { samples } from './samples'
 import { type RunTrace, installTracer } from './runtime'
 
 let runTrace: RunTrace
 
 const trace = (code: string, stdin = ''): RawTrace => JSON.parse(runTrace(code, stdin)) as RawTrace
-
-const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 
 const refOf = (raw: RawTrace, step: number, name: string): Ref => {
   const frames = raw.steps[step]!.frames
@@ -34,12 +32,12 @@ describe('python tracer', () => {
   })
 
   describe('golden traces', () => {
-    for (const sample of samples) {
+    for (const sample of python.samples) {
       it(sample.name, async () => {
         const raw = trace(joinSource(sample.code, sample.call ?? ''))
         expect(raw.error).toBeNull()
         expect(raw.truncated).toBe(false)
-        await expect(`${JSON.stringify(raw, null, 1)}\n`).toMatchFileSnapshot(`__golden__/${slug(sample.name)}.json`)
+        await expect(`${JSON.stringify(raw, null, 1)}\n`).toMatchFileSnapshot(`__golden__/${sample.id}.json`)
       })
     }
   })

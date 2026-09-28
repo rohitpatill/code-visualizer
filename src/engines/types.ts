@@ -1,7 +1,10 @@
 import type { Extension } from '@codemirror/state'
+import type { SampleId } from '../samples/catalog'
 import type { Views } from '../structures/types'
+import type { Runner } from './runner'
 
 export interface Sample {
+  id: SampleId
   group: string
   name: string
   code: string
@@ -15,10 +18,15 @@ export interface Token {
   cls: string | null
 }
 
+/** Every piece of UI copy that depends on the language. */
 export interface EngineCopy {
+  /** How LeetCode code looks in this language, e.g. "a class Solution". */
+  solutionShape: string
+  callExample: string
   callPlaceholder: string
   callHint: string
-  callExample: string
+  /** The kinds of objects that live on the heap, e.g. "lists, dicts and objects". */
+  containers: string
   /** The language's null literal, e.g. None. */
   nullLiteral: string
   /** How user code reads a line of input, e.g. input(). */
@@ -30,7 +38,7 @@ export interface EngineCopy {
 export interface Engine {
   id: string
   label: string
-  createWorker(): Worker
+  createRunner(): Runner
   editorLanguage(): Extension
   highlight(line: string): Token[]
   samples: readonly Sample[]

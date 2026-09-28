@@ -4,17 +4,15 @@ import { type Root, createRoot } from 'react-dom/client'
 import { afterEach, beforeAll, beforeEach, describe, expect, it } from 'vitest'
 import { joinSource } from '../../app/source'
 import { useStore } from '../../app/store'
-import { samples } from '../../engines/python/samples'
-import type { Sample } from '../../engines/types'
+import { engines } from '../../engines/registry'
+import type { Engine, Sample } from '../../engines/types'
+import { allSamples, golden, sampleOf } from '../../test/goldens'
 import { Trace } from '../../trace/Trace'
-import type { RawTrace } from '../../trace/types'
 import { Guide } from '../Guide'
 import { TopBar } from '../TopBar'
 import { ViewLayout } from './ViewLayout'
 
-const goldens = import.meta.glob<RawTrace>('../../engines/python/__golden__/*.json', { eager: true, import: 'default' })
-const slug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-const traceOf = (sample: Sample) => new Trace(goldens[`../../engines/python/__golden__/${slug(sample.name)}.json`]!)
+const traceOf = (engine: Engine, sample: Sample) => new Trace(golden(engine, sample))
 
 const initial = useStore.getState()
 let container: HTMLDivElement
@@ -52,10 +50,11 @@ const show = () =>
 const text = () => container.textContent ?? ''
 
 describe('view layout renders every sample', () => {
-  for (const sample of samples) {
-    it(sample.name, () => {
-      const trace = traceOf(sample)
+  for (const [engine, sample] of allSamples) {
+    it(`${engine.id}: ${sample.name}`, () => {
+      const trace = traceOf(engine, sample)
       act(() => {
+        useStore.getState().setEngine(engine.id)
         useStore.getState().loadSample(sample)
         useStore.getState().openRun(trace, joinSource(sample.code, sample.call ?? ''))
       })
@@ -72,12 +71,14 @@ describe('view layout renders every sample', () => {
   }
 })
 
-describe('view layout states', () => {
+describe.each(engines)('view layout states: $label', (engine) => {
+  beforeEach(() => act(() => useStore.getState().setEngine(engine.id)))
+
   it('draws structure cards for preset views', () => {
-    const sample = samples.find((s) => s.name === 'Binary search')!
+    const sample = sampleOf(engine, 'binary-search')
     act(() => {
       useStore.getState().loadSample(sample)
-      useStore.getState().openRun(traceOf(sample), sample.code)
+      useStore.getState().openRun(traceOf(engine, sample), sample.code)
       useStore.getState().go(10)
     })
     show()
@@ -91,9 +92,9 @@ describe('view layout states', () => {
   })
 
   it('asks a question in guess mode', () => {
-    const sample = samples.find((s) => s.name.startsWith('Sliding window'))!
+    const sample = sampleOf(engine, 'sliding-window')
     act(() => {
-      useStore.getState().openRun(traceOf(sample), sample.code)
+      useStore.getState().openRun(traceOf(engine, sample), sample.code)
       useStore.getState().toggleGuess()
     })
     show()
@@ -112,6 +113,6 @@ describe('view layout states', () => {
       ),
     )
     expect(text()).toContain('Visualize')
-    expect(text()).toContain('build_list([1, 2, 3])')
+    for (const helper of engine.copy.helpers) expect(text()).toContain(helper)
   })
 })

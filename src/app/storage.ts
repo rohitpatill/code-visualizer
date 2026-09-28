@@ -1,10 +1,12 @@
 // localStorage can throw (private mode, quota, disabled storage); the app must keep working without it.
 
 export const KEYS = {
-  code: 'stepthrough-code',
-  call: 'stepthrough-call',
-  views: 'stepthrough-views',
+  language: 'stepthrough-language',
+  draft: (engineId: string) => `stepthrough-draft-${engineId}`,
   seenGuide: 'stepthrough-seen-guide',
+  legacyCode: 'stepthrough-code',
+  legacyCall: 'stepthrough-call',
+  legacyViews: 'stepthrough-views',
 } as const
 
 export function readText(key: string): string | null {
