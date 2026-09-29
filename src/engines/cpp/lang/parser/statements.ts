@@ -1,5 +1,5 @@
 import type { Expr, Stmt, SwitchCase, VarDecl } from '../ast'
-import { CompileError } from '../lexer'
+import { CompileError } from '../../../shared/syntax'
 import type { CType } from '../types'
 import type { Cursor } from './cursor'
 import { parseArgs, parseComma, parseExpr, parseInitList } from './expressions'

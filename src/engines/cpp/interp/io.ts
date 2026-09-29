@@ -1,3 +1,4 @@
+import { Input } from '../../shared/input'
 import type { Output } from '../../shared/recorder'
 import type { CType } from '../lang/types'
 import { CppError } from './errors'
@@ -29,12 +30,14 @@ export class Io {
   boolalpha = false
   width = 0
   failed = false
-  private pos = 0
+  private readonly input: Input
 
   constructor(
     readonly out: Output,
-    private readonly input: string,
-  ) {}
+    stdin: string,
+  ) {
+    this.input = new Input(stdin)
+  }
 
   write(text: string): void {
     const padded = this.width > text.length ? text.padStart(this.width) : text
@@ -42,39 +45,22 @@ export class Io {
     this.out.write(padded)
   }
 
-  /** The next whitespace-separated token, or null at end of input. */
   token(): string | null {
-    const rest = this.input.slice(this.pos)
-    const m = /^\s*(\S+)/.exec(rest)
-    if (!m) {
-      this.pos = this.input.length
-      this.failed = true
-      return null
-    }
-    this.pos += m[0].length
-    return m[1]!
+    return this.check(this.input.token())
   }
 
   char(): number | null {
-    const rest = this.input.slice(this.pos)
-    const m = /^\s*(\S)/.exec(rest)
-    if (!m) {
-      this.failed = true
-      return null
-    }
-    this.pos += m[0].length
-    return m[1]!.charCodeAt(0)
+    return this.check(this.input.char())
   }
 
   line(): string | null {
-    if (this.pos >= this.input.length) {
-      this.failed = true
-      return null
-    }
-    const end = this.input.indexOf('\n', this.pos)
-    const text = this.input.slice(this.pos, end === -1 ? undefined : end).replace(/\r$/, '')
-    this.pos = end === -1 ? this.input.length : end + 1
-    return text
+    return this.check(this.input.line())
+  }
+
+  /** Reading past the end puts the stream in the failed state, as in C++. */
+  private check<V>(value: V | null): V | null {
+    if (value === null) this.failed = true
+    return value
   }
 }
 

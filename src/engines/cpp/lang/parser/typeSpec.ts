@@ -1,4 +1,4 @@
-import { CompileError } from '../lexer'
+import { CompileError } from '../../../shared/syntax'
 import { type CType, NAMED_INTS, T, intFromWords } from '../types'
 import type { Cursor } from './cursor'
 

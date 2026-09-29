@@ -1,5 +1,5 @@
 import type { Capture, Expr, Param } from '../ast'
-import { CompileError } from '../lexer'
+import { CompileError } from '../../../shared/syntax'
 import type { Cursor } from './cursor'
 import { parseParams } from './params'
 import { parseBlockBody } from './statements'

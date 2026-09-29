@@ -1,5 +1,5 @@
 import type { Param } from '../ast'
-import { CompileError } from '../lexer'
+import { CompileError } from '../../../shared/syntax'
 import type { Cursor } from './cursor'
 import { parseExpr } from './expressions'
 import { parseBaseType, parseDeclarator } from './typeSpec'

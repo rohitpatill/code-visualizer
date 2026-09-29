@@ -1,6 +1,6 @@
 import type { RawTrace, TraceError } from '../../../trace/types'
 import { StepLimit } from '../../shared/recorder'
-import { CompileError } from '../lang/lexer'
+import { CompileError } from '../../shared/syntax'
 import { parse } from '../lang/parser'
 import preludeSource from '../prelude.cpp?raw'
 import { callFunction } from './calls'

@@ -1,5 +1,5 @@
 import type { ClassDef, FuncDef, MemberInit, Param, Program, Stmt } from '../ast'
-import { CompileError } from '../lexer'
+import { CompileError } from '../../../shared/syntax'
 import type { CType } from '../types'
 import type { Cursor } from './cursor'
 import { parseArgs } from './expressions'

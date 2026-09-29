@@ -1,20 +1,10 @@
-export class CompileError extends Error {
-  constructor(
-    message: string,
-    readonly line: number | null,
-  ) {
-    super(message)
-  }
-}
+import { type BaseToken, CompileError } from '../../shared/syntax'
 
 export type NumLit =
   | { float: false; value: bigint; unsigned: boolean; longs: number }
   | { float: true; value: number; single: boolean }
 
-export interface Token {
-  kind: 'ident' | 'number' | 'string' | 'char' | 'punct' | 'eof'
-  text: string
-  line: number
+export interface Token extends BaseToken {
   num?: NumLit
   /** Decoded text of a string or char literal. */
   str?: string
