@@ -1,4 +1,4 @@
-# Code Visualizer: session context and handoff
+# Stepthrough: session context and handoff
 
 This file carries everything from the build sessions that is not obvious from
 the code, so work can continue after the conversation is compacted or a new
@@ -7,7 +7,7 @@ reference (read it first, it is kept in sync with the code). This file is the
 story: who we work for, how they like to work, what was decided and why, what
 state things are in, and what comes next.
 
-Last updated: 2026-09-29, after closing the Java gaps (streams, enum collections, subclassed collections, local types).
+Last updated: 2026-09-30, after renaming the app back to Stepthrough.
 
 ## 1. The person and how to work with him
 
@@ -152,6 +152,9 @@ Session work, by commit:
    - `6ee9988` Classes extending the collections and Random (LRU cache via
      removeEldestEntry, double-brace initialization).
    - `f70ff00` Classes, records, enums and interfaces declared in methods.
+8. **Name back to Stepthrough** (he preferred the old name): header, tab
+   title and docs, with a Space Grotesk wordmark. Repo and folder keep the
+   code-visualizer name.
 
 ## 4. Decisions and the reasoning behind them
 

@@ -1,4 +1,4 @@
-# Code Visualizer
+# Stepthrough
 
 A local, step-by-step code visualizer (Python, JavaScript, Java and C++) for
 learning programming and DSA.
@@ -88,10 +88,10 @@ Serves at http://localhost:5173. `.claude/launch.json` defines the
 
 Git: `main` tracks https://github.com/rohitpatill/code-visualizer.
 
-Naming: the product is **Code Visualizer** (header, tab title, docs). The old
-name Stepthrough survives only internally: the `stepthrough-*` localStorage
-keys (renaming them would erase saved drafts unless migrated), the package
-name, the launch config name and the Python helper module name.
+Naming: the product is **Stepthrough** (header, tab title, docs). It was
+briefly called Code Visualizer; that name survives only in the GitHub repo and
+folder name. The header wordmark uses Space Grotesk 600 (`--brand`); the rest
+of the UI stays IBM Plex.
 
 ## Why it exists
 
@@ -488,7 +488,8 @@ src/
   **Amber `#F5B84A` execution** (next line, active frame, pointers, current
   node). **Teal `#56C7B8` heap and references.** **Coral `#FF7B6E` changed or
   error.** **Violet `#A99BFF` functions, classes, nodes.**
-- IBM Plex Sans for UI, IBM Plex Mono for code and values.
+- IBM Plex Sans for UI, IBM Plex Mono for code and values, Space Grotesk for
+  the wordmark only.
 - Signature: the stack as a staircase, echoed by the timeline depth graph.
 - Tuples dashed (immutable), sets are pills without index.
 - Motion only in response to steps; `prefers-reduced-motion` disables it.

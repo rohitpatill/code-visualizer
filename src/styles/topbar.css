@@ -10,9 +10,10 @@
 
 .brand {
   margin: 0;
-  font-size: 18px;
+  font-family: var(--brand);
+  font-size: 20px;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 .brand::before {

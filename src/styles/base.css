@@ -12,6 +12,7 @@
   --string: #b5d98f;
   --sans: 'IBM Plex Sans', system-ui, sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --brand: 'Space Grotesk', var(--sans);
   color-scheme: dark;
 }
 
