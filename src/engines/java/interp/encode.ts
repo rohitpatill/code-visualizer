@@ -51,6 +51,7 @@ export class Encoder {
     if (v instanceof ClassRef) return prim('other', `class ${v.name}`)
     if (v instanceof NativeObj) return prim('other', NATIVE_LABELS[v.kind])
     if (v instanceof IterVal) return prim('other', 'iterator')
+    if (v instanceof JObject && v.constant) return prim('other', v.constant.name)
     return this.ref(v, heap)
   }
 

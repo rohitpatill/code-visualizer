@@ -10,6 +10,7 @@ import { callLibMethod, callLibStatic } from './lib'
 import { classRefMethod, objectMethod } from './lib/objects'
 import { instanceOfType, isKnownType } from './lib/types'
 import type { Frame, Machine } from './machine'
+import { enumStatic } from './enums'
 import { ensureInit } from './objects'
 import { VOID, isRawPrim, refR } from './ops'
 import { Scope } from './scope'
@@ -183,7 +184,11 @@ export function callObjectMethod(m: Machine, obj: JObject, name: string, args: r
 export function callStatic(m: Machine, cls: ClassInfo, name: string, args: readonly R[]): R {
   ensureInit(m, cls)
   const found = methodsNamed(cls, name).filter((x) => x.decl.isStatic)
-  if (!found.length) throw new CompileStop(`cannot find symbol: static method ${name}(...) in class ${cls.name}`)
+  if (!found.length) {
+    const builtin = cls.decl.kind === 'enum' ? enumStatic(cls, name, args) : null
+    if (builtin) return builtin
+    throw new CompileStop(`cannot find symbol: static method ${name}(...) in class ${cls.name}`)
+  }
   return invokeMethod(m, pickMethod(m, found, args, `method ${name}`), null, args)
 }
 
@@ -206,7 +211,11 @@ function receiverFor(m: Machine, cls: ClassInfo): JObject | null {
 export function callUnqualified(m: Machine, name: string, args: readonly R[]): R {
   for (let cls = m.frame.cls; cls; cls = cls.outer) {
     const found = methodsNamed(cls, name)
-    if (!found.length) continue
+    if (!found.length) {
+      const builtin = cls.decl.kind === 'enum' ? enumStatic(cls, name, args) : null
+      if (builtin) return builtin
+      continue
+    }
     const method = pickMethod(m, found, args, `method ${name}`)
     if (method.decl.isStatic) return invokeMethod(m, method, null, args)
     const self = receiverFor(m, cls)
@@ -214,7 +223,7 @@ export function callUnqualified(m: Machine, name: string, args: readonly R[]): R
     return callObjectMethod(m, self, name, args)
   }
   const self = m.frame.self
-  if (self && OBJECT_METHODS.has(name)) return callObjectMethod(m, self, name, args)
+  if (self && (OBJECT_METHODS.has(name) || self.constant)) return callObjectMethod(m, self, name, args)
   for (const cls of m.classes.all) {
     if (!cls.decl.prelude) continue
     const found = methodsNamed(cls, name).filter((x) => x.decl.isStatic)

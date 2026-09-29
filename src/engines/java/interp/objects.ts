@@ -2,6 +2,7 @@ import type { Initializer, MethodDecl } from '../lang/ast'
 import { type ClassInfo, instanceFields, isSubtype } from './classes'
 import { bindArgs, pickMethod, runFrame } from './calls'
 import { convert, zeroOf } from './convert'
+import { createConstants } from './enums'
 import { CompileStop } from './errors'
 import { evalExpr, initialValue } from './eval'
 import { execBody, execList } from './exec'
@@ -30,17 +31,21 @@ export function ensureInit(m: Machine, cls: ClassInfo): void {
   cls.init = 'running'
   if (cls.superclass) ensureInit(m, cls.superclass)
   const inits = cls.decl.staticInit.filter((i) => i.k === 'block' || i.field.init)
-  if (inits.length) {
+  const constants = cls.decl.constants
+  if (inits.length || constants.length) {
     const lineOf = (i: Initializer) => (i.k === 'block' ? i.line : i.field.line)
-    const frame = m.pushFrame({ name: `${cls.name}.<clinit>`, line: lineOf(inits[0]!), scope: new Scope(null), self: null, cls, silent: cls.decl.prelude, showThis: false })
+    const first = constants[0]?.line ?? lineOf(inits[0]!)
+    const last = inits.length ? lineOf(inits[inits.length - 1]!) : constants[constants.length - 1]!.line
+    const frame = m.pushFrame({ name: `${cls.name}.<clinit>`, line: first, scope: new Scope(null), self: null, cls, silent: cls.decl.prelude, showThis: false })
     const run = () => {
+      createConstants(m, cls)
       for (const init of inits) {
         if (init.k === 'field') m.step(init.field.line)
         runInitializers(m, [init], (name) => cls.statics.get(name)!)
       }
       return undefined
     }
-    runFrame(m, frame, run, { t: 'void' }, lineOf(inits[inits.length - 1]!))
+    runFrame(m, frame, run, { t: 'void' }, last)
   }
   cls.init = 'done'
 }
@@ -56,6 +61,7 @@ function enclosingInstance(m: Machine, cls: ClassInfo): JObject | null {
 /** `new C(args)`: fields start at zero, then the constructor chain runs. */
 export function instantiate(m: Machine, cls: ClassInfo, args: readonly R[], outer: JObject | null | undefined, env: Scope | null): JObject {
   if (cls.decl.kind === 'interface' || (cls.decl.isAbstract && !cls.decl.anonymous)) throw new CompileStop(`${cls.name} is abstract; cannot be instantiated`)
+  if (cls.decl.kind === 'enum') throw new CompileStop('enum classes may not be instantiated')
   ensureInit(m, cls)
   const obj = new JObject(cls, outer === undefined ? enclosingInstance(m, cls) : outer, env)
   for (const f of instanceFields(cls)) obj.fields.set(f.name, new Slot(f.type, zeroOf(f.type)))

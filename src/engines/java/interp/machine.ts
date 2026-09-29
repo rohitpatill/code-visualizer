@@ -154,7 +154,7 @@ export class Machine {
   private staticFields(): [string, Slot][] {
     const fields = this.classes.all
       .filter((c) => !c.decl.prelude)
-      .flatMap((c) => [...c.statics].map(([name, slot]) => ({ cls: c.name, name, slot })))
+      .flatMap((c) => [...c.statics].filter(([name]) => !c.decl.constants.some((k) => k.name === name)).map(([name, slot]) => ({ cls: c.name, name, slot })))
     const counts = new Map<string, number>()
     for (const f of fields) counts.set(f.name, (counts.get(f.name) ?? 0) + 1)
     return fields.map((f): [string, Slot] => [counts.get(f.name)! > 1 ? `${f.cls}.${f.name}` : f.name, f.slot])

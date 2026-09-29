@@ -117,9 +117,15 @@ export interface FieldDecl extends At {
 /** Field initializers and initializer blocks, run in source order. */
 export type Initializer = { k: 'field'; field: FieldDecl } | { k: 'block'; body: Stmt[]; line: number }
 
+/** One constant of an enum, with its constructor arguments. */
+export interface EnumConstant extends At {
+  name: string
+  args: Expr[]
+}
+
 export interface ClassDecl extends At {
   name: string
-  kind: 'class' | 'interface' | 'record'
+  kind: 'class' | 'interface' | 'record' | 'enum'
   superName: string | null
   interfaces: string[]
   /** Top-level, `static` nested, or implicitly static (interfaces, records). Inner classes see their outer instance. */
@@ -135,6 +141,8 @@ export interface ClassDecl extends At {
   components: Param[]
   /** A record's compact canonical constructor body. */
   compactCtor: Stmt[] | null
+  /** An enum's constants, in declaration order. */
+  constants: EnumConstant[]
   anonymous: boolean
   /** Built-in helper code: runs without recording steps. */
   prelude: boolean

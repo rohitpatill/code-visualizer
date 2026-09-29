@@ -119,4 +119,32 @@ describe('Java classes, records and lambdas', () => {
     static int apply(BinaryOperator<Integer> op, int a, int b) { return op.apply(a, b); }
 `))).toBe('49 5 true false HI! 10\n[x]\n4;1;3;\n[40, 10, 30]\na1 b2 \n42 9 12\n2\n')
   })
+
+  it('enums with fields, methods and switch', () => {
+    expect(output(main(`
+        for (Planet p : Planet.values()) System.out.printf("%s %d %.1f %s%n", p, p.ordinal(), p.gravity(), p.name().toLowerCase());
+        Dir d = Dir.valueOf("LEFT");
+        System.out.println(d + " " + d.turn() + " " + d.turn().turn() + " " + (d == Dir.LEFT) + " " + d.compareTo(Dir.UP) + " " + Dir.values().length);
+        switch (d) {
+            case UP -> System.out.println("up");
+            case LEFT, RIGHT -> System.out.println("sideways");
+            default -> System.out.println("down");
+        }
+        int score = switch (Dir.DOWN) { case UP -> 1; case DOWN -> 2; default -> 0; };
+        Map<Dir, Integer> moves = new TreeMap<>(); moves.put(Dir.RIGHT, 1); moves.put(Dir.UP, 2); moves.put(Dir.LEFT, 3);
+        List<Dir> sorted = new ArrayList<>(List.of(Dir.RIGHT, Dir.UP, Dir.DOWN)); Collections.sort(sorted);
+        System.out.println(score + " " + moves + " " + sorted + " " + Dir.UP.getDeclaringClass().getSimpleName());
+        try { Dir.valueOf("NORTH"); } catch (IllegalArgumentException ex) { System.out.println(ex.getMessage()); }`,
+      `    enum Dir {
+        UP, RIGHT, DOWN, LEFT;
+        Dir turn() { return values()[(ordinal() + 1) % values().length]; }
+    }
+    enum Planet {
+        MERCURY(3.7), EARTH(9.8), JUPITER(24.8);
+        private final double g;
+        Planet(double g) { this.g = g; }
+        double gravity() { return g; }
+    }
+`))).toBe('MERCURY 0 3.7 mercury\nEARTH 1 9.8 earth\nJUPITER 2 24.8 jupiter\nLEFT UP RIGHT true 3 4\nsideways\n2 {UP=2, RIGHT=1, LEFT=3} [UP, RIGHT, DOWN] Dir\nNo enum constant Main.Dir.NORTH\n')
+  })
 })

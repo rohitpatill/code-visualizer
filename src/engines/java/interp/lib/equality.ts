@@ -155,6 +155,7 @@ export function naturalCompare(m: Machine, a: JVal, b: JVal): number {
   if (a === null || b === null) throw new Fault('NullPointerException', 'Cannot compare a null value')
   if (a instanceof JStr && b instanceof JStr) return compareStrings(a.s, b.s)
   if (a instanceof Boxed && b instanceof Boxed && a.prim === b.prim) return compareBoxes(a, b)
+  if (a instanceof JObject && a.constant && b instanceof JObject && b.constant) return a.constant.ordinal - b.constant.ordinal
   if (a instanceof JObject && userMethod(a, 'compareTo', 1)) return toPrim(callObjectMethod(m, a, 'compareTo', [refR(b)]), 'int') as number
   throw new Fault('ClassCastException', `class ${runtimeClassName(a)} cannot be cast to class java.lang.Comparable`)
 }

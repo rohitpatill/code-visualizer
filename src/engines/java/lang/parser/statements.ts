@@ -9,7 +9,7 @@ import { type Cursor, KEYWORDS, arrayDims, parseType, skipAnnotations } from './
 const STATEMENT_EXPRESSIONS = new Set(['assign', 'postfix', 'call', 'new'])
 const DECLARATOR_FOLLOW = new Set(['=', ';', ',', '[', ':'])
 const UNSUPPORTED: Readonly<Record<string, string>> = {
-  enum: 'enums are not supported yet',
+  enum: 'enums declared inside a method are not supported; declare the enum next to your classes',
   synchronized: 'synchronized blocks are not supported',
   class: 'classes declared inside a method are not supported; declare the class next to your other classes',
   interface: 'interfaces declared inside a method are not supported',

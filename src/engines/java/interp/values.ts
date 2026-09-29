@@ -69,6 +69,8 @@ export class ElementSlot extends Slot {
 /** An instance of a user or prelude class. Inner and anonymous classes keep their enclosing instance and captured locals. */
 export class JObject {
   readonly fields = new Map<string, Slot>()
+  /** Set on an enum's constants. */
+  constant: { name: string; ordinal: number } | null = null
 
   constructor(
     readonly cls: ClassInfo,

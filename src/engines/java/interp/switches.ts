@@ -6,7 +6,7 @@ import { type Completion, NO_LINE, execList, withScope } from './exec'
 import type { Machine } from './machine'
 import { describeNull } from './names'
 import { Scope } from './scope'
-import { JStr, type R } from './values'
+import { JObject, JStr, type R } from './values'
 
 // switch statements and switch expressions, colon or arrow style.
 
@@ -24,9 +24,15 @@ function caseMatches(value: R, label: R): boolean {
   return Number(x.v) === Number(y.v)
 }
 
+/** `case RED:` names an enum constant of the switch value's own enum, unqualified. */
+const sameConstant = (value: R, label: Expr) => label.k === 'name' && value.value instanceof JObject && value.value.constant?.name === label.name
+
 function matchCase(m: Machine, value: R, cases: readonly SwitchCase[]): number {
+  const isEnum = value.value instanceof JObject && value.value.constant !== null
   for (let i = 0; i < cases.length; i++) {
-    for (const label of cases[i]!.labels) if (caseMatches(value, evalExpr(m, label))) return i
+    for (const label of cases[i]!.labels) {
+      if (isEnum ? sameConstant(value, label) : caseMatches(value, evalExpr(m, label))) return i
+    }
   }
   return cases.findIndex((c) => c.isDefault)
 }

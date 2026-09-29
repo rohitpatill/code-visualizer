@@ -1,7 +1,7 @@
 import { CompileError } from '../../../shared/syntax'
 import type { ClassDecl, FieldDecl, MethodDecl, Param } from '../ast'
 import { type JType, T, arrayOf } from '../types'
-import { parseArrayInit, parseExpr } from './expressions'
+import { parseArgs, parseArrayInit, parseExpr } from './expressions'
 import { parseBlock } from './statements'
 import { type Cursor, arrayDims, parseType, qualifiedName, skipAnnotations, skipTypeParams } from './types'
 
@@ -32,7 +32,8 @@ function modifiers(c: Cursor): Modifiers {
 function emptyClass(name: string, line: number, prelude: boolean): ClassDecl {
   return {
     name, kind: 'class', superName: null, interfaces: [], isStatic: true, isAbstract: false, fields: [], methods: [], ctors: [],
-    staticInit: [], instanceInit: [], nested: [], components: [], compactCtor: null, anonymous: false, prelude, line, endLine: line,
+    staticInit: [], instanceInit: [], nested: [], components: [], compactCtor: null, constants: [], anonymous: false, prelude, line,
+    endLine: line,
   }
 }
 
@@ -130,8 +131,23 @@ function parseMember(c: Cursor, cls: ClassDecl): void {
   else parseFields(c, type, name, nameLine, isStatic, cls)
 }
 
+/** `RED, GREEN("g"), BLUE;` at the start of an enum body. */
+function parseEnumConstants(c: Cursor, cls: ClassDecl): void {
+  while (!c.at(';') && !c.at('}')) {
+    skipAnnotations(c)
+    const line = c.line
+    const name = c.ident('an enum constant')
+    const args = c.at('(') ? parseArgs(c) : []
+    if (c.at('{')) throw new CompileError('enum constants with their own class bodies are not supported yet', line)
+    cls.constants.push({ name, args, line })
+    if (!c.accept(',')) break
+  }
+  c.accept(';')
+}
+
 function parseClassBody(c: Cursor, cls: ClassDecl): void {
   c.expect('{')
+  if (cls.kind === 'enum') parseEnumConstants(c, cls)
   while (!c.at('}')) {
     if (c.done) throw c.error("reached end of file while parsing, expected '}'")
     if (!c.accept(';')) parseMember(c, cls)
@@ -141,7 +157,6 @@ function parseClassBody(c: Cursor, cls: ClassDecl): void {
 
 function parseClass(c: Cursor, mods: Modifiers, prelude: boolean, outer: ClassDecl | null): ClassDecl {
   const word = c.next().text
-  if (word === 'enum') throw new CompileError('enums are not supported yet', c.line)
   const line = c.line
   const cls = emptyClass(c.ident('a class name'), line, prelude)
   cls.kind = word as ClassDecl['kind']

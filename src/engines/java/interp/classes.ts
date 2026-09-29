@@ -24,8 +24,11 @@ export interface ClassInfo {
 }
 
 function info(decl: ClassDecl, outer: ClassInfo | null): ClassInfo {
-  const statics = new Map(decl.fields.filter((f) => f.isStatic).map((f) => [f.name, new Slot(f.type, zeroOf(f.type))]))
-  const supertypes = [...(decl.superName ? [decl.superName] : []), ...decl.interfaces]
+  const statics = new Map([
+    ...decl.constants.map((k): [string, Slot] => [k.name, new Slot({ t: 'ref', name: decl.name, args: [] }, null)]),
+    ...decl.fields.filter((f) => f.isStatic).map((f): [string, Slot] => [f.name, new Slot(f.type, zeroOf(f.type))]),
+  ])
+  const supertypes = [...(decl.superName ? [decl.superName] : []), ...decl.interfaces, ...(decl.kind === 'enum' ? ['Enum', 'Comparable'] : [])]
   return {
     decl, name: decl.name, outer, superclass: null, interfaces: [], supertypes, statics, nested: new Map(), init: 'pending',
     methodCache: new Map(), fieldList: null,

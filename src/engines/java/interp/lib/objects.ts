@@ -1,3 +1,4 @@
+import { enumMethod } from '../enums'
 import type { Machine } from '../machine'
 import { boolR, intR, refR, strR } from '../ops'
 import { valueText } from '../text'
@@ -8,6 +9,8 @@ import { javaEquals, javaHash } from './equality'
 
 /** java.lang.Object's methods, record accessors and the Throwable methods the prelude leaves to the runtime. */
 export function objectMethod(m: Machine, obj: JObject, name: string, args: readonly R[]): R {
+  const constant = enumMethod(obj, name, args)
+  if (constant) return constant
   const record = obj.cls.decl.kind === 'record'
   switch (name) {
     case 'equals':
