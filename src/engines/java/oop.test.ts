@@ -147,4 +147,45 @@ describe('Java classes, records and lambdas', () => {
     }
 `))).toBe('MERCURY 0 3.7 mercury\nEARTH 1 9.8 earth\nJUPITER 2 24.8 jupiter\nLEFT UP RIGHT true 3 4\nsideways\n2 {UP=2, RIGHT=1, LEFT=3} [UP, RIGHT, DOWN] Dir\nNo enum constant Main.Dir.NORTH\n')
   })
+
+  it('enum constants with bodies, EnumMap and EnumSet', () => {
+    expect(output(main(`
+        for (Op op : Op.values()) System.out.println(op + " " + op.symbol + " " + op.apply(6, 3) + " " + op.getDeclaringClass().getSimpleName() + " " + (op instanceof Op));
+        System.out.println(Op.valueOf("MINUS").apply(1, 2) + " " + Op.TIMES.describe() + " " + Op.PLUS.compareTo(Op.TIMES));
+        EnumMap<Day, Integer> hours = new EnumMap<>(Day.class);
+        hours.put(Day.FRI, 4); hours.put(Day.MON, 8); hours.merge(Day.MON, 1, Integer::sum); hours.put(Day.WED, 6);
+        System.out.println(hours + " " + hours.size() + " " + hours.containsKey(Day.TUE) + " " + hours.get(Day.SUN));
+        for (Map.Entry<Day, Integer> e : hours.entrySet()) System.out.print(e.getKey().ordinal() + "=" + e.getValue() + " ");
+        System.out.println();
+        hours.remove(Day.MON);
+        Map<Day, Integer> copy = new EnumMap<>(hours);
+        System.out.println(copy + " " + copy.equals(hours) + " " + new HashMap<>(copy).equals(copy));
+        EnumSet<Day> weekend = EnumSet.of(Day.SUN, Day.SAT);
+        EnumSet<Day> week = EnumSet.complementOf(weekend);
+        EnumSet<Day> mid = EnumSet.range(Day.TUE, Day.THU);
+        System.out.println(weekend + " " + week + " " + mid + " " + EnumSet.allOf(Day.class).size() + " " + EnumSet.noneOf(Day.class));
+        week.removeAll(mid); week.add(Day.MON);
+        System.out.println(week + " " + week.contains(Day.FRI) + " " + EnumSet.copyOf(List.of(Day.FRI, Day.MON)));
+        try { hours.put(null, 1); } catch (NullPointerException ex) { System.out.println("null key"); }
+        try { EnumSet.copyOf(new ArrayList<Day>()); } catch (IllegalArgumentException ex) { System.out.println(ex.getMessage()); }
+        Map<Day, List<String>> plan = new EnumMap<>(Day.class);
+        plan.computeIfAbsent(Day.THU, k -> new ArrayList<>()).add("gym");
+        plan.computeIfAbsent(Day.MON, k -> new ArrayList<>()).add("work");
+        plan.computeIfAbsent(Day.THU, k -> new ArrayList<>()).add("read");
+        System.out.println(plan + " " + Day.class.getSimpleName());`,
+      `    enum Day { MON, TUE, WED, THU, FRI, SAT, SUN }
+    enum Op {
+        PLUS("+") { int apply(int a, int b) { return a + b; } },
+        MINUS("-") { int apply(int a, int b) { return a - b; } },
+        TIMES("*") {
+            int apply(int a, int b) { return a * b; }
+            @Override String describe() { return "times, not " + super.describe(); }
+        };
+        final String symbol;
+        Op(String symbol) { this.symbol = symbol; }
+        abstract int apply(int a, int b);
+        String describe() { return "op " + symbol; }
+    }
+`))).toBe('PLUS + 9 Op true\nMINUS - 3 Op true\nTIMES * 18 Op true\n-1 times, not op * -2\n{MON=9, WED=6, FRI=4} 3 false null\n0=9 2=6 4=4 \n{WED=6, FRI=4} true true\n[SAT, SUN] [MON, TUE, WED, THU, FRI] [TUE, WED, THU] 7 []\n[MON, FRI] true [MON, FRI]\nnull key\nCollection is empty\n{MON=[work], THU=[gym, read]} Day\n')
+  })
 })

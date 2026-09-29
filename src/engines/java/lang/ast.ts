@@ -117,10 +117,11 @@ export interface FieldDecl extends At {
 /** Field initializers and initializer blocks, run in source order. */
 export type Initializer = { k: 'field'; field: FieldDecl } | { k: 'block'; body: Stmt[]; line: number }
 
-/** One constant of an enum, with its constructor arguments. */
+/** One constant of an enum, with its constructor arguments and, when it overrides methods, its own class body. */
 export interface EnumConstant extends At {
   name: string
   args: Expr[]
+  body: ClassDecl | null
 }
 
 export interface ClassDecl extends At {

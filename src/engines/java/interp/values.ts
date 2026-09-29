@@ -129,8 +129,8 @@ export interface Store {
   entries(m: Machine): readonly Entry[]
 }
 
-type MapKind = 'HashMap' | 'LinkedHashMap' | 'TreeMap' | 'Map'
-type SetKind = 'HashSet' | 'LinkedHashSet' | 'TreeSet' | 'Set'
+type MapKind = 'HashMap' | 'LinkedHashMap' | 'TreeMap' | 'EnumMap' | 'Map'
+type SetKind = 'HashSet' | 'LinkedHashSet' | 'TreeSet' | 'EnumSet' | 'Set'
 
 export class MapVal {
   constructor(

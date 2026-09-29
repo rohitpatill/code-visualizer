@@ -131,6 +131,14 @@ function parseMember(c: Cursor, cls: ClassDecl): void {
   else parseFields(c, type, name, nameLine, isStatic, cls)
 }
 
+/** `PLUS { int apply(int a, int b) { ... } }`: a constant's own subclass of its enum, named `Op.PLUS` in frames. */
+function parseConstantBody(c: Cursor, owner: ClassDecl, name: string, line: number): ClassDecl {
+  const body = parseAnonymousClass(c, owner.name, line)
+  body.name = `${owner.name}.${name}`
+  body.isStatic = true
+  return body
+}
+
 /** `RED, GREEN("g"), BLUE;` at the start of an enum body. */
 function parseEnumConstants(c: Cursor, cls: ClassDecl): void {
   while (!c.at(';') && !c.at('}')) {
@@ -138,8 +146,8 @@ function parseEnumConstants(c: Cursor, cls: ClassDecl): void {
     const line = c.line
     const name = c.ident('an enum constant')
     const args = c.at('(') ? parseArgs(c) : []
-    if (c.at('{')) throw new CompileError('enum constants with their own class bodies are not supported yet', line)
-    cls.constants.push({ name, args, line })
+    const body = c.at('{') ? parseConstantBody(c, cls, name, line) : null
+    cls.constants.push({ name, args, body, line })
     if (!c.accept(',')) break
   }
   c.accept(';')

@@ -108,6 +108,7 @@ export function checkedIndex(m: Machine, target: R, index: R, objExpr: Expr, ver
 export function readField(m: Machine, target: R, name: string, objExpr: Expr): R {
   const v = target.value
   if (v instanceof ClassRef) {
+    if (name === 'class') return refR(v)
     if (v.cls) {
       const nested = v.cls.nested.get(name)
       if (nested) return refR(new ClassRef(nested.name, nested))

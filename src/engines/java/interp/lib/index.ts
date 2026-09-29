@@ -8,6 +8,7 @@ import {
 import { element, noMethod } from './common'
 import { builtinClass } from './types'
 import { javaEquals, javaHash } from './equality'
+import { constructEnumMap, enumSetStatic } from './enumCollections'
 import { javaFormat } from './format'
 import { comparatorStatic, fnMethod } from './functional'
 import { constructHeap, heapMethod } from './heaps'
@@ -29,7 +30,7 @@ const UTILITIES = new Set(['Arrays', 'Collections', 'List', 'Set', 'Map'])
 
 /** Built-in classes whose static members a program may name, as in `Math.max` or `Integer.MAX_VALUE`. */
 export const isLibClass = (name: string): boolean =>
-  WRAPPERS.has(name) || SYSTEM.has(name) || UTILITIES.has(name) || name === 'String' || name === 'Comparator'
+  WRAPPERS.has(name) || SYSTEM.has(name) || UTILITIES.has(name) || name === 'String' || name === 'Comparator' || name === 'EnumSet'
 
 export function libStaticField(m: Machine, cls: string, name: string): R {
   if (cls === 'System' && (name === 'out' || name === 'err')) return refR(systemOut)
@@ -46,13 +47,14 @@ export function callLibStatic(m: Machine, cls: string, name: string, args: reado
   if (UTILITIES.has(cls)) return utilityStatic(m, cls, name, args)
   if (cls === 'String') return stringStatic(m, name, args, (format, rest) => javaFormat(m, format, rest))
   if (cls === 'Comparator') return comparatorStatic(name, args)
+  if (cls === 'EnumSet') return enumSetStatic(m, name, args)
   throw noMethod(cls, name)
 }
 
 const LISTS = { ArrayList: 'ArrayList', LinkedList: 'LinkedList', ArrayDeque: 'ArrayDeque', Stack: 'Stack', Vector: 'ArrayList' } as const
 const MAPS = new Set(['HashMap', 'LinkedHashMap', 'TreeMap'] as const)
 const SETS = new Set(['HashSet', 'LinkedHashSet', 'TreeSet'] as const)
-const OTHER_CLASSES = new Set(['PriorityQueue', 'StringBuilder', 'StringBuffer', 'Random', 'Scanner', 'Thread'])
+const OTHER_CLASSES = new Set(['EnumMap', 'PriorityQueue', 'StringBuilder', 'StringBuffer', 'Random', 'Scanner', 'Thread'])
 
 /** Built-in classes a program can instantiate but not extend here, as in `new LinkedHashMap<>() { ... }`. */
 export const isLibClassToExtend = (name: string): boolean =>
@@ -63,6 +65,7 @@ export function constructLib(m: Machine, type: RefType, args: readonly R[]): R {
   const name = type.name
   if (name in LISTS) return constructList(m, LISTS[name as keyof typeof LISTS], type.args, args)
   if (name === 'PriorityQueue') return constructHeap(m, type.args, args)
+  if (name === 'EnumMap') return constructEnumMap(m, type.args, args)
   if (MAPS.has(name as 'HashMap')) return constructMap(m, name as 'HashMap', type.args, args)
   if (SETS.has(name as 'HashSet')) return constructSet(m, name as 'HashSet', type.args, args)
   if (name === 'StringBuilder' || name === 'StringBuffer') return newBuilder(m, args)

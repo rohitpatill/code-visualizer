@@ -4,7 +4,7 @@ import { zeroOf } from './convert'
 import { Fault } from './errors'
 import { evalExpr } from './eval'
 import type { Machine } from './machine'
-import { construct } from './objects'
+import { construct, ensureInit } from './objects'
 import { intR, refR, strR } from './ops'
 import { ClassRef, JArray, JObject, JStr, type R, Slot } from './values'
 
@@ -13,19 +13,33 @@ function binaryName(cls: ClassInfo): string {
   return cls.outer ? `${binaryName(cls.outer)}.${cls.name}` : cls.name
 }
 
-/** Makes an enum's constants in order, each through its constructor, as the enum's static initializer does. */
+/**
+ * Makes an enum's constants in order, each through its constructor, as the
+ * enum's static initializer does. A constant with a body is an instance of
+ * its own subclass of the enum.
+ */
 export function createConstants(m: Machine, cls: ClassInfo): void {
   cls.decl.constants.forEach((k, ordinal) => {
     m.step(k.line)
-    const obj = new JObject(cls, null, null)
+    const own = k.body ? m.classes.anonymousClass(k.body, cls) : cls
+    const obj = new JObject(own, null, null)
     obj.constant = { name: k.name, ordinal }
-    for (const f of instanceFields(cls)) obj.fields.set(f.name, new Slot(f.type, zeroOf(f.type)))
-    construct(m, cls, obj, k.args.map((a) => evalExpr(m, a)))
+    for (const f of instanceFields(own)) obj.fields.set(f.name, new Slot(f.type, zeroOf(f.type)))
+    construct(m, own, obj, k.args.map((a) => evalExpr(m, a)))
     cls.statics.get(k.name)!.value = obj
   })
 }
 
-const constantsOf = (cls: ClassInfo) => cls.decl.constants.map((k) => cls.statics.get(k.name)!.value)
+const constantsOf = (cls: ClassInfo) => cls.decl.constants.map((k) => cls.statics.get(k.name)!.value as JObject)
+
+/** The enum a constant belongs to, even when the constant has a body of its own. */
+export const enumOf = (obj: JObject): ClassInfo => (obj.cls.decl.kind === 'enum' ? obj.cls : obj.cls.superclass!)
+
+/** An enum's constants in ordinal order, initializing the enum first if needed. */
+export function enumConstants(m: Machine, cls: ClassInfo): JObject[] {
+  ensureInit(m, cls)
+  return constantsOf(cls)
+}
 
 /** The static values() and valueOf(String) every enum has. */
 export function enumStatic(cls: ClassInfo, name: string, args: readonly R[]): R | null {
@@ -34,7 +48,7 @@ export function enumStatic(cls: ClassInfo, name: string, args: readonly R[]): R 
   if (name !== 'valueOf' || args.length !== 1) return null
   const text = args[0]!.value
   if (!(text instanceof JStr)) throw new Fault('NullPointerException', 'Name is null')
-  const found = constantsOf(cls).find((v) => (v as JObject).constant!.name === text.s)
+  const found = constantsOf(cls).find((v) => v.constant!.name === text.s)
   if (!found) throw new Fault('IllegalArgumentException', `No enum constant ${binaryName(cls)}.${text.s}`)
   return refR(found)
 }
@@ -54,7 +68,7 @@ export function enumMethod(obj: JObject, name: string, args: readonly R[]): R | 
       return intR(constant.ordinal - other.constant.ordinal)
     }
     case 'getDeclaringClass':
-      return refR(new ClassRef(obj.cls.name, obj.cls))
+      return refR(new ClassRef(enumOf(obj).name, enumOf(obj)))
     default:
       return null
   }
