@@ -1,10 +1,16 @@
-import type { Frame, Step, Value } from '../trace/types'
+import type { Frame, HeapObject, Step, Value } from '../trace/types'
 import { seqItems } from './common'
 import { buildGraph } from './graph'
 import { buildArray, buildGrid, buildLinkedList } from './linear'
 import { viewsFor } from './suggest'
 import { buildHeapTree, buildTree } from './trees'
 import type { BuiltStructures, Structure, StructureView, ViewName, Views } from './types'
+
+/** Bottom to top, whichever end the language pushes at. */
+function stackItems(obj: HeapObject | undefined): Value[] {
+  const items = seqItems(obj) ?? []
+  return obj && 'stackTop' in obj && obj.stackTop === 'first' ? [...items].reverse() : items
+}
 
 function buildView(view: ViewName, value: Value, step: Step): StructureView | null {
   const rootId = value.t === 'r' ? value.id : null
@@ -19,6 +25,7 @@ function buildView(view: ViewName, value: Value, step: Step): StructureView | nu
     case 'heap':
       return { view, data: buildHeapTree(obj, step.heap) }
     case 'stack':
+      return { view, data: { items: stackItems(obj) } }
     case 'queue':
       return { view, data: { items: seqItems(obj) ?? [] } }
     case 'list':

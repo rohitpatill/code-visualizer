@@ -51,6 +51,16 @@ describe('structure builders on every sample', () => {
   }
 })
 
+describe('stack view', () => {
+  it('puts the top first for deques that push at the front', () => {
+    const items = [1, 2, 3].map((n) => ({ t: 'p', k: 'int', v: String(n) }) as const)
+    const heap = new Map([['1', { kind: 'deque', type: 'ArrayDeque<Integer>', items, size: 3, stackTop: 'first' } as const]])
+    const step: Step = { line: 1, event: 'line', frames: [{ id: 1, name: 'main', line: 1, global: true, vars: [['stack', { t: 'r', id: '1' }]] }], heap, stdout: '', touched: new Set() }
+    const [stack] = buildStructures(step, { stack: 'stack' }).structures
+    expect(stack?.view === 'stack' && stack.data.items.map((v) => (v.t === 'p' ? v.v : ''))).toEqual(['3', '2', '1'])
+  })
+})
+
 describe.each(engines)('structure builders: $label', (engine) => {
   it('marks binary search pointers and the lo..hi window', () => {
     const { steps, views } = load(engine, 'binary-search')

@@ -21,7 +21,14 @@ export type Value = Prim | Ref
 export type SequenceKind = 'list' | 'tuple' | 'set' | 'deque'
 
 export type HeapObject =
-  | { kind: SequenceKind; type: string; items: Value[]; size: number }
+  | {
+      kind: SequenceKind
+      type: string
+      items: Value[]
+      size: number
+      /** Where the top is when drawn as a stack; the default is the last item. Java deques push at the front. */
+      stackTop?: 'first'
+    }
   | { kind: 'dict'; type: string; entries: [Value, Value][]; size: number }
   | { kind: 'instance'; type: string; attrs: [string, Value][] }
   | { kind: 'class'; type: string; name: string; bases: string[]; attrs: [string, Value][] }
