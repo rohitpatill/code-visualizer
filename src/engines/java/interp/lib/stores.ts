@@ -19,7 +19,8 @@ const spread = (h: number) => h ^ (h >>> 16)
  * in index order for the current table size (which grows exactly as Java's
  * does), each bucket in its own order. put appends to a bucket; merge,
  * compute and computeIfAbsent prepend, as Java's do. A resize splits each
- * bucket in two, keeping order. LinkedHashMap keeps plain insertion order.
+ * bucket in two, keeping order. LinkedHashMap keeps insertion order, or
+ * access order when made with accessOrder = true (the LRU cache pattern).
  */
 export class HashStore implements Store {
   modCount = 0
@@ -33,6 +34,7 @@ export class HashStore implements Store {
   constructor(
     private readonly linked: boolean,
     initialCapacity?: number,
+    private readonly accessOrder = false,
   ) {
     this.threshold = initialCapacity === undefined ? 0 : tableSizeFor(Math.max(initialCapacity, 1))
   }
@@ -63,6 +65,7 @@ export class HashStore implements Store {
       const found = bucket![at]!
       const before = { ...found }
       found.value = value
+      this.access(found)
       return before
     }
     if (!this.capacity) this.resize()
@@ -86,6 +89,14 @@ export class HashStore implements Store {
     this.order.delete(entry!)
     this.changed()
     return entry
+  }
+
+  /** A LinkedHashMap in access order moves an entry to the end whenever it is read or written. */
+  access(entry: Entry): void {
+    if (!this.accessOrder) return
+    this.order.delete(entry)
+    this.order.add(entry)
+    this.changed()
   }
 
   clear(): void {

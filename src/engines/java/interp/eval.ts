@@ -4,7 +4,7 @@ import { callMethod, callSuper, callUnqualified } from './calls'
 import { convert, toPrim, toRef, zeroOf } from './convert'
 import { CompileStop, Fault } from './errors'
 import { evalSwitch } from './switches'
-import { constructLib } from './lib'
+import { constructLib, isLibClassToExtend } from './lib'
 import { methodRef } from './lib/functional'
 import { instanceOfType, runtimeClassName } from './lib/types'
 import type { Machine } from './machine'
@@ -83,6 +83,9 @@ function evalNew(m: Machine, e: Extract<Expr, { k: 'new' }>): R {
   const type = e.type as Extract<JType, { t: 'ref' }>
   const args = () => e.args.map((a) => evalExpr(m, a))
   if (e.body) {
+    if (!m.classes.resolve(type.name, m.frame.cls) && isLibClassToExtend(type.name)) {
+      throw new CompileStop(`extending the built-in class ${type.name} is not supported by the visualizer yet`)
+    }
     const cls = m.classes.anonymousClass(e.body, m.frame.cls)
     return refR(instantiate(m, cls, args(), m.frame.self, m.frame.scope), type)
   }

@@ -102,4 +102,34 @@ describe('Java collections', () => {
         int[] clone = a.clone(); clone[0] = 99; System.out.println(a[0] + " " + clone[0] + " " + (a == clone) + " " + Arrays.equals(a, a.clone()));
         Integer[] objs = {3, 1, 2}; Arrays.sort(objs); System.out.println(Arrays.toString(objs) + " " + Arrays.asList(objs).indexOf(2) + " " + Objects.hash(1, "a") + " " + Objects.equals(null, null));`))).toBe('[1, 2, 5, 5, 6, 9] [5, 2, 9, 1, 5, 6, 0, 0] [2, 9, 1] 4 -3\n[7, 0, 0, 7] true\n[0, 0, 0][0.0, 0.0][false, false][null, null]0\n[1, 2, 3] 1\nz [z, a, c]\n[0, 0, 5]\n[[0, 0, 0], [0, 0, 7]] 2 3\n1 99 false true\n[1, 2, 3] 1 1089 true\n')
   })
+
+  it('seeded Random, LRU order and try-with-resources', () => {
+    expect(output(main(`
+        Random rnd = new Random(42);
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 5; i++) sb.append(rnd.nextInt(100)).append(' ');
+        sb.append(rnd.nextInt()).append(' ').append(rnd.nextInt(7)).append(' ').append(rnd.nextInt(5, 10)).append(' ').append(rnd.nextBoolean()).append(' ').append(rnd.nextLong());
+        System.out.println(sb);
+        System.out.printf("%.6f%n", new Random(7).nextDouble());
+        Map<Integer, String> lru = new LinkedHashMap<>(16, 0.75f, true);
+        lru.put(1, "a"); lru.put(2, "b"); lru.put(3, "c"); lru.get(1); lru.put(2, "B"); lru.getOrDefault(3, "?");
+        System.out.println(lru + " " + lru.keySet().iterator().next());
+        try (Resource r1 = new Resource("one"); Resource r2 = new Resource("two")) {
+            System.out.println("using " + r1.name + " and " + r2.name);
+            throw new IllegalStateException("boom");
+        } catch (IllegalStateException ex) {
+            System.out.println("caught " + ex.getMessage());
+        } finally {
+            System.out.println("done");
+        }
+        try (PrintWriter out = new PrintWriter(System.out)) {
+            out.println("flushed by close");
+        }`,
+      `    static class Resource implements AutoCloseable {
+        String name;
+        Resource(String name) { this.name = name; System.out.println("open " + name); }
+        public void close() { System.out.println("close " + name); }
+    }
+`))).toBe('30 63 48 84 70 -248792245 1 8 true 1684641590762760125\n0.730699\n{1=a, 2=B, 3=c} 1\nopen one\nopen two\nusing one and two\nclose two\nclose one\ncaught boom\ndone\nflushed by close\n')
+  })
 })

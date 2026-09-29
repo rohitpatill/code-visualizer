@@ -1,5 +1,6 @@
 import type { CatchClause, Stmt } from '../lang/ast'
 import { type JType, T, arrayOf } from '../lang/types'
+import { callMethod } from './calls'
 import { isSubtype } from './classes'
 import { convert } from './convert'
 import { CompileStop, Fault, JavaThrow } from './errors'
@@ -7,7 +8,7 @@ import { evalExpr, initialValue } from './eval'
 import { iterate } from './lib/iteration'
 import type { Machine } from './machine'
 import { describeNull } from './names'
-import { truthy } from './ops'
+import { refR, truthy } from './ops'
 import { Scope } from './scope'
 import { execSwitch } from './switches'
 import { asThrow, isThrowable, throwObject } from './throwing'
@@ -111,16 +112,30 @@ function runCatch(m: Machine, handler: CatchClause, thrown: JavaThrow): Completi
   return nested(m, handler.body, NO_LINE, (scope) => scope.vars.set(handler.name, new Slot(T.object, thrown.exc)))
 }
 
+/** try-with-resources closes what it opened, last first, before any catch or finally runs. */
+function closeAll(m: Machine, opened: JVal[]): void {
+  while (opened.length) {
+    const resource = opened.pop()!
+    if (resource !== null) callMethod(m, refR(resource), 'close', [])
+  }
+}
+
 function execTry(m: Machine, s: Extract<Stmt, { k: 'try' }>): Completion {
   return withScope(m, new Scope(m.frame.scope), () => {
     let completion: Completion
     let pending: JavaThrow | null = null
+    const opened: JVal[] = []
     try {
-      for (const r of s.resources) execStmt(m, r, null)
+      for (const r of s.resources) {
+        execStmt(m, r, null)
+        if (r.k === 'local') for (const d of r.decls) opened.push(m.frame.scope.vars.get(d.name)!.value)
+      }
       completion = nested(m, s.body, NO_LINE)
+      closeAll(m, opened)
     } catch (err) {
       const thrown = asThrow(m, err)
       if (!(thrown instanceof JavaThrow)) throw thrown
+      closeAll(m, opened)
       const handler = s.catches.find((c) => c.types.some((t) => isSubtype(thrown.exc.cls, t)))
       if (!handler) pending = thrown
       else {

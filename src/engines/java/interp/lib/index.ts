@@ -14,6 +14,7 @@ import { constructHeap, heapMethod } from './heaps'
 import { constructNative, nativeMethod, systemIn, systemOut } from './io'
 import { constructList, listMethod } from './lists'
 import { constructMap, mapMethod } from './maps'
+import { newRandom, randomMethod } from './random'
 import { constructSet, setMethod } from './sets'
 import { builderMethod, newBuilder } from './builder'
 import { newString, stringMethod, stringStatic } from './strings'
@@ -51,6 +52,11 @@ export function callLibStatic(m: Machine, cls: string, name: string, args: reado
 const LISTS = { ArrayList: 'ArrayList', LinkedList: 'LinkedList', ArrayDeque: 'ArrayDeque', Stack: 'Stack', Vector: 'ArrayList' } as const
 const MAPS = new Set(['HashMap', 'LinkedHashMap', 'TreeMap'] as const)
 const SETS = new Set(['HashSet', 'LinkedHashSet', 'TreeSet'] as const)
+const OTHER_CLASSES = new Set(['PriorityQueue', 'StringBuilder', 'StringBuffer', 'Random', 'Scanner', 'Thread'])
+
+/** Built-in classes a program can instantiate but not extend here, as in `new LinkedHashMap<>() { ... }`. */
+export const isLibClassToExtend = (name: string): boolean =>
+  name in LISTS || MAPS.has(name as 'HashMap') || SETS.has(name as 'HashSet') || OTHER_CLASSES.has(name)
 
 /** `new` for a built-in class. */
 export function constructLib(m: Machine, type: RefType, args: readonly R[]): R {
@@ -68,6 +74,7 @@ export function constructLib(m: Machine, type: RefType, args: readonly R[]): R {
   if (name === 'AbstractMap.SimpleEntry' || name === 'SimpleEntry') {
     return refR(new EntryVal({ key: element(m, args[0]!), value: element(m, args[1]!), hash: 0, seq: 0 }))
   }
+  if (name === 'Random') return newRandom(args)
   const native = constructNative(m, name, args)
   if (native) return native
   throw new CompileStop(`cannot find symbol: class ${name} (it is not declared, or not supported by the visualizer yet)`)
@@ -108,7 +115,7 @@ export function callLibMethod(m: Machine, target: R, name: string, args: readonl
   if (v instanceof EntryVal) return entryMethod(m, v, name, args)
   if (v instanceof BuilderVal) return builderMethod(m, v, name, args)
   if (v instanceof IterVal) return iteratorMethod(v, name)
-  if (v instanceof NativeObj) return nativeMethod(m, v, name, args)
+  if (v instanceof NativeObj) return v.kind === 'random' ? randomMethod(m, v, name, args) : nativeMethod(m, v, name, args)
   if (v instanceof FnVal) return fnMethod(m, v, name, args)
   if (v instanceof JArray) return arrayMethod(m, v, name, args)
   if (name === 'equals' && args[0]) return { type: { t: 'prim', name: 'boolean' }, value: javaEquals(m, element(m, target), element(m, args[0])) }

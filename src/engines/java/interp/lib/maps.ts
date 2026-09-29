@@ -38,7 +38,8 @@ export function constructMap(m: Machine, kind: MapVal['kind'], typeArgs: JType[]
     map = new MapVal(kind, new TreeStore(cmp), typeArgs)
   } else {
     if (a && isRawPrim(a) && intArg(a, kind) < 0) throw new Fault('IllegalArgumentException', `Illegal initial capacity: ${intArg(a, kind)}`)
-    const store = new HashStore(kind === 'LinkedHashMap', a && isRawPrim(a) ? intArg(a, kind) : undefined)
+    const accessOrder = kind === 'LinkedHashMap' && args[2]?.value === true
+    const store = new HashStore(kind === 'LinkedHashMap', a && isRawPrim(a) ? intArg(a, kind) : undefined, accessOrder)
     if (source) store.reserve(source.store.size)
     map = new MapVal(kind, store, typeArgs)
   }
@@ -152,11 +153,11 @@ export function mapMethod(m: Machine, map: MapVal, name: string, args: readonly 
       arity(name, args, 2)
       return refR(put(m, map, arg(0), arg(1)))
     case 'get':
-      arity(name, args, 1)
-      return refR(store.find(m, arg(0))?.value ?? null)
     case 'getOrDefault': {
+      arity(name, args, name === 'get' ? 1 : 2)
       const e = store.find(m, arg(0))
-      return e ? refR(e.value) : args[1]!
+      if (e && store instanceof HashStore) store.access(e)
+      return e ? refR(e.value) : name === 'get' ? refR(null) : args[1]!
     }
     case 'containsKey':
       return boolR(!!store.find(m, arg(0)))
