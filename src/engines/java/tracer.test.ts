@@ -118,6 +118,56 @@ describe('Java tracer', () => {
     expect(t.error).toEqual({ message: 'Exception in thread "main" java.lang.ArithmeticException: / by zero', line: 5 })
   })
 
+  it('traces lambdas and anonymous classes as frames of their own', () => {
+    const t = trace(
+      main(
+        '    List<Integer> xs = new ArrayList<>(List.of(3, 1));\n    xs.sort((a, b) -> a - b);\n' +
+          '    Comparator<Integer> c = new Comparator<Integer>() {\n      public int compare(Integer a, Integer b) {\n        return b - a;\n      }\n    };\n    xs.sort(c);',
+      ),
+    )
+    const names = new Set(t.steps.flatMap((s) => s.frames.map((f) => f.name)))
+    expect(names).toContain('lambda')
+    expect(names).toContain('anonymous Comparator.compare')
+    const lambda = t.steps.find((s) => top(s).name === 'lambda')!
+    expect(top(lambda).vars.map(([n]) => n)).toEqual(['a', 'b'])
+  })
+
+  it('shows enum constants by name and keeps them out of the global frame', () => {
+    const t = trace(main('    Color c = Color.GREEN;\n    int n = c.ordinal();', '  enum Color { RED, GREEN }\n  static int total = 0;\n'))
+    const end = t.steps[lastIndex(t) - 1]!
+    expect(varOf(end, 'c')).toEqual({ t: 'p', k: 'other', v: 'GREEN' })
+    expect(t.steps[lastIndex(t)]!.frames[0]!.vars.map(([n]) => n)).toEqual(['total'])
+  })
+
+  it('initializes a class on first use, in a <clinit> frame above the caller', () => {
+    const t = trace(main('    int x = 1;\n    int y = Config.LIMIT + x;', '  static class Config {\n    static int LIMIT = 10;\n  }\n'))
+    const init = t.steps.find((s) => top(s).name === 'Config.<clinit>')!
+    expect(init.frames.map((f) => f.name)).toEqual(['globals', 'Main.main', 'Config.<clinit>'])
+  })
+
+  it('records a caught exception, then continues in the catch block', () => {
+    const t = trace(main('    try {\n      int[] a = new int[1];\n      a[3] = 1;\n    } catch (ArrayIndexOutOfBoundsException e) {\n      int handled = 1;\n    }\n    int after = 2;'))
+    const exc = t.steps.findIndex((s) => s.event === 'exception')
+    expect(t.steps[exc]!.exc).toBe('java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 1')
+    expect(t.steps.slice(exc + 1).map((s) => s.line)).toEqual([9, 11, 12, 13])
+    expect(t.error).toBeNull()
+  })
+
+  it('explains null dereferences with the expression that was null', () => {
+    const npe = (body: string) => raw(main(body)).error?.message
+    expect(npe('    ListNode head = null;\n    int v = head.val;')).toBe('Exception in thread "main" java.lang.NullPointerException: Cannot read field "val" because "head" is null')
+    expect(npe('    String s = null;\n    int n = s.length();')).toBe('Exception in thread "main" java.lang.NullPointerException: Cannot invoke "length()" because "s" is null')
+    expect(npe('    int[][] g = new int[2][];\n    g[1][0] = 5;')).toBe('Exception in thread "main" java.lang.NullPointerException: Cannot store to int array because "g[1]" is null')
+    expect(npe('    Map<String, Integer> m = new HashMap<>();\n    int n = m.get("a");')).toContain('Cannot invoke "java.lang.Integer.intValue()"')
+  })
+
+  it('names what is not supported instead of failing obscurely', () => {
+    const err = (body: string, members = '') => raw(main(body, members)).error?.message
+    expect(err('    int s = List.of(1).stream().count();')).toContain('streams are not supported')
+    expect(err('    Map<Integer, Integer> m = new LinkedHashMap<>() {\n    };')).toContain('extending the built-in class LinkedHashMap is not supported')
+    expect(err('    enum Local { A }')).toContain('enums declared inside a method are not supported')
+  })
+
   it('reports compile errors with a line, before or during the run', () => {
     expect(raw(main('    int x = 5')).error).toEqual({ message: "Compile error: expected ';', found '}'", line: 6 })
     expect(raw('class A {}').error?.message).toContain('no main method')
