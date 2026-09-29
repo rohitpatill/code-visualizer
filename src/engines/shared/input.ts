@@ -34,6 +34,16 @@ export class Input {
     return m[1]!.charCodeAt(0)
   }
 
+  /** Is anything left, even an empty line? */
+  hasLine(): boolean {
+    return this.pos < this.text.length
+  }
+
+  /** The next character, whitespace included, as a UTF-16 code. */
+  read(): number | null {
+    return this.pos < this.text.length ? this.text.charCodeAt(this.pos++) : null
+  }
+
   /** The rest of the current line without its line break, or null at end of input. */
   line(): string | null {
     if (this.pos >= this.text.length) return null
