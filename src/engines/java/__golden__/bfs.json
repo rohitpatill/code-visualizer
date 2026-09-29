@@ -1,0 +1,4540 @@
+{
+ "steps": [
+  {
+   "line": 4,
+   "event": "call",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 1,
+      "global": true,
+      "vars": []
+     },
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "String[]",
+      "items": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "HashMap<Character, List<Character>>",
+      "entries": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "HashMap<Character, List<Character>>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        },
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
+      ],
+      "size": 1
+     },
+     "3": {
+      "kind": "list",
+      "type": "List",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "HashMap<Character, List<Character>>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        },
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        },
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ]
+      ],
+      "size": 2
+     },
+     "4": {
+      "kind": "list",
+      "type": "List",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'D'",
+        "s": "D"
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "HashMap<Character, List<Character>>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        },
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        },
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        },
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ]
+      ],
+      "size": 3
+     },
+     "5": {
+      "kind": "list",
+      "type": "List",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'D'",
+        "s": "D"
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "HashMap<Character, List<Character>>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        },
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        },
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        },
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        },
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ]
+      ],
+      "size": 4
+     },
+     "6": {
+      "kind": "list",
+      "type": "List",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'E'",
+        "s": "E"
+       }
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "HashMap<Character, List<Character>>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        },
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        },
+        {
+         "t": "r",
+         "id": "4"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        },
+        {
+         "t": "r",
+         "id": "5"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        },
+        {
+         "t": "r",
+         "id": "6"
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        },
+        {
+         "t": "r",
+         "id": "7"
+        }
+       ]
+      ],
+      "size": 5
+     },
+     "7": {
+      "kind": "list",
+      "type": "List",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'D'",
+        "s": "D"
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 12,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 12,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "8": {
+      "kind": "set",
+      "type": "HashSet<Character>",
+      "items": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 13,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 13,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "8": {
+      "kind": "set",
+      "type": "HashSet<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 14,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 14,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [],
+      "size": 0,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       }
+      ],
+      "size": 1,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 16,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "10": {
+      "kind": "list",
+      "type": "ArrayList<Character>",
+      "items": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [],
+      "size": 0,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "10": {
+      "kind": "list",
+      "type": "ArrayList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 22,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "8": {
+      "kind": "set",
+      "type": "HashSet<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       }
+      ],
+      "size": 1,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 22,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "8": {
+      "kind": "set",
+      "type": "HashSet<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       }
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       }
+      ],
+      "size": 2,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 16,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       }
+      ],
+      "size": 1,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "10": {
+      "kind": "list",
+      "type": "ArrayList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 22,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "8": {
+      "kind": "set",
+      "type": "HashSet<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'D'",
+        "s": "D"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'D'",
+        "s": "D"
+       }
+      ],
+      "size": 2,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 16,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'D'",
+        "s": "D"
+       }
+      ],
+      "size": 1,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "10": {
+      "kind": "list",
+      "type": "ArrayList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       }
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'A'",
+         "s": "A"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 16,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [],
+      "size": 0,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "10": {
+      "kind": "list",
+      "type": "ArrayList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'D'",
+        "s": "D"
+       }
+      ],
+      "size": 4
+     }
+    }
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'B'",
+         "s": "B"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'C'",
+         "s": "C"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 21,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 22,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 22,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "8": {
+      "kind": "set",
+      "type": "HashSet<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'D'",
+        "s": "D"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'E'",
+        "s": "E"
+       }
+      ],
+      "size": 5
+     }
+    }
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'E'",
+        "s": "E"
+       }
+      ],
+      "size": 1,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 16,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 18,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 18,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "9": {
+      "kind": "deque",
+      "type": "LinkedList<Character>",
+      "items": [],
+      "size": 0,
+      "stackTop": "first"
+     }
+    }
+   }
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "10": {
+      "kind": "list",
+      "type": "ArrayList<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'A'",
+        "s": "A"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'B'",
+        "s": "B"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'C'",
+        "s": "C"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'D'",
+        "s": "D"
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'E'",
+        "s": "E"
+       }
+      ],
+      "size": 5
+     }
+    }
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ],
+       [
+        "nei",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'D'",
+         "s": "D"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 19,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 19,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ],
+       [
+        "node",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'E'",
+         "s": "E"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 16,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 16,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 26,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 26,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 27,
+   "event": "return",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 27,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "graph",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "visited",
+        {
+         "t": "r",
+         "id": "8"
+        }
+       ],
+       [
+        "queue",
+        {
+         "t": "r",
+         "id": "9"
+        }
+       ],
+       [
+        "order",
+        {
+         "t": "r",
+         "id": "10"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 16,
+   "heap": {}
+  },
+  {
+   "line": 28,
+   "event": "return",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 28,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
+   "out": 16,
+   "heap": {
+    "del": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10"
+    ]
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "[A, B, C, D, E]\n",
+ "maxSteps": 3000
+}

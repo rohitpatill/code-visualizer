@@ -1,0 +1,1891 @@
+{
+ "steps": [
+  {
+   "line": 4,
+   "event": "call",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 1,
+      "global": true,
+      "vars": []
+     },
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 4,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "1": {
+      "kind": "list",
+      "type": "String[]",
+      "items": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 5,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 5,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 6,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 6,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 7,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 7,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "2": {
+      "kind": "dict",
+      "type": "Map<Character, Character>",
+      "entries": [
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "')'",
+         "s": ")"
+        },
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'('",
+         "s": "("
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "']'",
+         "s": "]"
+        },
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'['",
+         "s": "["
+        }
+       ],
+       [
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'}'",
+         "s": "}"
+        },
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'{'",
+         "s": "{"
+        }
+       ]
+      ],
+      "size": 3
+     }
+    }
+   }
+  },
+  {
+   "line": 8,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 8,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "list",
+      "type": "Stack<Character>",
+      "items": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'('",
+         "s": "("
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'('",
+         "s": "("
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "list",
+      "type": "Stack<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'('",
+        "s": "("
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'['",
+         "s": "["
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'['",
+         "s": "["
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "list",
+      "type": "Stack<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'('",
+        "s": "("
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'['",
+        "s": "["
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "']'",
+         "s": "]"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "']'",
+         "s": "]"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "']'",
+         "s": "]"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "list",
+      "type": "Stack<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'('",
+        "s": "("
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'{'",
+         "s": "{"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 17,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 17,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'{'",
+         "s": "{"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "list",
+      "type": "Stack<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'('",
+        "s": "("
+       },
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'{'",
+        "s": "{"
+       }
+      ],
+      "size": 2
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'}'",
+         "s": "}"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'}'",
+         "s": "}"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "'}'",
+         "s": "}"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "list",
+      "type": "Stack<Character>",
+      "items": [
+       {
+        "t": "p",
+        "k": "str",
+        "v": "'('",
+        "s": "("
+       }
+      ],
+      "size": 1
+     }
+    }
+   }
+  },
+  {
+   "line": 10,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 10,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "')'",
+         "s": ")"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 11,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 11,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "')'",
+         "s": ")"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 15,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 15,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ],
+       [
+        "ch",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "')'",
+         "s": ")"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 9,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 9,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {
+    "set": {
+     "3": {
+      "kind": "list",
+      "type": "Stack<Character>",
+      "items": [],
+      "size": 0
+     }
+    }
+   }
+  },
+  {
+   "line": 20,
+   "event": "line",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 20,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 0,
+   "heap": {}
+  },
+  {
+   "line": 21,
+   "event": "return",
+   "frames": {
+    "keep": 1,
+    "push": [
+     {
+      "id": 2,
+      "name": "Main.main",
+      "line": 21,
+      "global": false,
+      "vars": [
+       [
+        "args",
+        {
+         "t": "r",
+         "id": "1"
+        }
+       ],
+       [
+        "s",
+        {
+         "t": "p",
+         "k": "str",
+         "v": "\"([]{})\"",
+         "s": "([]{})"
+        }
+       ],
+       [
+        "pairs",
+        {
+         "t": "r",
+         "id": "2"
+        }
+       ],
+       [
+        "stack",
+        {
+         "t": "r",
+         "id": "3"
+        }
+       ],
+       [
+        "valid",
+        {
+         "t": "p",
+         "k": "bool",
+         "v": "true"
+        }
+       ]
+      ]
+     }
+    ]
+   },
+   "out": 5,
+   "heap": {}
+  },
+  {
+   "line": 22,
+   "event": "return",
+   "frames": {
+    "keep": 0,
+    "push": [
+     {
+      "id": 1,
+      "name": "globals",
+      "line": 22,
+      "global": true,
+      "vars": []
+     }
+    ]
+   },
+   "out": 5,
+   "heap": {
+    "del": [
+     "1",
+     "2",
+     "3"
+    ]
+   }
+  }
+ ],
+ "truncated": false,
+ "error": null,
+ "stdout": "true\n",
+ "maxSteps": 3000
+}

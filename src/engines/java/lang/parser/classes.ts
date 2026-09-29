@@ -190,7 +190,7 @@ export function parseCompilationUnit(c: Cursor, prelude: boolean): ClassDecl[] {
     if (c.accept(';')) continue
     const mods = modifiers(c)
     if (!TYPE_WORDS.has(c.peek().text)) {
-      throw new CompileError('expected a class, interface or record. Java code lives inside a class; put code that calls it in the call box', c.line)
+      throw new CompileError('expected a class, interface or record here. Statements go inside a method; if your code has its own main(), leave the call box empty', c.line)
     }
     classes.push(parseClass(c, mods, prelude, null))
   }
