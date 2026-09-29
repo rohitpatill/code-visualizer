@@ -3,8 +3,8 @@ import { invokeCallable } from '../calls'
 import { CompileStop, Fault } from '../errors'
 import type { Machine } from '../machine'
 import { VOID, boolR, intR, isRawPrim, refR, truthy } from '../ops'
-import { valueText, viewItems } from '../text'
-import { EntryVal, IterVal, type JVal, MapVal, type R, ViewVal, entryVal } from '../values'
+import { valueText } from '../text'
+import { type EntryVal, type JVal, MapVal, type R, ViewVal, entryVal } from '../values'
 import { arity, element, intArg, noMethod } from './common'
 import { compareWith, javaEquals, javaHash } from './equality'
 import { cursorOf } from './iteration'
@@ -17,9 +17,9 @@ function writable(map: MapVal): void {
   if (map.immutable) throw unsupported()
 }
 
-function put(m: Machine, map: MapVal, key: JVal, value: JVal): JVal {
+function put(m: Machine, map: MapVal, key: JVal, value: JVal, first = false): JVal {
   writable(map)
-  return map.store.put(m, key, value)?.value ?? null
+  return map.store.put(m, key, value, first)?.value ?? null
 }
 
 function remove(m: Machine, map: MapVal, key: JVal): JVal {
@@ -61,7 +61,7 @@ function computeMethod(m: Machine, map: MapVal, name: string, args: readonly R[]
   const current = () => map.store.find(m, key)?.value ?? null
   const settle = (v: JVal): R => {
     if (v === null) remove(m, map, key)
-    else put(m, map, key, v)
+    else put(m, map, key, v, true)
     return refR(v)
   }
   switch (name) {
@@ -69,7 +69,7 @@ function computeMethod(m: Machine, map: MapVal, name: string, args: readonly R[]
       const old = current()
       if (old !== null) return refR(old)
       const v = element(m, invokeCallable(m, args[1]!.value, [refR(key)], 'apply'))
-      if (v !== null) put(m, map, key, v)
+      if (v !== null) put(m, map, key, v, true)
       return refR(v)
     }
     case 'computeIfPresent': {
@@ -221,66 +221,5 @@ export function mapMethod(m: Machine, map: MapVal, name: string, args: readonly 
       if (!result) throw noMethod(map.kind, name)
       return result
     }
-  }
-}
-
-/** keySet(), values() and entrySet(): live views that read and remove through the map. */
-export function viewMethod(m: Machine, view: ViewVal, name: string, args: readonly R[]): R {
-  const map = view.map
-  const target = () => element(m, args[0]!)
-  switch (name) {
-    case 'size':
-      return intR(map.store.size)
-    case 'isEmpty':
-      return boolR(map.store.size === 0)
-    case 'contains':
-      return boolR(view.part === 'keys' ? !!map.store.find(m, target()) : viewItems(m, view).some((x) => javaEquals(m, target(), x)))
-    case 'iterator':
-      return refR(new IterVal(cursorOf(m, view)!))
-    case 'remove':
-    case 'removeIf': {
-      writable(map)
-      const test = (x: JVal) => (name === 'remove' ? javaEquals(m, target(), x) : truthy(invokeCallable(m, args[0]!.value, [refR(x)], 'test')))
-      const entries = map.store.entries(m)
-      const drop = viewItems(m, view)
-        .map((x, i) => (test(x) ? entries[i]!.key : undefined))
-        .filter((k): k is JVal => k !== undefined)
-      for (const k of name === 'remove' ? drop.slice(0, 1) : drop) map.store.remove(m, k)
-      return boolR(drop.length > 0)
-    }
-    case 'forEach':
-      for (const x of viewItems(m, view)) invokeCallable(m, args[0]!.value, [refR(x)], 'accept')
-      return VOID
-    case 'toString':
-      return refR(m.intern(valueText(m, view)))
-    case 'equals':
-      return boolR(javaEquals(m, view, args[0]!.value))
-    case 'stream':
-      throw new CompileStop('streams are not supported by the visualizer yet: use a loop')
-    default:
-      throw noMethod(view.part === 'keys' ? 'Set' : view.part === 'values' ? 'Collection' : 'Set<Map.Entry>', name)
-  }
-}
-
-export function entryMethod(m: Machine, entry: EntryVal, name: string, args: readonly R[]): R {
-  const e = entry.entry
-  switch (name) {
-    case 'getKey':
-      return refR(e.key)
-    case 'getValue':
-      return refR(e.value)
-    case 'setValue': {
-      const old = e.value
-      e.value = element(m, args[0]!)
-      return refR(old)
-    }
-    case 'equals':
-      return boolR(javaEquals(m, entry, args[0]!.value))
-    case 'hashCode':
-      return intR(javaHash(m, entry))
-    case 'toString':
-      return refR(m.intern(valueText(m, entry)))
-    default:
-      throw noMethod('Map.Entry', name)
   }
 }

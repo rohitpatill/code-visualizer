@@ -3,7 +3,8 @@ import { type JType, T, primOf, typeName, widens } from '../lang/types'
 import { type ClassInfo, type Method, isSubtype, methodsNamed } from './classes'
 import { convert, primValue } from './convert'
 import { CompileStop, Fault, JavaThrow } from './errors'
-import { describeNull, evalExpr } from './eval'
+import { evalExpr } from './eval'
+import { describeNull } from './names'
 import { type Completion, execBody } from './exec'
 import { callLibMethod, callLibStatic } from './lib'
 import { classRefMethod, objectMethod } from './lib/objects'
@@ -17,6 +18,7 @@ import { ClassRef, FnVal, JArray, JObject, JStr, type R, Slot } from './values'
 
 type FnImplLambda = Extract<FnVal['impl'], { kind: 'lambda' }>
 
+const OBJECT_METHODS = new Set(['getClass', 'hashCode', 'equals', 'toString'])
 const NOT_APPLICABLE = -Infinity
 const VARARGS_PENALTY = 100
 
@@ -110,7 +112,9 @@ function finish(m: Machine, frame: Frame, done: Completion, ret: JType, endLine:
 
 /**
  * Runs a pushed frame: records the call, the body, and the return. An
- * exception leaving the frame is recorded again in the caller, where it now is.
+ * exception leaving the frame is recorded again in the caller, where it now
+ * is. Running out of JavaScript stack is Java's StackOverflowError, raised in
+ * the deepest frame that has room left to build it.
  */
 export function runFrame(m: Machine, frame: Frame, body: () => Completion, ret: JType, endLine: number, made?: JObject): R {
   let popped = false
@@ -118,7 +122,7 @@ export function runFrame(m: Machine, frame: Frame, body: () => Completion, ret: 
     m.record('call', frame.line)
     return finish(m, frame, body(), ret, endLine, made)
   } catch (err) {
-    const thrown = asThrow(m, err)
+    const thrown = asThrow(m, err instanceof RangeError ? new Fault('StackOverflowError') : err)
     if (!(thrown instanceof JavaThrow)) m.noteError(thrown, frame)
     m.popFrame(frame)
     popped = true
@@ -186,7 +190,7 @@ export function callStatic(m: Machine, cls: ClassInfo, name: string, args: reado
 /** `target.name(args)` for any value. `recv` is the receiver's source, for NullPointerException messages. */
 export function callMethod(m: Machine, target: R, name: string, args: readonly R[], recv: Expr | null = null): R {
   const v = target.value
-  if (v === null) throw new Fault('NullPointerException', `Cannot invoke "${name}()" because ${describeNull(m, recv)} is null`)
+  if (v === null) throw new Fault('NullPointerException', `Cannot invoke "${name}()" because ${describeNull(recv)} is null`)
   if (v instanceof ClassRef) return classRefMethod(v, name) ?? (v.cls ? callStatic(m, v.cls, name, args) : callLibStatic(m, v.name, name, args))
   if (v instanceof JObject) return callObjectMethod(m, v, name, args)
   return callLibMethod(m, target, name, args)
@@ -209,6 +213,8 @@ export function callUnqualified(m: Machine, name: string, args: readonly R[]): R
     if (!self) throw new CompileStop(`non-static method ${name}(...) cannot be referenced from a static context`)
     return callObjectMethod(m, self, name, args)
   }
+  const self = m.frame.self
+  if (self && OBJECT_METHODS.has(name)) return callObjectMethod(m, self, name, args)
   for (const cls of m.classes.all) {
     if (!cls.decl.prelude) continue
     const found = methodsNamed(cls, name).filter((x) => x.decl.isStatic)

@@ -1,8 +1,9 @@
 import { BOX, type JType, typeName } from '../../lang/types'
+import { arrayClassName } from '../text'
 import { isSubtype } from '../classes'
 import type { Machine } from '../machine'
 import {
-  Boxed, BuilderVal, EntryVal, FnVal, HeapVal, IterVal, JArray, JObject, JStr, type JVal, ListVal, MapVal, SetVal, ViewVal,
+  Boxed, BuilderVal, ClassRef, EntryVal, FnVal, HeapVal, IterVal, JArray, JObject, JStr, type JVal, ListVal, MapVal, SetVal, ViewVal,
 } from '../values'
 
 type Test = (v: JVal) => boolean
@@ -84,6 +85,13 @@ export function instanceOfType(m: Machine, v: JVal, type: JType): boolean {
 }
 
 const LANG = new Set(['String', 'Integer', 'Long', 'Double', 'Float', 'Short', 'Byte', 'Character', 'Boolean', 'StringBuilder'])
+
+/** `value.getClass()` for a built-in value: its simple name, and the qualified name getName() reports. */
+export function builtinClass(v: JVal): ClassRef {
+  if (v instanceof JArray) return new ClassRef(typeName(v.type), null, arrayClassName(v.type))
+  const qualified = runtimeClassName(v)
+  return new ClassRef(qualified.slice(qualified.lastIndexOf('.') + 1), null, qualified)
+}
 
 /** A value's class as Java names it in ClassCastException messages. */
 export function runtimeClassName(v: JVal): string {

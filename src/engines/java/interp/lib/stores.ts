@@ -6,7 +6,7 @@ const MAX_CAPACITY = 1 << 30
 const LOAD_FACTOR = 0.75
 
 /** HashMap.tableSizeFor: the power of two a requested capacity rounds up to. */
-export function tableSizeFor(cap: number): number {
+function tableSizeFor(cap: number): number {
   let n = 1
   while (n < cap && n < MAX_CAPACITY) n *= 2
   return n
@@ -15,14 +15,15 @@ export function tableSizeFor(cap: number): number {
 const spread = (h: number) => h ^ (h >>> 16)
 
 /**
- * java.util.HashMap's layout, so iteration order matches a real run: entries
- * go in bucket order for the current table size (which grows exactly as
- * Java's does), and in insertion order within a bucket. LinkedHashMap keeps
- * plain insertion order.
+ * java.util.HashMap's table, so iteration order matches a real run: buckets
+ * in index order for the current table size (which grows exactly as Java's
+ * does), each bucket in its own order. put appends to a bucket; merge,
+ * compute and computeIfAbsent prepend, as Java's do. A resize splits each
+ * bucket in two, keeping order. LinkedHashMap keeps plain insertion order.
  */
 export class HashStore implements Store {
   modCount = 0
-  private readonly buckets = new Map<number, Entry[]>()
+  private readonly table = new Map<number, Entry[]>()
   private readonly order = new Set<Entry>()
   private seq = 0
   private capacity = 0
@@ -40,24 +41,37 @@ export class HashStore implements Store {
     return this.order.size
   }
 
-  find(m: Machine, key: JVal): Entry | undefined {
-    const bucket = this.buckets.get(javaHash(m, key))
-    return bucket?.find((e) => e.key === key || javaEquals(m, key, e.key))
+  private bucketOf(hash: number): number {
+    return spread(hash) & (this.capacity - 1)
   }
 
-  put(m: Machine, key: JVal, value: JVal): Entry | undefined {
+  private locate(m: Machine, key: JVal): { hash: number; bucket: Entry[] | undefined; at: number } {
     const hash = javaHash(m, key)
-    const bucket = this.buckets.get(hash)
-    const found = bucket?.find((e) => e.key === key || javaEquals(m, key, e.key))
-    if (found) {
+    const bucket = this.capacity ? this.table.get(this.bucketOf(hash)) : undefined
+    const at = bucket ? bucket.findIndex((e) => e.hash === hash && (e.key === key || javaEquals(m, key, e.key))) : -1
+    return { hash, bucket, at }
+  }
+
+  find(m: Machine, key: JVal): Entry | undefined {
+    const { bucket, at } = this.locate(m, key)
+    return at === -1 ? undefined : bucket![at]
+  }
+
+  put(m: Machine, key: JVal, value: JVal, first = false): Entry | undefined {
+    const { hash, bucket, at } = this.locate(m, key)
+    if (at !== -1) {
+      const found = bucket![at]!
       const before = { ...found }
       found.value = value
       return before
     }
     if (!this.capacity) this.resize()
     const entry: Entry = { key, value, hash, seq: this.seq++ }
-    if (bucket) bucket.push(entry)
-    else this.buckets.set(hash, [entry])
+    const index = this.bucketOf(hash)
+    const list = this.table.get(index)
+    if (!list) this.table.set(index, [entry])
+    else if (first) list.unshift(entry)
+    else list.push(entry)
     this.order.add(entry)
     this.changed()
     if (this.size > this.threshold) this.resize()
@@ -65,12 +79,10 @@ export class HashStore implements Store {
   }
 
   remove(m: Machine, key: JVal): Entry | undefined {
-    const hash = javaHash(m, key)
-    const bucket = this.buckets.get(hash)
-    const at = bucket ? bucket.findIndex((e) => e.key === key || javaEquals(m, key, e.key)) : -1
+    const { hash, bucket, at } = this.locate(m, key)
     if (at === -1) return undefined
     const [entry] = bucket!.splice(at, 1)
-    if (!bucket!.length) this.buckets.delete(hash)
+    if (!bucket!.length) this.table.delete(this.bucketOf(hash))
     this.order.delete(entry!)
     this.changed()
     return entry
@@ -78,20 +90,18 @@ export class HashStore implements Store {
 
   clear(): void {
     if (!this.size) return
-    this.buckets.clear()
+    this.table.clear()
     this.order.clear()
     this.changed()
   }
 
   entries(): readonly Entry[] {
-    if (this.ordered) return this.ordered
-    const list = [...this.order]
-    if (!this.linked) {
-      const mask = this.capacity - 1
-      list.sort((a, b) => (spread(a.hash) & mask) - (spread(b.hash) & mask) || a.seq - b.seq)
+    if (!this.ordered) {
+      this.ordered = this.linked
+        ? [...this.order]
+        : [...this.table.keys()].sort((a, b) => a - b).flatMap((index) => this.table.get(index)!)
     }
-    this.ordered = list
-    return list
+    return this.ordered
   }
 
   /** HashMap.putAll and the copy constructors grow the table once for everything they add. */
@@ -103,8 +113,19 @@ export class HashStore implements Store {
   }
 
   private resize(): void {
-    this.capacity = this.capacity ? this.capacity * 2 : this.threshold || 16
+    const old = this.capacity
+    this.capacity = old ? old * 2 : this.threshold || 16
     this.threshold = this.capacity < MAX_CAPACITY ? Math.floor(this.capacity * LOAD_FACTOR) : Number.MAX_SAFE_INTEGER
+    if (old) {
+      for (const [index, list] of [...this.table]) {
+        const high = list.filter((e) => spread(e.hash) & old)
+        if (!high.length) continue
+        const low = list.filter((e) => !(spread(e.hash) & old))
+        if (low.length) this.table.set(index, low)
+        else this.table.delete(index)
+        this.table.set(index + old, high)
+      }
+    }
     this.ordered = null
   }
 

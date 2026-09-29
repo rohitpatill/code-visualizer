@@ -37,13 +37,13 @@ function toArray(m: Machine, items: readonly JVal[], arg: R | undefined): R {
 }
 
 /** Iterates with the fail-fast checks of the real iterator, calling `fn` on each element. */
-export function forEachItem(m: Machine, seq: Sequence, fn: (v: JVal) => void): void {
+function forEachItem(m: Machine, seq: Sequence, fn: (v: JVal) => void): void {
   const cursor = cursorOf(m, seq)!
   while (cursor.hasNext()) fn(cursor.next())
 }
 
 /** Removes the elements `drop` picks, as removeIf, removeAll and retainAll do. Returns whether anything went. */
-export function removeWhere(seq: Sequence, drop: (v: JVal) => boolean): boolean {
+function removeWhere(seq: Sequence, drop: (v: JVal) => boolean): boolean {
   writable(seq, true)
   const keep = seq.items.filter((v) => !drop(v))
   if (keep.length === seq.items.length) return false

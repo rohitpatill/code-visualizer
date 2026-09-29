@@ -77,7 +77,7 @@ export class JObject {
   ) {}
 }
 
-export type ListKind = 'ArrayList' | 'LinkedList' | 'ArrayDeque' | 'Stack' | 'List'
+type ListKind = 'ArrayList' | 'LinkedList' | 'ArrayDeque' | 'Stack' | 'List'
 
 /** ArrayList, LinkedList, ArrayDeque, Stack and the fixed or immutable lists. Deques keep their front at index 0. */
 export class ListVal {
@@ -115,16 +115,20 @@ export interface Store {
   readonly size: number
   modCount: number
   find(m: Machine, key: JVal): Entry | undefined
-  /** Inserts or updates; returns the entry as it was before (undefined if the key is new). */
-  put(m: Machine, key: JVal, value: JVal): Entry | undefined
+  /**
+   * Inserts or updates; returns the entry as it was before (undefined if the
+   * key is new). `first` puts a new key at the front of its hash bucket, as
+   * HashMap's merge and compute methods do.
+   */
+  put(m: Machine, key: JVal, value: JVal, first?: boolean): Entry | undefined
   remove(m: Machine, key: JVal): Entry | undefined
   clear(): void
   /** Entries in iteration order. */
   entries(m: Machine): readonly Entry[]
 }
 
-export type MapKind = 'HashMap' | 'LinkedHashMap' | 'TreeMap' | 'Map'
-export type SetKind = 'HashSet' | 'LinkedHashSet' | 'TreeSet' | 'Set'
+type MapKind = 'HashMap' | 'LinkedHashMap' | 'TreeMap' | 'Map'
+type SetKind = 'HashSet' | 'LinkedHashSet' | 'TreeSet' | 'Set'
 
 export class MapVal {
   constructor(
@@ -189,6 +193,8 @@ export class ClassRef {
   constructor(
     readonly name: string,
     readonly cls: ClassInfo | null,
+    /** What getName() returns for a built-in class, such as java.lang.String or [I. */
+    readonly qualified = name,
   ) {}
 }
 
@@ -200,7 +206,7 @@ export class NativeObj {
   ) {}
 }
 
-export type FnImpl =
+type FnImpl =
   | { kind: 'lambda'; params: LambdaParam[]; body: Expr | Stmt[]; scope: Scope; self: JObject | null; cls: ClassInfo | null; line: number; endLine: number }
   | { kind: 'native'; call: (m: Machine, args: readonly R[]) => R }
 

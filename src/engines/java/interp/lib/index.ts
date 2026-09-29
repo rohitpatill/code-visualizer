@@ -6,17 +6,20 @@ import {
   Boxed, BuilderVal, EntryVal, FnVal, HeapVal, IterVal, JArray, JStr, ListVal, MapVal, NativeObj, type R, SetVal, ViewVal,
 } from '../values'
 import { element, noMethod } from './common'
+import { builtinClass } from './types'
 import { javaEquals, javaHash } from './equality'
 import { javaFormat } from './format'
 import { comparatorStatic, fnMethod } from './functional'
 import { constructHeap, heapMethod } from './heaps'
 import { constructNative, nativeMethod, systemIn, systemOut } from './io'
 import { constructList, listMethod } from './lists'
-import { constructMap, entryMethod, mapMethod, viewMethod } from './maps'
+import { constructMap, mapMethod } from './maps'
 import { constructSet, setMethod } from './sets'
-import { builderMethod, newBuilder, newString, stringMethod, stringStatic } from './strings'
+import { builderMethod, newBuilder } from './builder'
+import { newString, stringMethod, stringStatic } from './strings'
 import { MATH_CONSTANTS, systemClassStatic } from './system'
 import { utilityStatic } from './utilities'
+import { entryMethod, viewMethod } from './views'
 import { WRAPPER_CONSTANTS, boxedMethod, wrapperStatic } from './wrappers'
 
 const WRAPPERS = new Set(['Integer', 'Long', 'Double', 'Float', 'Short', 'Byte', 'Character', 'Boolean'])
@@ -94,6 +97,7 @@ function arrayMethod(m: Machine, a: JArray, name: string, args: readonly R[]): R
 /** A method called on a value of a built-in type. */
 export function callLibMethod(m: Machine, target: R, name: string, args: readonly R[]): R {
   const v = target.value
+  if (name === 'getClass' && !args.length && typeof v === 'object' && v !== null) return refR(builtinClass(v))
   if (v instanceof JStr) return stringMethod(m, v, name, args)
   if (v instanceof Boxed) return boxedMethod(m, v, name, args)
   if (v instanceof ListVal) return listMethod(m, v, name, args)

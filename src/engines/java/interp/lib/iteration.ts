@@ -2,7 +2,7 @@ import type { Expr } from '../../lang/ast'
 import { type JType, T } from '../../lang/types'
 import { callMethod } from '../calls'
 import { CompileStop, Fault } from '../errors'
-import { describeNull } from '../eval'
+import { describeNull } from '../names'
 import type { Machine } from '../machine'
 import { truthy } from '../ops'
 import { viewItems } from '../text'
@@ -95,7 +95,7 @@ export function cursorOf(m: Machine, v: JVal): Cursor | null {
 /** What a for-each loop walks, and the element type it binds. */
 export function iterate(m: Machine, r: R, source: Expr): { cursor: Cursor; elem: JType } {
   const v = r.value
-  if (v === null) throw new Fault('NullPointerException', `Cannot iterate because ${describeNull(m, source)} is null`)
+  if (v === null) throw new Fault('NullPointerException', `Cannot iterate because ${describeNull(source)} is null`)
   if (v instanceof JArray) {
     let i = 0
     return { cursor: { hasNext: () => i < v.items.length, next: () => v.items[i++]!, remove: () => {} }, elem: v.type.of }

@@ -15,7 +15,7 @@ import { constructLib } from './index'
 
 type Call = (m: Machine, args: readonly R[]) => R
 
-export const nativeFn = (label: string, params: readonly string[], call: Call) => new FnVal({ kind: 'native', call }, label, params)
+const nativeFn = (label: string, params: readonly string[], call: Call) => new FnVal({ kind: 'native', call }, label, params)
 
 /** A comparator built in Java terms: Comparator.comparingInt, reverseOrder, reversed() and friends. */
 export const comparator = (label: string, compare: (m: Machine, a: JVal, b: JVal) => number) =>
@@ -29,8 +29,8 @@ export function comparing(fn: JVal, keyCmp: JVal = null): FnVal {
   return comparator('comparing', (m, a, b) => compareWith(m, keyCmp, key(m, a), key(m, b)))
 }
 
-export const NATURAL = comparator('naturalOrder', (m, a, b) => compareWith(m, null, a, b))
-export const REVERSE = comparator('reverseOrder', (m, a, b) => compareWith(m, null, b, a))
+const NATURAL = comparator('naturalOrder', (m, a, b) => compareWith(m, null, a, b))
+const REVERSE = comparator('reverseOrder', (m, a, b) => compareWith(m, null, b, a))
 
 export const reversed = (cmp: JVal) => (cmp === null ? REVERSE : comparator('reversed', (m, a, b) => compareWith(m, cmp, b, a)))
 

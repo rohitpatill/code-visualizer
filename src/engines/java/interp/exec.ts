@@ -1,15 +1,17 @@
-import type { CatchClause, Expr, Stmt, SwitchCase } from '../lang/ast'
+import type { CatchClause, Stmt } from '../lang/ast'
 import { type JType, T, arrayOf } from '../lang/types'
 import { isSubtype } from './classes'
-import { convert, primValue } from './convert'
+import { convert } from './convert'
 import { CompileStop, Fault, JavaThrow } from './errors'
-import { describeNull, evalExpr, initialValue } from './eval'
+import { evalExpr, initialValue } from './eval'
 import { iterate } from './lib/iteration'
 import type { Machine } from './machine'
+import { describeNull } from './names'
 import { truthy } from './ops'
 import { Scope } from './scope'
+import { execSwitch } from './switches'
 import { asThrow, isThrowable, throwObject } from './throwing'
-import { JObject, JStr, type JVal, type R, Slot, UNINIT } from './values'
+import { JObject, type JVal, type R, Slot, UNINIT } from './values'
 
 export type Completion =
   | undefined
@@ -17,10 +19,10 @@ export type Completion =
   | { k: 'return'; value: R | null; line: number }
   | { k: 'yield'; value: R }
 
-const NO_LINE = -1
+export const NO_LINE = -1
 const STEP_THEMSELVES = new Set(['block', 'empty', 'for', 'while', 'foreach', 'labeled'])
 
-function withScope<V>(m: Machine, scope: Scope, run: () => V): V {
+export function withScope<V>(m: Machine, scope: Scope, run: () => V): V {
   const f = m.frame
   const prev = f.scope
   f.scope = scope
@@ -105,55 +107,6 @@ function execForeach(m: Machine, s: Extract<Stmt, { k: 'foreach' }>, label: stri
   }
 }
 
-function switchValue(m: Machine, test: Expr): R {
-  const r = evalExpr(m, test)
-  if (r.value === null) throw new Fault('NullPointerException', `Cannot invoke "String.hashCode()" because ${describeNull(m, test)} is null`)
-  return r
-}
-
-function caseMatches(value: R, label: R): boolean {
-  if (value.value instanceof JStr) return label.value instanceof JStr && label.value.s === value.value.s
-  const x = primValue(value)
-  const y = primValue(label)
-  if (!x || !y) throw new CompileStop('constant expression required in case label')
-  return Number(x.v) === Number(y.v)
-}
-
-function matchCase(m: Machine, value: R, cases: readonly SwitchCase[]): number {
-  for (let i = 0; i < cases.length; i++) {
-    for (const label of cases[i]!.labels) if (caseMatches(value, evalExpr(m, label))) return i
-  }
-  return cases.findIndex((c) => c.isDefault)
-}
-
-/** Runs from the matching case: arrow cases alone, colon cases falling through until something leaves. */
-function runCases(m: Machine, cases: readonly SwitchCase[], start: number): Completion {
-  return withScope(m, new Scope(m.frame.scope), () => {
-    if (cases[start]!.arrow) return execList(m, cases[start]!.body, NO_LINE)
-    for (let i = start; i < cases.length; i++) {
-      const done = execList(m, cases[i]!.body, NO_LINE)
-      if (done !== undefined) return done
-    }
-    return undefined
-  })
-}
-
-function execSwitch(m: Machine, s: Extract<Stmt, { k: 'switch' }>): Completion {
-  const start = matchCase(m, switchValue(m, s.test), s.cases)
-  if (start === -1) return undefined
-  const done = runCases(m, s.cases, start)
-  return done?.k === 'break' && done.label === null ? undefined : done
-}
-
-/** A switch expression's value: what the matching case yields. */
-export function evalSwitch(m: Machine, e: Extract<Expr, { k: 'switch' }>): R {
-  const start = matchCase(m, switchValue(m, e.test), e.cases)
-  if (start === -1) throw new CompileStop('the switch expression does not cover all possible input values')
-  const done = runCases(m, e.cases, start)
-  if (done?.k !== 'yield') throw new CompileStop(done ? `${done.k} out of switch expression` : 'switch expression completes without providing a value')
-  return done.value
-}
-
 function runCatch(m: Machine, handler: CatchClause, thrown: JavaThrow): Completion {
   return nested(m, handler.body, NO_LINE, (scope) => scope.vars.set(handler.name, new Slot(T.object, thrown.exc)))
 }
@@ -191,7 +144,7 @@ function execTry(m: Machine, s: Extract<Stmt, { k: 'try' }>): Completion {
 
 function execThrow(m: Machine, s: Extract<Stmt, { k: 'throw' }>): never {
   const exc = evalExpr(m, s.value).value
-  if (exc === null) throw new Fault('NullPointerException', `Cannot throw exception because ${describeNull(m, s.value)} is null`)
+  if (exc === null) throw new Fault('NullPointerException', `Cannot throw exception because ${describeNull(s.value)} is null`)
   if (!(exc instanceof JObject) || !isThrowable(exc.cls)) throw new CompileStop('incompatible types: only a Throwable can be thrown')
   throw throwObject(m, exc)
 }

@@ -36,6 +36,6 @@ export function objectMethod(m: Machine, obj: JObject, name: string, args: reado
 /** getName and getSimpleName on the value getClass() returns. */
 export function classRefMethod(ref: ClassRef, name: string): R | null {
   if (name === 'getSimpleName') return strR(ref.name)
-  if (name === 'getName') return strR(ref.cls ? javaName(ref.cls) : ref.name)
+  if (name === 'getName') return strR(ref.cls ? javaName(ref.cls) : ref.qualified)
   return null
 }

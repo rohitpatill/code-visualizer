@@ -1,4 +1,5 @@
-import { toPrim } from '../convert'
+import { T } from '../../lang/types'
+import { toPrim, toRef } from '../convert'
 import { methodsNamed } from '../classes'
 import { callObjectMethod, invokeCallable } from '../calls'
 import { Fault } from '../errors'
@@ -70,8 +71,14 @@ function setContains(m: Machine, s: JVal, key: JVal): boolean {
   return keysOf(m, s).some((k) => javaEquals(m, key, k))
 }
 
+/** A record component as an object: primitives boxed, so they hash and compare like Java's. */
+function component(m: Machine, obj: JObject, name: string): JVal {
+  const slot = obj.fields.get(name)!
+  return toRef(m, { type: slot.type, value: slot.value }, T.object)
+}
+
 function recordEquals(m: Machine, a: JObject, b: JObject): boolean {
-  return a.cls === b.cls && a.cls.decl.components.every((c) => javaEquals(m, a.fields.get(c.name)!.value, b.fields.get(c.name)!.value))
+  return a.cls === b.cls && a.cls.decl.components.every((c) => javaEquals(m, component(m, a, c.name), component(m, b, c.name)))
 }
 
 /** `a.equals(b)`. */
@@ -112,7 +119,7 @@ export function javaHash(m: Machine, v: JVal): number {
   if (v instanceof JObject) {
     if (userMethod(v, 'hashCode', 0)) return toPrim(callObjectMethod(m, v, 'hashCode', []), 'int') as number
     if (v.cls.decl.kind === 'record') {
-      return v.cls.decl.components.reduce<number>((h, c) => (Math.imul(31, h) + javaHash(m, v.fields.get(c.name)!.value)) | 0, 0)
+      return v.cls.decl.components.reduce<number>((h, c) => (Math.imul(31, h) + javaHash(m, component(m, v, c.name))) | 0, 0)
     }
   }
   return m.identityHash(v as object)

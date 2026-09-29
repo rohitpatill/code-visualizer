@@ -1,168 +1,33 @@
 import type { Expr } from '../lang/ast'
 import { type JType, T, typeName } from '../lang/types'
 import { callMethod, callSuper, callUnqualified } from './calls'
-import { type ClassInfo, staticSlot } from './classes'
 import { convert, toPrim, toRef, zeroOf } from './convert'
 import { CompileStop, Fault } from './errors'
-import { evalSwitch } from './exec'
-import { constructLib, isLibClass, libStaticField } from './lib'
+import { evalSwitch } from './switches'
+import { constructLib } from './lib'
 import { methodRef } from './lib/functional'
 import { instanceOfType, runtimeClassName } from './lib/types'
 import type { Machine } from './machine'
-import { ensureInit, instantiate } from './objects'
+import { checkedIndex, evalName, evalTarget, exprText, placeOf, readField } from './names'
+import { instantiate } from './objects'
 import { binary, boolR, charR, intR, isRawPrim, refR, truthy, unary } from './ops'
-import { ClassRef, ElementSlot, FnVal, JArray, JObject, type JVal, type R, Slot, UNINIT } from './values'
+import { FnVal, JArray, JStr, type JVal, type R, Slot, UNINIT } from './values'
 
 type ArrayType = Extract<JType, { t: 'array' }>
 
-/** A variable visible from the running code: locals, then fields of this and enclosing instances, then static fields. */
-function findVar(m: Machine, name: string): { slot: Slot; owner?: ClassInfo } | undefined {
-  const f = m.frame
-  const local = f.scope.find(name)
-  if (local) return { slot: local }
-  for (let obj = f.self; obj; obj = obj.outer) {
-    const field = obj.fields.get(name) ?? obj.env?.find(name)
-    if (field) return { slot: field }
-  }
-  for (let cls = f.cls; cls; cls = cls.outer) {
-    const found = staticSlot(cls, name)
-    if (found) return found
-  }
-  return undefined
-}
+const constants = new WeakMap<Expr, boolean>()
 
-function classRef(m: Machine, name: string): R | null {
-  const cls = m.classes.resolve(name, m.frame.cls)
-  if (cls) return refR(new ClassRef(cls.name, cls))
-  return isLibClass(name) ? refR(new ClassRef(name, null)) : null
-}
-
-function evalName(m: Machine, name: string): R {
-  const found = findVar(m, name)
-  if (found) {
-    if (found.owner) ensureInit(m, found.owner)
-    const value = found.slot.value
-    if (value === UNINIT) throw new CompileStop(`variable ${name} might not have been initialized`)
-    return { type: found.slot.type, value }
+/** A compile-time constant expression of literals: javac folds `"h" + "i"` into one interned string. */
+function isConstant(e: Expr): boolean {
+  let known = constants.get(e)
+  if (known === undefined) {
+    known =
+      e.k === 'str' || e.k === 'num' || e.k === 'char' || e.k === 'bool' ||
+      (e.k === 'binary' && isConstant(e.left) && isConstant(e.right)) ||
+      (e.k === 'unary' && e.op !== '++' && e.op !== '--' && isConstant(e.arg))
+    constants.set(e, known)
   }
-  const ref = classRef(m, name)
-  if (!ref) throw new CompileStop(`cannot find symbol: variable ${name}`)
-  return ref
-}
-
-/** Source text of a simple expression, for the helpful NullPointerException messages Java prints. */
-function exprText(e: Expr): string | null {
-  switch (e.k) {
-    case 'name':
-      return e.name
-    case 'this':
-      return 'this'
-    case 'field': {
-      const obj = exprText(e.obj)
-      return obj && `${obj}.${e.name}`
-    }
-    case 'index': {
-      const obj = exprText(e.obj)
-      return obj && `${obj}[${exprText(e.index) ?? '...'}]`
-    }
-    case 'num':
-      return String(e.lit.value)
-    default:
-      return null
-  }
-}
-
-/** `"curr.next"`, or `the return value of "get()"`: what was null. */
-export function describeNull(_m: Machine, e: Expr | null): string {
-  if (!e) return 'the value'
-  const text = exprText(e)
-  if (text) return `"${text}"`
-  return e.k === 'call' ? `the return value of "${e.name}()"` : 'the value'
-}
-
-/** The declared type of a simple expression, for array wording in error messages. */
-function declaredType(m: Machine, e: Expr): JType | null {
-  if (e.k === 'name') return findVar(m, e.name)?.slot.type ?? null
-  if (e.k === 'index') {
-    const t = declaredType(m, e.obj)
-    return t?.t === 'array' ? t.of : null
-  }
-  return null
-}
-
-function arrayWord(t: JType | null): string {
-  if (t?.t !== 'array') return 'array'
-  const of = t.of
-  if (of.t !== 'prim') return 'object array'
-  return of.name === 'byte' || of.name === 'boolean' ? 'byte/boolean array' : `${of.name} array`
-}
-
-function checkedIndex(m: Machine, target: R, index: R, objExpr: Expr, verb: 'load from' | 'store to'): { array: JArray; i: number } {
-  const array = target.value
-  const i = toPrim(index, 'int') as number
-  if (array === null) throw new Fault('NullPointerException', `Cannot ${verb} ${arrayWord(declaredType(m, objExpr))} because ${describeNull(m, objExpr)} is null`)
-  if (!(array instanceof JArray)) throw new CompileStop(`array required, but ${runtimeClassName(array)} found`)
-  if (i < 0 || i >= array.items.length) throw new Fault('ArrayIndexOutOfBoundsException', `Index ${i} out of bounds for length ${array.items.length}`)
-  return { array, i }
-}
-
-function readField(m: Machine, target: R, name: string, objExpr: Expr): R {
-  const v = target.value
-  if (v instanceof ClassRef) {
-    if (v.cls) {
-      const nested = v.cls.nested.get(name)
-      if (nested) return refR(new ClassRef(nested.name, nested))
-      const found = staticSlot(v.cls, name)
-      if (!found) throw new CompileStop(`cannot find symbol: variable ${name} in class ${v.name}`)
-      ensureInit(m, found.owner)
-      return { type: found.slot.type, value: found.slot.value }
-    }
-    return libStaticField(m, v.name, name)
-  }
-  if (v === null) {
-    const what = name === 'length' ? 'Cannot read the array length' : `Cannot read field "${name}"`
-    throw new Fault('NullPointerException', `${what} because ${describeNull(m, objExpr)} is null`)
-  }
-  if (v instanceof JArray && name === 'length') return intR(v.items.length)
-  if (v instanceof JObject) {
-    const slot = v.fields.get(name) ?? staticSlot(v.cls, name)?.slot
-    if (slot) return { type: slot.type, value: slot.value }
-  }
-  throw new CompileStop(`cannot find symbol: variable ${name} in ${runtimeClassName(v)}`)
-}
-
-/** The storage an assignment writes: a variable, a field, or an array element. */
-function placeOf(m: Machine, e: Expr): Slot {
-  if (e.k === 'name') {
-    const found = findVar(m, e.name)
-    if (!found) throw new CompileStop(`cannot find symbol: variable ${e.name}`)
-    if (found.owner) ensureInit(m, found.owner)
-    return found.slot
-  }
-  if (e.k === 'index') {
-    const { array, i } = checkedIndex(m, evalExpr(m, e.obj), evalExpr(m, e.index), e.obj, 'store to')
-    return new ElementSlot(array, i)
-  }
-  if (e.k !== 'field') throw new CompileStop('unexpected type: required variable, found value')
-  const target = evalTarget(m, e.obj)
-  const v = target.value
-  if (v === null) throw new Fault('NullPointerException', `Cannot assign field "${e.name}" because ${describeNull(m, e.obj)} is null`)
-  if (v instanceof JArray) throw new CompileStop('cannot assign a value to final variable length')
-  if (v instanceof ClassRef && v.cls) {
-    const found = staticSlot(v.cls, e.name)
-    if (found) {
-      ensureInit(m, found.owner)
-      return found.slot
-    }
-  }
-  const slot = v instanceof JObject ? (v.fields.get(e.name) ?? staticSlot(v.cls, e.name)?.slot) : undefined
-  if (!slot) throw new CompileStop(`cannot find symbol: variable ${e.name}`)
-  return slot
-}
-
-/** The receiver of a member access: like evalExpr, but a bare class name is allowed. */
-function evalTarget(m: Machine, e: Expr): R {
-  return e.k === 'name' ? evalName(m, e.name) : evalExpr(m, e)
+  return known
 }
 
 function assign(m: Machine, e: Extract<Expr, { k: 'assign' }>): R {
@@ -203,7 +68,7 @@ function makeArray(m: Machine, type: ArrayType, dims: readonly number[]): JArray
 }
 
 /** `{1, 2, 3}` as an array of `type`. */
-export function arrayFromInit(m: Machine, type: JType, e: Extract<Expr, { k: 'array' }>): JArray {
+function arrayFromInit(m: Machine, type: JType, e: Extract<Expr, { k: 'array' }>): JArray {
   if (type.t !== 'array') throw new CompileStop(`illegal initializer for ${typeName(type)}`)
   const of = type.of
   return new JArray(type, e.items.map((item) => (item.k === 'array' ? arrayFromInit(m, of, item) : convert(m, evalExpr(m, item), of))))
@@ -289,8 +154,10 @@ export function evalExpr(m: Machine, e: Expr): R {
       return unary(e.op, evalExpr(m, e.arg))
     case 'postfix':
       return update(m, e.arg, e.op, true)
-    case 'binary':
-      return binary(m, e.op, evalExpr(m, e.left), evalExpr(m, e.right))
+    case 'binary': {
+      const r = binary(m, e.op, evalExpr(m, e.left), evalExpr(m, e.right))
+      return r.value instanceof JStr && isConstant(e) ? refR(m.intern(r.value.s), T.string) : r
+    }
     case 'logical': {
       const left = truthy(evalExpr(m, e.left))
       if (e.op === '&&' ? !left : left) return boolR(left)
