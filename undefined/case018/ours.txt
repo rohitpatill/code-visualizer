@@ -1,0 +1,4 @@
+125 50 Main St#2 2 (0,0)
+[a, bb, ccc]
+base is 10
+12

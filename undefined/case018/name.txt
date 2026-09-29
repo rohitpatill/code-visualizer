@@ -1,0 +1,1 @@
+oop: inner, nested and anonymous classes

@@ -1,0 +1,7 @@
+Circle(1.0) circle I am circle
+Square[2] square square I am square square
+Square[3] square square I am square square
+16.14 3
+true true false true true
+2
+pattern 4

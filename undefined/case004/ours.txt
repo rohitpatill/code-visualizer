@@ -1,0 +1,5 @@
+ABB?
+small small middle big 
+00 01 10 11 20 21 
+12
+ok

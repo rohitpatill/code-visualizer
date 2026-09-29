@@ -1,0 +1,6 @@
+Point[x=3, y=4] 3 5.0 true false true
+negative x: -1
+age=30 30
+9 pear 0 1 6 9
+[3, 2, 1]
+P

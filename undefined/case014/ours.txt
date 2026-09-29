@@ -1,0 +1,11 @@
+[banana, apple, cherry, pear, kiwi, fig]
+true false true 5
+[banana, apple, cherry, pear, fig]
+[1024, 16, -3, 19, 100, 7, 42]
+[10, 20, 30, 50, 80] 10 80 20 30 null null [10, 20] [30, 50, 80]
+10
+[20, 30, 50, 80]
+{alpha=1, bravo=2, charlie=3, delta=4} alpha delta=4 bravo charlie {alpha=1, bravo=2} {charlie=3, delta=4}
+{3=c, 2=b, 1=a}
+true false
+[b, a, n]

@@ -1,0 +1,8 @@
+12 o 4 8 8 -1
+World|Hello|HELLO, WORLD|hello, world|HeLLo, WorLd|Hello, Java
+true true true false true pad|pad|
+ababab a-b-c x/y 3.5truec
+-1 1 true -1
+abcd bc 4
+[a, b, c] [one, , two] [x] a+b+c true
+012 47697 0 2112 2112

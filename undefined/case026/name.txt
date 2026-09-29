@@ -1,0 +1,1 @@
+semantics: ternaries, casts and instanceof on objects

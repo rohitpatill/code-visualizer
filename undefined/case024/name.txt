@@ -1,0 +1,1 @@
+patterns: DP, intervals, bits and binary search on the answer

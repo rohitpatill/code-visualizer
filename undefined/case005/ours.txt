@@ -1,0 +1,12 @@
+caught Index 5 out of bounds for length 2
+cast
+need 50 50 true
+in finally
+1
+multi java.lang.IllegalArgumentException: zero
+finally
+For input string: "12a"
+empty java.util.NoSuchElementException
+immutable null
+outer <- inner
+deep
