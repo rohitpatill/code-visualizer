@@ -113,11 +113,13 @@ body.
 - `cin` reads values from the input box, separated by spaces or lines.
 - Java runs on a built-in interpreter too, checked against a real JDK: classes,
   inheritance, interfaces, records, enums, generics, lambdas and method
-  references, exceptions with try/catch/finally, and the everyday parts of
-  `java.util` (lists, deques, maps, sets, PriorityQueue, Arrays, Collections),
-  String, StringBuilder, Math, Scanner and printf. HashMap iteration order,
-  `Integer` caching and `==` on strings behave exactly as in Java. Streams are
-  not supported yet.
+  references, exceptions with try/catch/finally, streams with Collectors and
+  Optional, and the everyday parts of `java.util` (lists, deques, maps, sets,
+  PriorityQueue, EnumMap, Arrays, Collections), String, StringBuilder, Math,
+  Scanner and printf. Your classes can extend the collections, so the
+  `LinkedHashMap` LRU cache works. HashMap iteration order, `Integer` caching,
+  `==` on strings and the order stream lambdas run in behave exactly as in
+  Java.
 - `Scanner` (and `BufferedReader`) read the input box.
 - Stops after 3000 steps, with a 15 second hard timeout.
 - Pointer markers are name based. A variable called `x` won't show on an

@@ -228,15 +228,20 @@ src/
       interp/               values, classes (table, lookup), numbers, convert
                             (boxing, lossy checks), text (Double.toString,
                             String.valueOf), ops, names, eval, exec,
-                            switches, calls, objects, enums, throwing,
-                            encode, machine, run
+                            switches, calls, overloads, objects, enums,
+                            throwing, encode, machine, run, streamValues
+                            (Stream, Optional, Collector, statistics)
       interp/lib/           the java.util subset: sequences, lists, heaps,
                             stores (HashMap and TreeMap layouts), maps,
                             views, sets, iteration, sorting, equality,
                             strings, builder, characters, wrappers, system,
                             format (printf), io (System.out, Scanner),
                             random, functional (lambdas, comparators),
-                            utilities (Arrays, Collections), objects, types
+                            utilities (Arrays, Collections), objects, types,
+                            enumCollections (EnumMap, EnumSet), extendable,
+                            streamSources, streams (intermediate steps),
+                            terminals, collecting and collectors, optionals,
+                            statistics
       testing.ts            helpers for the JDK-verified tests
       highlight.ts, samples.ts, tests, __golden__/
     cpp/
@@ -392,16 +397,42 @@ src/
 - Supported: classes, inheritance with `super`, abstract classes, interfaces
   with default methods, static and inner classes, anonymous classes, records
   (compact constructors, accessors, equals/hashCode/toString), enums (fields,
-  constructors, methods, `values`, `valueOf`, switch), generics (erased),
-  varargs, lambdas and method references, switch statements and expressions
-  (both styles), labeled loops, try/catch/finally with multi-catch and
-  try-with-resources, text blocks, `var`. Library: String, StringBuilder,
+  constructors, methods, constants with their own bodies, `values`,
+  `valueOf`, switch), classes, records, enums and interfaces declared inside
+  a method (a local class sees the method's variables), generics (erased,
+  explicit type arguments ignored), varargs, lambdas and method references,
+  switch statements and expressions (both styles), labeled loops,
+  try/catch/finally with multi-catch and try-with-resources, text blocks,
+  `var`, class literals (`Color.class`). Library: String, StringBuilder,
   Math, the wrappers, Objects, System, Arrays, Collections, List/Set/Map.of,
   ArrayList, LinkedList, ArrayDeque, Stack, PriorityQueue, HashMap,
   LinkedHashMap (access order too), TreeMap, HashSet, LinkedHashSet, TreeSet,
-  iterators with fail-fast ConcurrentModificationException, Comparator
-  factories, Random, Scanner, BufferedReader, StringTokenizer, PrintWriter
-  (buffered until flushed), printf and String.format.
+  EnumMap, EnumSet, iterators with fail-fast ConcurrentModificationException,
+  Comparator and Map.Entry comparator factories, Random, Scanner,
+  BufferedReader, StringTokenizer, PrintWriter (buffered until flushed),
+  printf and String.format.
+- Streams (`streams.ts`, `terminals.ts`, `collectors.ts`): Stream, IntStream,
+  LongStream and DoubleStream from collections, arrays, `String.chars()`,
+  ranges, `of`, `iterate` and `generate`; the usual intermediate and terminal
+  operations; Collectors (toList, toSet, toMap, groupingBy, partitioningBy,
+  counting, joining, mapping, summing, averaging and the rest); Optional and
+  the summary statistics. Each stage is a generator pulling one element at a
+  time, so lambdas run in Java's order: every element passes all stages
+  before the next starts, `sorted` waits for all of them, `limit` and
+  `findFirst` stop the source. Java details kept: count() skips the pipeline
+  when the size is known (so a `peek` there never runs), groupingBy inserts
+  new keys at the bucket head (computeIfAbsent), toMap's duplicate-key
+  message, Kahan-compensated double sums, reusing a stream is
+  IllegalStateException. A stream in a variable shows as `Stream` or
+  `IntStream`; an Optional is a box around its value.
+- A class may extend a built-in collection or Random (`class LRUCache extends
+  LinkedHashMap`, `new ArrayList<>() {{ add(1); }}`). The object wraps a real
+  one (`JObject.base`): inherited and `super.` calls go to it, library
+  routines read it (`builtinPart`), and LinkedHashMap calls the subclass's
+  removeEldestEntry after each new key, as Java does. It draws as its own
+  fields plus a `super` field holding the collection, or as the collection
+  itself when it has no fields. Final classes (String, the wrappers) are
+  refused with javac's message.
 - Frames: a global frame showing user classes' static fields (enum constants
   left out), `Class.method` calls, `new Class` constructors, `lambda`, and
   `Class.<clinit>` when a class is first used and runs static initializers.
@@ -469,7 +500,7 @@ src/
 
 ## Verification status
 
-- `npm test` (Vitest, 380 tests):
+- `npm test` (Vitest, 391 tests):
   - Python golden traces for all 13 samples in real Pyodide 0.26.4 from npm
     (`PYTHONHASHSEED=0`, since set order depends on string hashing), plus
     errors, step limit, `input()`, UTF-16 output, stable ids, deltas;
@@ -487,14 +518,18 @@ src/
     (two sum, Dijkstra, grid BFS, trie, dummy node, iterators, fast io,
     unknown types), and trace-shape checks (frames, `?`, literals, heap
     kinds, `this`, `&x`, same-line merging, silent prelude);
-  - Java golden traces for all 13 samples, 29 programs whose expected output
+  - Java golden traces for all 13 samples, 37 programs whose expected output
     was produced by a real JDK (arithmetic and casts, Double.toString,
     boxing and string identity, switch forms, labels, exceptions, Scanner and
     BufferedReader, strings, printf, every collection including HashMap
-    iteration order, sorting, OOP, records, generics, lambdas, enums, Random,
+    iteration order, sorting, OOP, records, generics, lambdas, enums with
+    bodies, EnumMap and EnumSet, local classes, classes extending
+    collections, streams and their laziness, Collectors, Optional, Random,
     LeetCode patterns), and trace-shape checks (frames, `<clinit>`, `this`,
-    lambdas, anonymous classes, enum display, caught exceptions, helpful
-    NullPointerException messages, unsupported features, compile errors);
+    lambdas, stream lambdas per element, anonymous classes, enum display,
+    Optional display, classes extending collections, caught exceptions,
+    helpful NullPointerException messages, unsupported features, compile
+    errors);
   - `Trace` rebuilding (heap and frames) against forward replay;
   - `WorkerRunner` with a fake worker: ready, results, busy, timeout and
     restart, crash, load failure, stale results;
@@ -505,7 +540,7 @@ src/
     tabs, guess mode, empty-run error, top bar and guide, no React warnings.
 - `npm run build` runs `tsc` then Vite. Main chunk about 630 kB (CodeMirror);
   acorn and astring live only in the JavaScript worker (150 kB), the Java
-  interpreter only in its worker (142 kB), the C++ interpreter in its own
+  interpreter only in its worker (169 kB), the C++ interpreter in its own
   (80 kB), and each editor grammar is its own lazy chunk.
 - The JDK on this machine is 18. Two of its behaviors are deliberately not
   copied: it stringifies every operand of `a + b + c` only after evaluating
@@ -541,10 +576,11 @@ src/
   the element. Structs held by value draw in the heap area with an arrow.
   `new T[n]` is zero-filled. Unsupported syntax fails with a named compile
   error.
-- Java is a large subset, not all of Java: no streams, no enum constants
-  with their own bodies, no EnumMap or EnumSet, no subclasses of built-in
-  classes (so no `removeEldestEntry` LRU), no threads, no reflection beyond
-  getClass().getName(). Generic types are not checked, so some programs javac
+- Java is a large subset, not all of Java: no threads or `synchronized`,
+  no reflection beyond getClass().getName(), no parallel streams (accepted,
+  run sequentially), no subclasses of built-in classes other than the
+  collections and Random. A stream's `sorted()` always sorts, where Java may
+  skip it on an already sorted source (same result, fewer compareTo calls). Generic types are not checked, so some programs javac
   rejects will run. Map.of and Set.of show insertion order (Java randomizes
   it per run). A StackOverflowError comes after a few hundred frames
   (JavaScript's stack), not Java's thousands.
@@ -579,7 +615,5 @@ accounts and progress on that same backend.
 - JavaScript async functions and generators.
 - C++: templates, inheritance, `stringstream`, `tuple`, pointer offsets into
   arrays drawn on the element.
-- Java: streams, EnumMap/EnumSet, enum constant bodies, anonymous subclasses
-  of built-in classes.
 - Split CodeMirror into its own chunk (only edit mode needs it).
 - More learning-first features in the spirit of guess mode.

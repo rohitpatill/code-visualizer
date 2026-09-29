@@ -7,7 +7,7 @@ reference (read it first, it is kept in sync with the code). This file is the
 story: who we work for, how they like to work, what was decided and why, what
 state things are in, and what comes next.
 
-Last updated: 2026-09-29, after adding the Java engine.
+Last updated: 2026-09-29, after closing the Java gaps (streams, enum collections, subclassed collections, local types).
 
 ## 1. The person and how to work with him
 
@@ -144,6 +144,14 @@ Session work, by commit:
      JDK-verified tests.
    - `ba38198` Random (Java's exact generator), LinkedHashMap access order,
      try-with-resources closing. `40423fd` Enums. `97f9704` Trace-shape tests.
+7. **Java gaps closed** (he asked for "further required enhancements"; I read
+   that as the Java gaps listed at the end of the Java work):
+   - `ac440e1` Enum constants with bodies, EnumMap and EnumSet, `Color.class`.
+   - `d186bb9` Streams, Collectors, Optional, summary statistics, explicit
+     type arguments (`Map.Entry.<K, V>comparingByValue()`).
+   - `6ee9988` Classes extending the collections and Random (LRU cache via
+     removeEldestEntry, double-brace initialization).
+   - `f70ff00` Classes, records, enums and interfaces declared in methods.
 
 ## 4. Decisions and the reasoning behind them
 
@@ -204,15 +212,31 @@ Recorded in CLAUDE.md "Key decisions"; the reasoning and rejected options:
 - **Java quirks not copied**: JDK 9 to 18 stringify concatenation operands
   late (fixed in JDK 19); older Double.toString prints some edge values
   with extra digits. We follow the spec and JDK 19+.
+- **Streams are lazy generators**, not eager arrays, because the trace shows
+  every lambda call: Java runs each element through all stages before the
+  next, and learners see that order. The JDK source (`lib/src.zip` in the
+  installed JDK) was read for the details that change output: SIZED flags
+  (count() skipping peek), computeIfAbsent in groupingBy, Kahan summation.
+- **Extending a collection wraps a real one** (`JObject.base`) instead of
+  making user objects into collections. Inherited calls delegate; only
+  LinkedHashMap's removeEldestEntry is called back from the library, because
+  it is the one hook Java's collections call on a subclass that programs
+  rely on.
+- **Local types are filed with their enclosing class** at parse time, as
+  javac does; a local class captures the method's scope like an anonymous
+  class. Two local classes with the same name in different methods would
+  collide (rare, accepted).
+- **`main`'s empty `args` array stays visible**: it is what Java really
+  passes. Offered to hide it; not done.
 
 ## 5. Current state
 
 - Languages: Python (Pyodide 0.26.4), JavaScript (instrumented), Java and C++
   (interpreters). All four share examples, guide, structure views, call tree,
   timeline, breakpoints and guess mode.
-- Tests: 380 passing (`npm test`). Build passes (`npm run build`, which runs
+- Tests: 391 passing (`npm test`). Build passes (`npm run build`, which runs
   `tsc` first). Main chunk about 630 kB (CodeMirror); JS worker 150 kB
-  (acorn, astring); Java worker 142 kB; C++ worker 80 kB; Python worker 11 kB
+  (acorn, astring); Java worker 169 kB; C++ worker 80 kB; Python worker 11 kB
   (Pyodide from CDN); editor grammars are lazy chunks.
 - **Not yet checked by eye in a browser** since the TypeScript migration and
   the JavaScript, C++ and Java engines. Rohit said he would check himself.
@@ -245,10 +269,9 @@ Open items and ideas raised along the way:
 - C++ subset gaps worth closing if he uses them: templates, inheritance,
   `stringstream`, `tuple`, arrows to array elements for pointer offsets.
 - JavaScript async/generators.
-- Java gaps: streams, EnumMap/EnumSet, enum constant bodies, anonymous
-  subclasses of built-in classes (so no `removeEldestEntry`). `main` shows an
-  empty `args` array in every Java run; truthful, but it could be hidden if
-  it reads as noise.
+- Java: what is left is rare in DSA code (threads, `synchronized`,
+  reflection). `main` shows an empty `args` array in every Java run;
+  truthful, but it could be hidden if it reads as noise.
 
 ## 7. Practical notes for the next session
 
@@ -283,7 +306,8 @@ Open items and ideas raised along the way:
   JDK prints CRLF: strip `\r` before comparing. Avoid printing a collection
   and mutating it in the same concatenation (JDK 18 evaluates it late), and
   subnormal or float edge values (old Double/Float.toString). Put the JDK's
-  output, not ours, into the test.
+  output, not ours, into the test. For how a library method really
+  behaves, read the JDK's own source: `lib/src.zip` in the JDK folder.
 - The Bash tool collapses `\\` inside heredocs; files containing regexes or
   escapes are written with the editor tool instead.
 - New dependencies can confuse the running dev server's optimizer; restart it
