@@ -1,6 +1,6 @@
 # Code Visualizer
 
-A local, step-by-step code visualizer (Python, JavaScript and C++) for
+A local, step-by-step code visualizer (Python, JavaScript, Java and C++) for
 learning programming and DSA.
 `README.md` is the user guide. This file is the builder's memory and the
 engineering contract. Keep it in sync with the code (see "Keeping this file
@@ -136,9 +136,9 @@ common data structure or pattern.
 13. **State in a zustand store with narrow selectors**, so a hover or a step
     re-renders only what depends on it.
 14. **Engines run behind a `Runner` interface**, not a worker. Every engine
-    so far uses `WorkerRunner` (browser Web Worker). Languages that need a real
-    toolchain (Java, full C++) will need a sandboxed server; that becomes
-    another `Runner` and nothing above it changes.
+    uses `WorkerRunner` (browser Web Worker). A language that needs a real
+    toolchain (a full C++ or Java compiler) would need a sandboxed server; that
+    becomes another `Runner` and nothing above it changes.
 15. **One sample catalog for every language** (`src/samples/catalog.ts`).
     Each engine supplies a `SampleSet` keyed by catalog id, so TypeScript
     fails the build if a language misses a sample (it may mark one `null`).
@@ -159,7 +159,16 @@ common data structure or pattern.
     into teaching errors. A server runner with a real compiler can replace it
     later behind the same `Runner`.
 19. **Engines build their own program** from code and call box
-    (`Engine.buildProgram`): C++ wraps the call in `main()`.
+    (`Engine.buildProgram`): C++ and Java wrap the call in `main()`.
+20. **Java runs on our own interpreter too**, for the same reasons as C++.
+    The library mirrors `java.util` wherever it shows: HashMap's table and
+    bucket order (merge and compute insert at the bucket head), PriorityQueue's
+    sift routines, TimSort's binary insertion below 32 elements, the Integer
+    cache, interned and folded string constants, Random's generator. The Java
+    tests' expected outputs come from a real JDK, not from us.
+21. **Interpreters share their plumbing** (`engines/shared/`): the token
+    cursor and `CompileError`, the stdin reader, the scope chain and the
+    `Recorder`. Language rules stay in each engine.
 
 ## Architecture
 
@@ -207,6 +216,29 @@ src/
                             helpers.js (ListNode, TreeNode, buildList,
                             buildTree, evaluated from source)
       highlight.ts, samples.ts, __golden__/
+    java/
+      index.ts              engine definition and copy
+      worker.ts             module worker, runs interp/run.ts
+      source.ts             buildJavaProgram: call box becomes main()
+      prelude.java          ListNode, TreeNode, buildList, buildTree and the
+                            Throwable hierarchy, written in Java
+      lang/                 types (JType), lexer, ast, parser/ (types,
+                            expressions, primary, statements, control,
+                            classes, nodes)
+      interp/               values, classes (table, lookup), numbers, convert
+                            (boxing, lossy checks), text (Double.toString,
+                            String.valueOf), ops, names, eval, exec,
+                            switches, calls, objects, enums, throwing,
+                            encode, machine, run
+      interp/lib/           the java.util subset: sequences, lists, heaps,
+                            stores (HashMap and TreeMap layouts), maps,
+                            views, sets, iteration, sorting, equality,
+                            strings, builder, characters, wrappers, system,
+                            format (printf), io (System.out, Scanner),
+                            random, functional (lambdas, comparators),
+                            utilities (Arrays, Collections), objects, types
+      testing.ts            helpers for the JDK-verified tests
+      highlight.ts, samples.ts, tests, __golden__/
     cpp/
       index.ts              engine definition and copy
       worker.ts             module worker, runs interp/run.ts
@@ -222,8 +254,10 @@ src/
       interp/stl/           sequences, strings, adapters, associative,
                             heap, iterators, ordering, algorithms, methods
       highlight.ts, samples.ts, semantics/patterns/tracer tests, __golden__/
-    shared/recorder.ts      Recorder: frame and heap deltas, output, step
-                            budget; used by the JavaScript and C++ tracers
+    shared/                 used by the tracers written in TypeScript:
+                            recorder (frame and heap deltas, output, step
+                            budget), syntax (CompileError, TokenCursor),
+                            input (stdin reader), scope (ScopeChain)
   model/                    pure logic: describe, diff, heapLayout,
                             callTree, guess
   structures/               view suggestions and data builders: common,
@@ -265,7 +299,9 @@ src/
   float str other`), `v` the literal in the source language, `s` raw string
   text. Otherwise `{t:'r', id}`.
 - Heap objects: `kind` drives rendering (`list tuple set deque dict instance
-  class function module other`), `type` is the language's own type name.
+  class function module other`), `type` is the language's own type name. A
+  sequence may say `stackTop: 'first'` when the language pushes at the front
+  (Java deques); the Stack view then draws the first item on top.
 - `Trace` expands frames once (sharing unchanged frame objects), keeps a full
   heap every 64 steps so `step(i)` replays at most 63 deltas, has an 8-step
   LRU, and `scan()` walks all steps in O(total deltas).
@@ -333,6 +369,48 @@ src/
   silently. User definitions replace them.
 - Frames: a global frame, then `main`, then calls named `Class::method`.
 
+### Java interpreter (`src/engines/java/`)
+
+- Same shape as C++: lexer, recursive-descent parser, tree-walking
+  interpreter. Primitives carry their Java type (32-bit `int` wraps, `long`
+  is BigInt, `char` is a UTF-16 unit, `float` is rounded every step, integer
+  division truncates, float-to-int casts saturate). References are objects;
+  `String` and the wrapper classes are objects too, so `==` compares identity
+  exactly as in Java (Integer cache from -128 to 127, interned literals,
+  folded constants), while the views draw them inline like primitives.
+- Runtime faults are real Java exceptions built from `prelude.java`, so user
+  code can catch them, with the JDK's messages (`Index 5 out of bounds for
+  length 3`, helpful NullPointerException text naming the null expression).
+  An exception is recorded where it is thrown and again in each caller it
+  passes through; uncaught, the run ends with `Exception in thread "main"
+  ...`. Running out of JavaScript stack becomes a catchable
+  StackOverflowError.
+- There is no type checker, so what javac rejects is caught while running:
+  reading an unassigned local, a missing return, lossy conversions (`int x =
+  2.5`), bad operand types. These stop the run as `Compile error: ...` at that
+  line.
+- Supported: classes, inheritance with `super`, abstract classes, interfaces
+  with default methods, static and inner classes, anonymous classes, records
+  (compact constructors, accessors, equals/hashCode/toString), enums (fields,
+  constructors, methods, `values`, `valueOf`, switch), generics (erased),
+  varargs, lambdas and method references, switch statements and expressions
+  (both styles), labeled loops, try/catch/finally with multi-catch and
+  try-with-resources, text blocks, `var`. Library: String, StringBuilder,
+  Math, the wrappers, Objects, System, Arrays, Collections, List/Set/Map.of,
+  ArrayList, LinkedList, ArrayDeque, Stack, PriorityQueue, HashMap,
+  LinkedHashMap (access order too), TreeMap, HashSet, LinkedHashSet, TreeSet,
+  iterators with fail-fast ConcurrentModificationException, Comparator
+  factories, Random, Scanner, BufferedReader, StringTokenizer, PrintWriter
+  (buffered until flushed), printf and String.format.
+- Frames: a global frame showing user classes' static fields (enum constants
+  left out), `Class.method` calls, `new Class` constructors, `lambda`, and
+  `Class.<clinit>` when a class is first used and runs static initializers.
+- The call box becomes `public class Main { public static void main(...) }`
+  when the code has no main (`buildJavaProgram`).
+- Prelude (`prelude.java`): `ListNode`, `TreeNode`, `buildList(1, 2, 3)`,
+  `buildTree(3, 9, 20, null, null, 15, 7)` and the exception classes, run
+  silently. User classes replace them.
+
 ### Frontend data flow
 
 1. Edit mode: code, call and views live in the store. Each language keeps its
@@ -340,7 +418,8 @@ src/
    `stepthrough-draft-<id>`; the old single-language keys migrate into
    Python). The language choice persists as `stepthrough-language`.
 2. Visualize builds the program with `engine.buildProgram(code, call)`
-   (`joinSource` for Python and JavaScript, `buildCppProgram` for C++) and
+   (`joinSource` for Python and JavaScript, `buildJavaProgram` and
+   `buildCppProgram` for Java and C++) and
    asks the engine's runner to run it. The worker returns a JSON string, parsed once into a `Trace`.
 3. View mode: the store's `index` drives everything. `ViewLayout` rebuilds the
    current and previous `Step`; `MemoryPane` derives the diff (from the
@@ -364,7 +443,8 @@ src/
    `engines/protocol.ts`, or a remote runner), an `Engine` with its copy,
    `buildProgram`, highlighter and lazy grammar, and register it in
    `engines/registry.ts`. A tracer written in TypeScript should record
-   through `engines/shared/recorder.ts`.
+   through `engines/shared/recorder.ts`; an interpreter reuses the shared
+   token cursor, stdin reader and scope chain.
 3. Implement the whole `SampleSet` (TypeScript enforces it), using the
    catalog's variable names for preset views.
 4. Add tracer tests that write `__golden__/<sample id>.json`. The builder,
@@ -389,7 +469,7 @@ src/
 
 ## Verification status
 
-- `npm test` (Vitest, 272 tests):
+- `npm test` (Vitest, 380 tests):
   - Python golden traces for all 13 samples in real Pyodide 0.26.4 from npm
     (`PYTHONHASHSEED=0`, since set order depends on string hashing), plus
     errors, step limit, `input()`, UTF-16 output, stable ids, deltas;
@@ -407,6 +487,14 @@ src/
     (two sum, Dijkstra, grid BFS, trie, dummy node, iterators, fast io,
     unknown types), and trace-shape checks (frames, `?`, literals, heap
     kinds, `this`, `&x`, same-line merging, silent prelude);
+  - Java golden traces for all 13 samples, 29 programs whose expected output
+    was produced by a real JDK (arithmetic and casts, Double.toString,
+    boxing and string identity, switch forms, labels, exceptions, Scanner and
+    BufferedReader, strings, printf, every collection including HashMap
+    iteration order, sorting, OOP, records, generics, lambdas, enums, Random,
+    LeetCode patterns), and trace-shape checks (frames, `<clinit>`, `this`,
+    lambdas, anonymous classes, enum display, caught exceptions, helpful
+    NullPointerException messages, unsupported features, compile errors);
   - `Trace` rebuilding (heap and frames) against forward replay;
   - `WorkerRunner` with a fake worker: ready, results, busy, timeout and
     restart, crash, load failure, stale results;
@@ -415,14 +503,19 @@ src/
     language, and a check that preset view names exist in each trace;
   - every step of every sample in every language rendered in jsdom, both
     tabs, guess mode, empty-run error, top bar and guide, no React warnings.
-- `npm run build` runs `tsc` then Vite. Main chunk about 622 kB (CodeMirror);
-  acorn and astring live only in the JavaScript worker (150 kB), the C++
-  interpreter only in its worker (79 kB), and each editor grammar is its own
-  lazy chunk.
+- `npm run build` runs `tsc` then Vite. Main chunk about 630 kB (CodeMirror);
+  acorn and astring live only in the JavaScript worker (150 kB), the Java
+  interpreter only in its worker (142 kB), the C++ interpreter in its own
+  (80 kB), and each editor grammar is its own lazy chunk.
+- The JDK on this machine is 18. Two of its behaviors are deliberately not
+  copied: it stringifies every operand of `a + b + c` only after evaluating
+  all of them (fixed in JDK 19; we follow the language spec), and its older
+  Double.toString prints a few edge values with extra digits (we follow the
+  shortest-digits rule of JDK 19 and later).
 - A test asserts the npm Pyodide version equals the CDN version the browser
   loads; bump `pyodide.ts` and `package.json` together.
-- Not yet checked by eye in a browser since the TypeScript migration, the
-  JavaScript engine and the C++ engine.
+- Not yet checked by eye in a browser since the TypeScript migration and
+  the JavaScript, C++ and Java engines.
 - `npm audit`: dev-tooling vulnerabilities, deliberately not force-fixed
   (would jump Vite a major version; local-only tool).
 
@@ -448,6 +541,13 @@ src/
   the element. Structs held by value draw in the heap area with an arrow.
   `new T[n]` is zero-filled. Unsupported syntax fails with a named compile
   error.
+- Java is a large subset, not all of Java: no streams, no enum constants
+  with their own bodies, no EnumMap or EnumSet, no subclasses of built-in
+  classes (so no `removeEldestEntry` LRU), no threads, no reflection beyond
+  getClass().getName(). Generic types are not checked, so some programs javac
+  rejects will run. Map.of and Set.of show insertion order (Java randomizes
+  it per run). A StackOverflowError comes after a few hundred frames
+  (JavaScript's stack), not Java's thousands.
 - Flash may not replay if the same thing changes on consecutive steps.
 - Python generators and iterators render as opaque `other` boxes.
 - Python set display order follows real iteration order, which changes
@@ -463,9 +563,9 @@ src/
 ## Roadmap
 
 Agreed order: (1) language-neutral foundation, done; (2) JavaScript engine,
-done; C++ engine (in-browser interpreter), done ahead of plan; (3) better
-structure views; (4) backend with sandboxed runners for Java (and a
-real-compiler C++ if the subset is outgrown), each a new `Runner`; (5)
+done; C++ and Java engines (in-browser interpreters), done ahead of plan; (3)
+better structure views; (4) backend with sandboxed runners for real
+compilers if the interpreted subsets are outgrown, each a new `Runner`; (5)
 accounts and progress on that same backend.
 
 ## Backlog
@@ -479,5 +579,7 @@ accounts and progress on that same backend.
 - JavaScript async functions and generators.
 - C++: templates, inheritance, `stringstream`, `tuple`, pointer offsets into
   arrays drawn on the element.
+- Java: streams, EnumMap/EnumSet, enum constant bodies, anonymous subclasses
+  of built-in classes.
 - Split CodeMirror into its own chunk (only edit mode needs it).
 - More learning-first features in the spirit of guess mode.

@@ -7,8 +7,7 @@ reference (read it first, it is kept in sync with the code). This file is the
 story: who we work for, how they like to work, what was decided and why, what
 state things are in, and what comes next.
 
-Last updated: 2026-09-29, after the rename to Code Visualizer (commit
-`926b569`).
+Last updated: 2026-09-29, after adding the Java engine.
 
 ## 1. The person and how to work with him
 
@@ -127,7 +126,24 @@ Session work, by commit:
    - `4212a2d` Docs.
 5. `926b569` Renamed the visible product to **Code Visualizer** (header, tab
    title, README and CLAUDE.md). Internal `stepthrough-*` keys kept on
-   purpose.
+   purpose. `faa98d5` added this file.
+6. **Java engine** (he asked for Java "as perfectly as possible"):
+   - `5794f27`, `aa9b5ef` Shared plumbing for interpreters: token cursor and
+     `CompileError`, stdin reader, scope chain (C++ moved onto them, goldens
+     unchanged). `78b8046` Trace contract: sequences may say
+     `stackTop: 'first'` so Java deques draw as stacks correctly.
+   - `db226f7` Java lexer and parser (text blocks, records, lambdas, switch
+     expressions, anonymous classes, generics, annotations).
+   - `39968fd` Interpreter and `java.util` subset. `2485e74` Engine, 13
+     samples, goldens, registered between JavaScript and C++.
+   - `395e733`, `f8ec1c0`, `bcd1da8`, `a17c607` Bugs found by diffing against
+     a real JDK and fixed (HashMap bucket-head insertion for
+     merge/compute/computeIfAbsent, compile-time string constants,
+     catchable StackOverflowError, getClass on built-ins, record hashing,
+     token splits undone on parse rewind), large modules split, and the
+     JDK-verified tests.
+   - `ba38198` Random (Java's exact generator), LinkedHashMap access order,
+     try-with-resources closing. `40423fd` Enums. `97f9704` Trace-shape tests.
 
 ## 4. Decisions and the reasoning behind them
 
@@ -170,18 +186,36 @@ Recorded in CLAUDE.md "Key decisions"; the reasoning and rejected options:
   seed; tests pin `PYTHONHASHSEED=0`).
 - **Storage keys kept as `stepthrough-*`** after the rename, so saved drafts
   survive. Renaming needs a migration; offered, not done.
+- **Java by our own interpreter too**, same reasoning as C++ (a JVM in
+  WebAssembly is huge and not traceable; a server means building the backend
+  first). The roadmap had Java on a server; decided in-browser, stated to
+  Rohit at the start of the work.
+- **Fidelity where learners see it**: the library reproduces Java's exact
+  HashMap table (capacity growth, bucket order, head insertion by the compute
+  family), PriorityQueue sifts, TimSort below 32 elements, the Integer cache,
+  string interning and constant folding, Random's LCG, JDK exception
+  messages. The point is that output and `==` surprises match a real run.
+- **Expected outputs come from the JDK**, never from us: each verified
+  program was run with javac/java 18 and our interpreter, diffed, and the
+  JDK's output became the test expectation (generated, not typed).
+- **Compile errors found at run time**: there is no type checker, so what
+  javac rejects (unassigned locals, missing return, lossy conversions) is
+  reported as `Compile error: ...` when reached.
+- **Java quirks not copied**: JDK 9 to 18 stringify concatenation operands
+  late (fixed in JDK 19); older Double.toString prints some edge values
+  with extra digits. We follow the spec and JDK 19+.
 
 ## 5. Current state
 
-- Languages: Python (Pyodide 0.26.4), JavaScript (instrumented), C++
-  (interpreter). All three share examples, guide, structure views, call tree,
+- Languages: Python (Pyodide 0.26.4), JavaScript (instrumented), Java and C++
+  (interpreters). All four share examples, guide, structure views, call tree,
   timeline, breakpoints and guess mode.
-- Tests: 272 passing (`npm test`). Build passes (`npm run build`, which runs
-  `tsc` first). Main chunk about 622 kB (CodeMirror); JS worker 150 kB
-  (acorn, astring); C++ worker 79 kB; Python worker 11 kB (Pyodide from CDN);
-  editor grammars are lazy chunks.
-- **Not yet checked by eye in a browser** since the TypeScript migration, the
-  JavaScript engine and the C++ engine. Rohit said he would check himself.
+- Tests: 380 passing (`npm test`). Build passes (`npm run build`, which runs
+  `tsc` first). Main chunk about 630 kB (CodeMirror); JS worker 150 kB
+  (acorn, astring); Java worker 142 kB; C++ worker 80 kB; Python worker 11 kB
+  (Pyodide from CDN); editor grammars are lazy chunks.
+- **Not yet checked by eye in a browser** since the TypeScript migration and
+  the JavaScript, C++ and Java engines. Rohit said he would check himself.
   This is the first thing to confirm when he reports back; any visual issue
   he finds should be fixed before new features.
 - Runaway code: 3000-step limit in every engine plus the 15 s worker timeout
@@ -197,13 +231,13 @@ Agreed roadmap (CLAUDE.md "Roadmap"):
 3. **Better structure views** (next): the backlog lists pinning a variable as a
    pointer by hand, watch expressions, live step/loop counters, edge-list
    graphs and better graph layout, hiding constructor noise in the call tree.
-4. Backend with sandboxed runners (Java, and a real-compiler C++ if the subset
-   is outgrown), each a new `Runner`.
+4. Backend with sandboxed runners for real compilers, if the interpreted
+   Java or C++ subsets are outgrown, each a new `Runner`.
 5. Accounts and progress (questions solved, steps, history) on that backend.
 
 Open items and ideas raised along the way:
 
-- Wait for his browser check of all three languages; fix what he reports.
+- Wait for his browser check of all four languages; fix what he reports.
 - Guess mode asks nothing on pure recursion like factorial (only plain values
   changing at the same depth are asked). Noted as a known limit, not fixed.
 - Friendlier message when a worker crashes from a huge allocation.
@@ -211,6 +245,10 @@ Open items and ideas raised along the way:
 - C++ subset gaps worth closing if he uses them: templates, inheritance,
   `stringstream`, `tuple`, arrows to array elements for pointer offsets.
 - JavaScript async/generators.
+- Java gaps: streams, EnumMap/EnumSet, enum constant bodies, anonymous
+  subclasses of built-in classes (so no `removeEldestEntry`). `main` shows an
+  empty `args` array in every Java run; truthful, but it could be hidden if
+  it reads as noise.
 
 ## 7. Practical notes for the next session
 
@@ -237,5 +275,16 @@ Open items and ideas raised along the way:
   Bash wrapper, so multi-line patch scripts are written to the session
   scratchpad and run with `python`. Git Bash `sed` writes LF; the repo
   normalizes to LF via `.gitattributes`.
+- Checking Java behavior against a real JDK: JDK 18 is installed
+  (`C:\Program Files\Java\jdk-18.0.2`, `javac` and `java` on PATH). Write the
+  program to a scratch folder as `Main.java`, run `javac Main.java` and
+  `java -Xss4m -cp . Main < input.txt`, and compare with
+  `output(program, stdin)` from `src/engines/java/testing.ts`. On Windows the
+  JDK prints CRLF: strip `\r` before comparing. Avoid printing a collection
+  and mutating it in the same concatenation (JDK 18 evaluates it late), and
+  subnormal or float edge values (old Double/Float.toString). Put the JDK's
+  output, not ours, into the test.
+- The Bash tool collapses `\\` inside heredocs; files containing regexes or
+  escapes are written with the editor tool instead.
 - New dependencies can confuse the running dev server's optimizer; restart it
   (without testing the UI) after installing packages.
