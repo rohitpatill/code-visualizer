@@ -9,9 +9,9 @@ import type { Machine } from '../machine'
 import type { PrimValue } from '../numbers'
 import { instantiate } from '../objects'
 import { boolR, intR, refR, truthy } from '../ops'
-import { ClassRef, FnVal, JArray, type JVal, type R } from '../values'
+import { ClassRef, EntryVal, FnVal, JArray, type JVal, type R } from '../values'
 import { compareWith } from './equality'
-import { constructLib } from './index'
+import { constructLib, isLibClass } from './index'
 
 type Call = (m: Machine, args: readonly R[]) => R
 
@@ -49,6 +49,20 @@ export function comparatorStatic(name: string, args: readonly R[]): R {
     default:
       throw new CompileStop(`Comparator.${name} is not supported`)
   }
+}
+
+/** Function.identity() and UnaryOperator.identity(). */
+export const IDENTITY = nativeFn('identity', ['t'], (_m, [t]) => t!)
+
+/** Map.Entry.comparingByKey() and comparingByValue(), optionally with a comparator for the key or value. */
+export function entryStatic(name: string, args: readonly R[]): R {
+  if (name !== 'comparingByKey' && name !== 'comparingByValue') throw new CompileStop(`Map.Entry.${name} is not supported`)
+  const part = (v: JVal) => {
+    if (!(v instanceof EntryVal)) throw new CompileStop(`Map.Entry.${name} compares Map.Entry values`)
+    return name === 'comparingByKey' ? v.entry.key : v.entry.value
+  }
+  const cmp = args[0]?.value ?? null
+  return refR(comparator(name, (m, a, b) => compareWith(m, cmp, part(a), part(b))))
 }
 
 /** thenComparing takes a comparator or a key extractor: a one-argument lambda, or a method reference other than compare. */
@@ -115,8 +129,9 @@ const LIB_STATICS: Readonly<Record<string, ReadonlySet<string>>> = {
   Boolean: new Set(['logicalAnd', 'logicalOr', 'logicalXor', 'parseBoolean']),
 }
 
-/** A class named on the left of `::`, unless a local variable has that name. */
+/** A class named on the left of `::`, unless a local variable has that name. `Map.Entry` names a nested built-in type. */
 function classTarget(m: Machine, e: Expr): ClassRef | null {
+  if (e.k === 'field' && e.obj.k === 'name' && isLibClass(`${e.obj.name}.${e.name}`) && !m.frame.scope.find(e.obj.name)) return new ClassRef(`${e.obj.name}.${e.name}`, null)
   if (e.k !== 'name' || m.frame.scope.find(e.name)) return null
   const cls = m.classes.resolve(e.name, m.frame.cls)
   if (cls) return new ClassRef(cls.name, cls)

@@ -161,9 +161,24 @@ describe('Java tracer', () => {
     expect(npe('    Map<String, Integer> m = new HashMap<>();\n    int n = m.get("a");')).toContain('Cannot invoke "java.lang.Integer.intValue()"')
   })
 
+  it('runs stream lambdas one element at a time, each through every stage', () => {
+    const t = trace(main('    List<Integer> out = List.of(1, 2, 3).stream()\n      .filter(x -> x != 2)\n      .map(x -> x * 10)\n      .toList();'))
+    const calls = t.steps.filter((s) => s.event === 'call' && top(s).name === 'lambda').map((s) => `${s.line}:${(varOf(s, 'x') as { v: string }).v}`)
+    expect(calls).toEqual(['6:1', '7:1', '6:2', '6:3', '7:3'])
+  })
+
+  it('shows streams by kind and Optionals as a box around their value', () => {
+    const t = trace(main('    IntStream s = IntStream.range(0, 3);\n    Optional<String> o = Optional.of("a");\n    OptionalInt e = OptionalInt.empty();\n    int end = 0;'))
+    const at = lastIndex(t) - 1
+    expect(varOf(t.steps[at]!, 's')).toEqual({ t: 'p', k: 'other', v: 'IntStream' })
+    expect(varOf(t.steps[at]!, 'e')).toEqual({ t: 'p', k: 'other', v: 'OptionalInt.empty' })
+    const o = t.heap(at).get((varOf(t.steps[at]!, 'o') as Ref).id)
+    expect(o).toMatchObject({ kind: 'instance', type: 'Optional', attrs: [['value', { t: 'p', k: 'str', v: '"a"' }]] })
+  })
+
   it('names what is not supported instead of failing obscurely', () => {
     const err = (body: string, members = '') => raw(main(body, members)).error?.message
-    expect(err('    int s = List.of(1).stream().count();')).toContain('streams are not supported')
+    expect(err('    record P(int x) {}')).toContain('records declared inside a method are not supported')
     expect(err('    Map<Integer, Integer> m = new LinkedHashMap<>() {\n    };')).toContain('extending the built-in class LinkedHashMap is not supported')
     expect(err('    enum Local { A }')).toContain('enums declared inside a method are not supported')
   })

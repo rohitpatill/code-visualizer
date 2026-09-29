@@ -14,6 +14,7 @@ import { writable } from './sequences'
 import { immutableSet } from './sets'
 import { javaSort, sortPrimitives } from './sorting'
 import { HashStore } from './stores'
+import { arrayStream } from './streamSources'
 
 function arrayArg(r: R | undefined, what: string): JArray {
   const v = r?.value
@@ -108,7 +109,7 @@ function arraysStatic(m: Machine, name: string, args: readonly R[]): R {
       return intR(binarySearch(m, a, lo, hi, args[args.length - 1]!))
     }
     case 'stream':
-      throw new CompileStop('streams are not supported by the visualizer yet: use a loop')
+      return arrayStream(args)
     default:
       throw noMethod('Arrays', name)
   }

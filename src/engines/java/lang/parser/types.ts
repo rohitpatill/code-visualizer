@@ -43,7 +43,7 @@ export function qualifiedName(c: Cursor): string {
 /** `java.util.List` is `List`; `Map.Entry` stays. */
 const dropPackage = (name: string) => name.split('.').filter((part, i, all) => i === all.length - 1 || !/^[a-z]/.test(part)).join('.')
 
-function typeArgs(c: Cursor): JType[] {
+export function typeArgs(c: Cursor): JType[] {
   c.expect('<')
   const args: JType[] = []
   for (;;) {

@@ -8,9 +8,15 @@ import {
 import { element, noMethod } from './common'
 import { builtinClass } from './types'
 import { javaEquals, javaHash } from './equality'
+import { OptionalVal, StatsVal, StreamVal } from '../streamValues'
+import { collectorsStatic } from './collectors'
 import { constructEnumMap, enumSetStatic } from './enumCollections'
+import { optionalMethod, optionalStatic } from './optionals'
+import { newStats, statsMethod } from './statistics'
+import { isStreamClass, streamStatic } from './streamSources'
+import { streamMethod } from './streams'
 import { javaFormat } from './format'
-import { comparatorStatic, fnMethod } from './functional'
+import { IDENTITY, comparatorStatic, entryStatic, fnMethod } from './functional'
 import { constructHeap, heapMethod } from './heaps'
 import { constructNative, nativeMethod, systemIn, systemOut } from './io'
 import { constructList, listMethod } from './lists'
@@ -27,10 +33,15 @@ import { WRAPPER_CONSTANTS, boxedMethod, wrapperStatic } from './wrappers'
 const WRAPPERS = new Set(['Integer', 'Long', 'Double', 'Float', 'Short', 'Byte', 'Character', 'Boolean'])
 const SYSTEM = new Set(['Math', 'StrictMath', 'Objects', 'System', 'Thread'])
 const UTILITIES = new Set(['Arrays', 'Collections', 'List', 'Set', 'Map'])
+const OPTIONALS = new Set(['Optional', 'OptionalInt', 'OptionalLong', 'OptionalDouble'] as const)
+const FUNCTIONS = new Set(['Function', 'UnaryOperator'])
+const ENTRY = new Set(['Map.Entry', 'Entry'])
+const OTHER_STATICS = new Set(['String', 'Comparator', 'EnumSet', 'Collectors'])
 
 /** Built-in classes whose static members a program may name, as in `Math.max` or `Integer.MAX_VALUE`. */
 export const isLibClass = (name: string): boolean =>
-  WRAPPERS.has(name) || SYSTEM.has(name) || UTILITIES.has(name) || name === 'String' || name === 'Comparator' || name === 'EnumSet'
+  WRAPPERS.has(name) || SYSTEM.has(name) || UTILITIES.has(name) || OTHER_STATICS.has(name) || isStreamClass(name) || OPTIONALS.has(name as 'Optional') ||
+  FUNCTIONS.has(name) || ENTRY.has(name)
 
 export function libStaticField(m: Machine, cls: string, name: string): R {
   if (cls === 'System' && (name === 'out' || name === 'err')) return refR(systemOut)
@@ -48,6 +59,11 @@ export function callLibStatic(m: Machine, cls: string, name: string, args: reado
   if (cls === 'String') return stringStatic(m, name, args, (format, rest) => javaFormat(m, format, rest))
   if (cls === 'Comparator') return comparatorStatic(name, args)
   if (cls === 'EnumSet') return enumSetStatic(m, name, args)
+  if (cls === 'Collectors') return collectorsStatic(m, name, args)
+  if (isStreamClass(cls)) return streamStatic(m, cls, name, args)
+  if (OPTIONALS.has(cls as 'Optional')) return optionalStatic(m, cls as 'Optional', name, args)
+  if (FUNCTIONS.has(cls) && name === 'identity' && !args.length) return refR(IDENTITY)
+  if (ENTRY.has(cls)) return entryStatic(name, args)
   throw noMethod(cls, name)
 }
 
@@ -78,6 +94,8 @@ export function constructLib(m: Machine, type: RefType, args: readonly R[]): R {
     return refR(new EntryVal({ key: element(m, args[0]!), value: element(m, args[1]!), hash: 0, seq: 0 }))
   }
   if (name === 'Random') return newRandom(args)
+  const stats = newStats(name)
+  if (stats) return stats
   const native = constructNative(m, name, args)
   if (native) return native
   throw new CompileStop(`cannot find symbol: class ${name} (it is not declared, or not supported by the visualizer yet)`)
@@ -121,6 +139,9 @@ export function callLibMethod(m: Machine, target: R, name: string, args: readonl
   if (v instanceof NativeObj) return v.kind === 'random' ? randomMethod(m, v, name, args) : nativeMethod(m, v, name, args)
   if (v instanceof FnVal) return fnMethod(m, v, name, args)
   if (v instanceof JArray) return arrayMethod(m, v, name, args)
+  if (v instanceof StreamVal) return streamMethod(m, v, name, args)
+  if (v instanceof OptionalVal) return optionalMethod(m, v, name, args)
+  if (v instanceof StatsVal) return statsMethod(m, v, name, args)
   if (name === 'equals' && args[0]) return { type: { t: 'prim', name: 'boolean' }, value: javaEquals(m, element(m, target), element(m, args[0])) }
   throw new CompileStop(`${target.type.t === 'prim' ? target.type.name : 'this value'} cannot be dereferenced`)
 }

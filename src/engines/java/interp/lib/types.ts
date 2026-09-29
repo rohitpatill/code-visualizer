@@ -1,6 +1,8 @@
 import { BOX, type JType, typeName } from '../../lang/types'
+import { CollectorVal, OptionalVal, StatsVal, type StreamPrim, StreamVal } from '../streamValues'
 import { arrayClassName } from '../text'
 import { isSubtype } from '../classes'
+import { statsClassName } from './statistics'
 import type { Machine } from '../machine'
 import {
   Boxed, BuilderVal, ClassRef, EntryVal, FnVal, HeapVal, IterVal, JArray, JObject, JStr, type JVal, ListVal, MapVal, SetVal, ViewVal,
@@ -14,12 +16,16 @@ const list = (...kinds: ListVal['kind'][]): Test => (v) => v instanceof ListVal 
 const map = (...kinds: MapVal['kind'][]): Test => (v) => v instanceof MapVal && (!kinds.length || kinds.includes(v.kind))
 const set = (...kinds: SetVal['kind'][]): Test => (v) => (v instanceof SetVal && (!kinds.length || kinds.includes(v.kind))) || (!kinds.length && v instanceof ViewVal && v.part !== 'values')
 const collection: Test = (v) => v instanceof ListVal || v instanceof HeapVal || v instanceof SetVal || v instanceof ViewVal
+const stream = (prim: StreamPrim): Test => (v) => v instanceof StreamVal && v.prim === prim
+const optional = (kind: OptionalVal['kind']): Test => (v) => v instanceof OptionalVal && v.kind === kind
 const functional = (name: string): Test => (v) => v instanceof FnVal || implementing(name)(v)
 
 const FUNCTIONAL = [
   'Comparator', 'Runnable', 'Function', 'BiFunction', 'Predicate', 'BiPredicate', 'Consumer', 'BiConsumer', 'Supplier', 'UnaryOperator',
   'BinaryOperator', 'IntBinaryOperator', 'IntUnaryOperator', 'IntPredicate', 'IntFunction', 'ToIntFunction', 'ToLongFunction',
-  'ToDoubleFunction', 'IntConsumer', 'Callable',
+  'ToDoubleFunction', 'IntConsumer', 'Callable', 'IntSupplier', 'LongSupplier', 'DoubleSupplier', 'BooleanSupplier', 'ObjIntConsumer',
+  'IntToLongFunction', 'IntToDoubleFunction', 'LongUnaryOperator', 'LongBinaryOperator', 'DoubleUnaryOperator', 'DoubleBinaryOperator',
+  'LongFunction', 'DoubleFunction', 'ToIntBiFunction',
 ]
 
 const BUILTIN: Readonly<Record<string, Test>> = {
@@ -65,6 +71,18 @@ const BUILTIN: Readonly<Record<string, Test>> = {
   'Map.Entry': (v) => v instanceof EntryVal,
   Entry: (v) => v instanceof EntryVal,
   Iterator: (v) => v instanceof IterVal || implementing('Iterator')(v),
+  Stream: stream(null),
+  IntStream: stream('int'),
+  LongStream: stream('long'),
+  DoubleStream: stream('double'),
+  Optional: optional('Optional'),
+  OptionalInt: optional('OptionalInt'),
+  OptionalLong: optional('OptionalLong'),
+  OptionalDouble: optional('OptionalDouble'),
+  Collector: (v) => v instanceof CollectorVal,
+  IntSummaryStatistics: (v) => v instanceof StatsVal && v.prim === 'int',
+  LongSummaryStatistics: (v) => v instanceof StatsVal && v.prim === 'long',
+  DoubleSummaryStatistics: (v) => v instanceof StatsVal && v.prim === 'double',
   ...Object.fromEntries(FUNCTIONAL.map((name) => [name, functional(name)])),
 }
 
@@ -107,6 +125,8 @@ export function runtimeClassName(v: JVal): string {
   else if (v instanceof MapVal) return `java.util.${v.kind}`
   else if (v instanceof SetVal) return `java.util.${v.kind}`
   else if (v instanceof HeapVal) return 'java.util.PriorityQueue'
+  else if (v instanceof OptionalVal) return `java.util.${v.kind}`
+  else if (v instanceof StatsVal) return `java.util.${statsClassName(v)}`
   else return typeof v === 'object' && v ? v.constructor.name : String(v)
   return LANG.has(name) ? `java.lang.${name}` : name
 }

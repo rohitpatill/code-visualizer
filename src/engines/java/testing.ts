@@ -3,7 +3,7 @@ import { runTrace } from './interp/run'
 
 /** A Java program: `body` is main's body, `members` sits in the class above it. */
 export const main = (body: string, members = '') =>
-  `import java.util.*;\nimport java.util.function.*;\nimport java.io.*;\n\npublic class Main {\n${members}\n    public static void main(String[] args) throws Exception {\n${body}\n    }\n}\n`
+  `import java.util.*;\nimport java.util.function.*;\nimport java.util.stream.*;\nimport java.io.*;\n\npublic class Main {\n${members}\n    public static void main(String[] args) throws Exception {\n${body}\n    }\n}\n`
 
 export const run = (code: string, stdin = ''): RawTrace => JSON.parse(runTrace(code, stdin)) as RawTrace
 

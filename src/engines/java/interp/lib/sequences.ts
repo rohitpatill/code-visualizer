@@ -1,6 +1,6 @@
 import { type JType, T } from '../../lang/types'
 import { invokeCallable } from '../calls'
-import { CompileStop, Fault } from '../errors'
+import { Fault } from '../errors'
 import type { Machine } from '../machine'
 import { VOID, boolR, intR, refR, truthy } from '../ops'
 import { valueText } from '../text'
@@ -8,6 +8,7 @@ import { HeapVal, IterVal, JArray, type JVal, ListVal, type R } from '../values'
 import { arity, element } from './common'
 import { javaEquals, javaHash } from './equality'
 import { cursorOf, itemsOf } from './iteration'
+import { collectionStream, streamR } from './streamSources'
 
 // Methods every array-backed collection shares: ArrayList, LinkedList,
 // ArrayDeque, Stack and PriorityQueue.
@@ -102,7 +103,7 @@ export function sequenceMethod(m: Machine, seq: Sequence, name: string, args: re
       return refR(m.intern(valueText(m, seq)))
     case 'stream':
     case 'parallelStream':
-      throw new CompileStop('streams are not supported by the visualizer yet: use a loop')
+      return streamR(collectionStream(m, seq)!)
     default:
       return null
   }

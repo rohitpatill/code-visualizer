@@ -3,6 +3,9 @@ import type { HeapDraft } from '../../shared/recorder'
 import { type JType, type PrimName, typeName } from '../lang/types'
 import type { Machine } from './machine'
 import type { PrimValue } from './numbers'
+import { optionalText } from './lib/optionals'
+import { statsClassName, statsMethod } from './lib/statistics'
+import { CollectorVal, OptionalVal, PendingVal, StatsVal, StreamVal } from './streamValues'
 import { doubleText, floatText, viewItems } from './text'
 import {
   Boxed, BuilderVal, ClassRef, EntryVal, FnVal, HeapVal, IterVal, JArray, JObject, JStr, type JVal, ListVal, MapVal, NativeObj,
@@ -52,6 +55,9 @@ export class Encoder {
     if (v instanceof NativeObj) return prim('other', NATIVE_LABELS[v.kind])
     if (v instanceof IterVal) return prim('other', 'iterator')
     if (v instanceof JObject && v.constant) return prim('other', v.constant.name)
+    if (v instanceof StreamVal) return prim('other', v.prim ? `${v.prim[0]!.toUpperCase()}${v.prim.slice(1)}Stream` : 'Stream')
+    if (v instanceof CollectorVal || v instanceof PendingVal) return prim('other', 'Collector')
+    if (v instanceof OptionalVal && (v.value === undefined || v.kind !== 'Optional')) return prim('other', optionalText(this.m, v))
     return this.ref(v, heap)
   }
 
@@ -81,6 +87,15 @@ export class Encoder {
       heap[id] = this.object(obj, heap)
     }
     return { t: 'r', id }
+  }
+
+  private stats(st: StatsVal, heap: HeapDraft): HeapObject {
+    const m = this.m
+    const attr = (name: string): [string, Value] => {
+      const r = statsMethod(m, st, name, [])
+      return [name.slice(3).toLowerCase(), this.value(r.value, r.type, heap)]
+    }
+    return { kind: 'instance', type: statsClassName(st), attrs: ['getCount', 'getSum', 'getMin', 'getAverage', 'getMax'].map(attr) }
   }
 
   private items(values: readonly JVal[], type: JType, heap: HeapDraft): Value[] {
@@ -123,6 +138,8 @@ export class Encoder {
       return { kind: 'tuple', type: 'Map.Entry', items: [this.value(obj.entry.key, OBJECT, heap), this.value(obj.entry.value, OBJECT, heap)], size: 2 }
     }
     if (obj instanceof BuilderVal) return { kind: 'other', type: 'StringBuilder', repr: clip(JSON.stringify(obj.s)) }
+    if (obj instanceof OptionalVal) return { kind: 'instance', type: 'Optional', attrs: [['value', this.value(obj.value!, OBJECT, heap)]] }
+    if (obj instanceof StatsVal) return this.stats(obj, heap)
     const fn = obj as FnVal
     return { kind: 'function', type: 'lambda', name: fn.label, sig: `(${fn.params.join(', ')})` }
   }

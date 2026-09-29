@@ -4,7 +4,7 @@ import type { Token } from '../lexer'
 import { arrayOf, ref } from '../types'
 import { exprNode as node } from './nodes'
 import { checkRange, isLambdaStart, parseLambda, parsePrimary } from './primary'
-import { type Cursor, KEYWORDS, arrayDims, parseType } from './types'
+import { type Cursor, KEYWORDS, arrayDims, parseType, typeArgs } from './types'
 
 const BINARY: Readonly<Record<string, number>> = {
   '||': 1, '&&': 2, '|': 3, '^': 4, '&': 5, '==': 6, '!=': 6, '<': 7, '>': 7, '<=': 7, '>=': 7, instanceof: 7,
@@ -128,7 +128,7 @@ function parsePostfix(c: Cursor, base: Expr): Expr {
   for (;;) {
     const line = c.line
     if (c.accept('.')) {
-      if (c.at('<')) throw c.error('explicit type arguments on a call are not supported')
+      if (c.at('<')) typeArgs(c)
       const name = c.ident('a member name')
       e = c.at('(') ? node(line, { k: 'call', obj: e, name, args: parseArgs(c), sup: false }) : node(line, { k: 'field', obj: e, name })
     } else if (c.at('[') && c.at(']', 1) && e.k === 'name') {

@@ -9,6 +9,9 @@ import {
   BuilderVal, ClassRef, EntryVal, FnVal, HeapVal, IterVal, JArray, JObject, JStr, type JVal, ListVal, MapVal, NativeObj, type R,
   SetVal, ViewVal, entryVal,
 } from './values'
+import { optionalText } from './lib/optionals'
+import { statsText } from './lib/statistics'
+import { CollectorVal, OptionalVal, StatsVal, StreamVal } from './streamValues'
 
 function parseExponential(exponential: string): { digits: string; e: number } {
   const [mantissa, exp] = exponential.replace(/^-/, '').split('e')
@@ -121,6 +124,10 @@ export function valueText(m: Machine, v: JVal, type: JType = { t: 'ref', name: '
   if (v instanceof ClassRef) return `class ${v.name}`
   if (v instanceof IterVal) return `java.util.Iterator@${m.identityHash(v).toString(16)}`
   if (v instanceof NativeObj) return `${NATIVE_NAMES[v.kind]}@${m.identityHash(v).toString(16)}`
+  if (v instanceof OptionalVal) return optionalText(m, v)
+  if (v instanceof StatsVal) return statsText(m, v)
+  if (v instanceof StreamVal) return `java.util.stream.${v.prim ? `${v.prim[0]!.toUpperCase()}${v.prim.slice(1)}` : 'Reference'}Pipeline@${m.identityHash(v).toString(16)}`
+  if (v instanceof CollectorVal) return `java.util.stream.Collectors$CollectorImpl@${m.identityHash(v).toString(16)}`
   return String(v)
 }
 

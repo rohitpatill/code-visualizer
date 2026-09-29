@@ -1,6 +1,6 @@
 import type { JType } from '../../lang/types'
 import { invokeCallable } from '../calls'
-import { CompileStop, Fault } from '../errors'
+import { Fault } from '../errors'
 import type { Machine } from '../machine'
 import { VOID, boolR, intR, isRawPrim, refR, truthy } from '../ops'
 import { valueText } from '../text'
@@ -10,6 +10,7 @@ import { compareWith, javaEquals, javaHash } from './equality'
 import { cursorOf, isCollection, itemsOf } from './iteration'
 import { unsupported } from './sequences'
 import { HashStore, TreeStore } from './stores'
+import { collectionStream, streamR } from './streamSources'
 
 function add(m: Machine, set: SetVal, v: JVal): boolean {
   if (set.immutable) throw unsupported()
@@ -140,7 +141,8 @@ export function setMethod(m: Machine, set: SetVal, name: string, args: readonly 
     case 'toString':
       return refR(m.intern(valueText(m, set)))
     case 'stream':
-      throw new CompileStop('streams are not supported by the visualizer yet: use a loop')
+    case 'parallelStream':
+      return streamR(collectionStream(m, set)!)
     default: {
       const result = treeSetMethod(m, set, name, args)
       if (!result) throw noMethod(set.kind, name)

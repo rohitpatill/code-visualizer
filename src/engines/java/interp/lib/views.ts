@@ -1,5 +1,4 @@
 import { invokeCallable } from '../calls'
-import { CompileStop } from '../errors'
 import type { Machine } from '../machine'
 import { VOID, boolR, intR, refR, truthy } from '../ops'
 import { valueText, viewItems } from '../text'
@@ -8,6 +7,7 @@ import { element, noMethod } from './common'
 import { javaEquals, javaHash } from './equality'
 import { cursorOf } from './iteration'
 import { unsupported } from './sequences'
+import { collectionStream, streamR } from './streamSources'
 
 /** keySet(), values() and entrySet(): live views that read and remove through the map. */
 export function viewMethod(m: Machine, view: ViewVal, name: string, args: readonly R[]): R {
@@ -41,7 +41,8 @@ export function viewMethod(m: Machine, view: ViewVal, name: string, args: readon
     case 'equals':
       return boolR(javaEquals(m, view, args[0]!.value))
     case 'stream':
-      throw new CompileStop('streams are not supported by the visualizer yet: use a loop')
+    case 'parallelStream':
+      return streamR(collectionStream(m, view)!)
     default:
       throw noMethod(view.part === 'keys' ? 'Set' : view.part === 'values' ? 'Collection' : 'Set<Map.Entry>', name)
   }

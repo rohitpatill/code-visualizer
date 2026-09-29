@@ -1,6 +1,6 @@
 import { T } from '../../lang/types'
 import { primValue, toPrim } from '../convert'
-import { CompileStop, Fault } from '../errors'
+import { Fault } from '../errors'
 import type { Machine } from '../machine'
 import { boolR, charR, intR, refR, strR } from '../ops'
 import { textOf, valueText } from '../text'
@@ -8,6 +8,7 @@ import { JArray, JStr, type R } from '../values'
 import { arity, intArg, noMethod, textArg } from './common'
 import { compareStrings, stringHash } from './equality'
 import { isCollection, itemsOf } from './iteration'
+import { charStream, lineStream, streamR } from './streamSources'
 
 const CHAR_ARRAY = { t: 'array', of: T.char } as const
 
@@ -155,8 +156,9 @@ export function stringMethod(m: Machine, str: JStr, name: string, args: readonly
     case 'toString':
       return refR(str, T.string)
     case 'chars':
+      return streamR(charStream(s))
     case 'lines':
-      throw new CompileStop('streams are not supported by the visualizer yet: use a loop over s.toCharArray()')
+      return streamR(lineStream(s))
     default:
       throw noMethod('String', name)
   }

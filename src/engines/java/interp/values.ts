@@ -4,6 +4,7 @@ import type { JType, PrimName } from '../lang/types'
 import type { ClassInfo } from './classes'
 import type { Machine } from './machine'
 import type { Scope } from './scope'
+import type { CollectorVal, OptionalVal, PendingVal, StatsVal, StreamVal } from './streamValues'
 
 /** A local declared without a value. Reading it is Java's "might not have been initialized" error. */
 export const UNINIT = Symbol('uninitialized')
@@ -242,6 +243,11 @@ export type JVal =
   | ClassRef
   | NativeObj
   | FnVal
+  | StreamVal
+  | OptionalVal
+  | CollectorVal
+  | StatsVal
+  | PendingVal
 
 /** An evaluated expression. For primitives `type` is exact; for references the object carries its own class. */
 export interface R {
