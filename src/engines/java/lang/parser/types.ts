@@ -20,7 +20,7 @@ export function skipAnnotations(c: Cursor): void {
   }
 }
 
-export function skipBalanced(c: Cursor, open: string, close: string): void {
+function skipBalanced(c: Cursor, open: string, close: string): void {
   let depth = 0
   do {
     if (c.done) throw c.error(`expected '${close}'`)

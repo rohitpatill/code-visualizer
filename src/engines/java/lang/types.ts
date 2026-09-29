@@ -10,7 +10,7 @@ export type JType =
   | { t: 'array'; of: JType }
   | { t: 'ref'; name: string; args: JType[] }
 
-export type PrimType = Extract<JType, { t: 'prim' }>
+type PrimType = Extract<JType, { t: 'prim' }>
 export type RefType = Extract<JType, { t: 'ref' }>
 
 const prim = (name: PrimName): PrimType => ({ t: 'prim', name })
@@ -52,9 +52,6 @@ export function primOf(t: JType): PrimName | null {
   if (t.t === 'prim') return t.name
   return t.t === 'ref' ? (UNBOX[t.name] ?? null) : null
 }
-
-export const isPrim = (t: JType): t is PrimType => t.t === 'prim'
-export const isIntegral = (p: PrimName) => p === 'int' || p === 'long' || p === 'short' || p === 'byte' || p === 'char'
 
 const WIDER: Readonly<Record<PrimName, readonly PrimName[]>> = {
   boolean: [],
