@@ -192,10 +192,9 @@ describe('Java tracer', () => {
 
   it('names what is not supported instead of failing obscurely', () => {
     const err = (body: string, members = '') => raw(main(body, members)).error?.message
-    expect(err('    record P(int x) {}')).toContain('records declared inside a method are not supported')
+    expect(err('    synchronized (args) {\n    }')).toContain('synchronized blocks are not supported')
     expect(err('    Thread t = new Thread() {\n    };')).toContain('threads are not supported')
     expect(err('', '  static class Name extends String {}\n')).toBe('Compile error: cannot inherit from final String')
-    expect(err('    enum Local { A }')).toContain('enums declared inside a method are not supported')
   })
 
   it('reports compile errors with a line, before or during the run', () => {

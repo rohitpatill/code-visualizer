@@ -1,8 +1,12 @@
-import type { TokenCursor } from '../../../shared/syntax'
+import { TokenCursor } from '../../../shared/syntax'
+import type { ClassDecl } from '../ast'
 import type { Token } from '../lexer'
 import { type JType, PRIM_NAMES, type PrimName, T, arrayOf, ref } from '../types'
 
-export type Cursor = TokenCursor<Token>
+/** The token cursor, plus the classes being parsed, innermost last, so a class declared in a method knows where it lives. */
+export class Cursor extends TokenCursor<Token> {
+  readonly owners: ClassDecl[] = []
+}
 
 /** Words that can never start a type, so `return x;` is never read as a declaration. */
 export const KEYWORDS: ReadonlySet<string> = new Set(

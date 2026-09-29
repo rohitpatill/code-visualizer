@@ -60,12 +60,23 @@ function enclosingInstance(m: Machine, cls: ClassInfo): JObject | null {
   throw new CompileStop(`non-static variable this cannot be referenced from a static context: make ${cls.name} a static class, or create it inside an instance method of ${outer.name}`)
 }
 
+/**
+ * What a local class instance sees: the method's variables and `this` where it
+ * is created, or, when made inside its own methods, what its creator saw.
+ */
+function localContext(m: Machine, cls: ClassInfo): { outer: JObject | null; env: Scope | null } {
+  const self = m.frame.self
+  if (self && isSubtype(self.cls, cls.name)) return { outer: self.outer, env: self.env }
+  return { outer: self, env: m.frame.scope }
+}
+
 /** `new C(args)`: fields start at zero, then the constructor chain runs. */
 export function instantiate(m: Machine, cls: ClassInfo, args: readonly R[], outer: JObject | null | undefined, env: Scope | null): JObject {
   if (cls.decl.kind === 'interface' || (cls.decl.isAbstract && !cls.decl.anonymous)) throw new CompileStop(`${cls.name} is abstract; cannot be instantiated`)
   if (cls.decl.kind === 'enum') throw new CompileStop('enum classes may not be instantiated')
   ensureInit(m, cls)
-  const obj = new JObject(cls, outer === undefined ? enclosingInstance(m, cls) : outer, env)
+  const local = cls.decl.local && !cls.decl.isStatic && outer === undefined ? localContext(m, cls) : null
+  const obj = new JObject(cls, local ? local.outer : outer === undefined ? enclosingInstance(m, cls) : outer, local ? local.env : env)
   for (const f of instanceFields(cls)) obj.fields.set(f.name, new Slot(f.type, zeroOf(f.type)))
   construct(m, cls, obj, args)
   return obj

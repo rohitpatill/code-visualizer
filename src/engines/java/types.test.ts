@@ -116,4 +116,47 @@ describe('Java enum bodies, enum collections and classes that extend collections
     }
 `))).toBe('1 {2=2, 1=1}\n-1 {1=1, 3=3} 2 true [1, 3]\n-1 3 4 {3=3, 4=4} true LRUCache\neldest a of 1\neldest a of 2\neldest b of 3\neldest a of 3\neldest c of 3\n{d=4, a=9} 2\n{not=1, be=2, or=1, to=2} 2 be true\n5 4 {be=2, not=1, or=1, to=2}\n[-1, 2, 3, 4, 5] 13 3 -1 5 true true\n[x, y] {ann=30, bob=25} 2\n9 7 3 2\n3 4 1 84\n')
   })
+
+  it('classes, records, enums and interfaces declared inside methods', () => {
+    expect(output(main(`
+        record Pair(int a, int b) {
+            int sum() { return a + b; }
+        }
+        enum Move { LEFT, RIGHT }
+        interface Shape { double area(); }
+        List<Pair> pairs = new ArrayList<>(List.of(new Pair(3, 1), new Pair(1, 2), new Pair(2, 2)));
+        pairs.sort(Comparator.comparingInt(Pair::sum).thenComparingInt(Pair::a));
+        System.out.println(pairs + " " + pairs.get(0).sum() + " " + new Pair(1, 2).equals(new Pair(1, 2)) + " " + Move.valueOf("RIGHT").ordinal() + " " + Arrays.toString(Move.values()));
+        int base = 10;
+        String label = "n";
+        class Node {
+            int val;
+            Node next;
+            Node(int val) { this.val = val + base; }
+            Node push(int v) { Node n = new Node(v); n.next = this; return n; }
+            public String toString() { return label + val + (next == null ? "" : "," + next); }
+        }
+        Node list = new Node(1).push(2).push(3);
+        System.out.println(list + " " + list.next.val);
+        Shape square = () -> 4.0;
+        class Circle implements Shape {
+            final double r;
+            Circle(double r) { this.r = r; }
+            public double area() { return Math.PI * r * r; }
+        }
+        List<Shape> shapes = List.of(square, new Circle(1), new Circle(2));
+        double total = 0;
+        for (Shape s : shapes) total += s.area();
+        System.out.printf("%.3f %s%n", total, new Main().helper());`,
+      `    String helper() {
+        final int bonus = 5;
+        class Local {
+            int get() { return bonus * 2 + twice(1); }
+        }
+        record Point(int x, int y) {}
+        return new Local().get() + " " + new Point(1, 2);
+    }
+    static int twice(int x) { return 2 * x; }
+`))).toBe('[Pair[a=1, b=2], Pair[a=2, b=2], Pair[a=3, b=1]] 3 true 1 [LEFT, RIGHT]\nn13,n12,n11 12\n19.708 12 Point[x=1, y=2]\n')
+  })
 })

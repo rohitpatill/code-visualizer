@@ -34,6 +34,7 @@ function emptyClass(name: string, line: number, prelude: boolean): ClassDecl {
     name, kind: 'class', superName: null, interfaces: [], isStatic: true, isAbstract: false, fields: [], methods: [], ctors: [],
     staticInit: [], instanceInit: [], nested: [], components: [], compactCtor: null, constants: [], anonymous: false, prelude, line,
     endLine: line,
+    local: false,
   }
 }
 
@@ -155,12 +156,39 @@ function parseEnumConstants(c: Cursor, cls: ClassDecl): void {
 
 function parseClassBody(c: Cursor, cls: ClassDecl): void {
   c.expect('{')
-  if (cls.kind === 'enum') parseEnumConstants(c, cls)
-  while (!c.at('}')) {
-    if (c.done) throw c.error("reached end of file while parsing, expected '}'")
-    if (!c.accept(';')) parseMember(c, cls)
+  c.owners.push(cls)
+  try {
+    if (cls.kind === 'enum') parseEnumConstants(c, cls)
+    while (!c.at('}')) {
+      if (c.done) throw c.error("reached end of file while parsing, expected '}'")
+      if (!c.accept(';')) parseMember(c, cls)
+    }
+  } finally {
+    c.owners.pop()
   }
   cls.endLine = c.next().line
+}
+
+/** Is a class, interface, record or enum declared here, inside a method? */
+export function atLocalType(c: Cursor): boolean {
+  const at = c.at('final') || c.at('abstract') ? 1 : 0
+  const word = c.peek(at).text
+  if (word === 'record') return c.peek(at + 1).kind === 'ident' && c.at('(', at + 2)
+  return (word === 'class' || word === 'interface' || word === 'enum') && c.peek(at).kind === 'ident'
+}
+
+/**
+ * A type declared inside a method. It is filed with the nearest named class,
+ * as javac files it; a local class keeps the method's variables it was made
+ * next to, while local records, enums and interfaces are static.
+ */
+export function parseLocalType(c: Cursor): void {
+  const owner = [...c.owners].reverse().find((o) => !o.anonymous)
+  if (!owner) throw c.error('a class declared here needs an enclosing class')
+  const cls = parseClass(c, modifiers(c), owner.prelude, owner)
+  cls.local = true
+  cls.isStatic = cls.kind !== 'class'
+  owner.nested.push(cls)
 }
 
 function parseClass(c: Cursor, mods: Modifiers, prelude: boolean, outer: ClassDecl | null): ClassDecl {

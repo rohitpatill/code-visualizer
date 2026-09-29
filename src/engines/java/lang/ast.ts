@@ -145,6 +145,8 @@ export interface ClassDecl extends At {
   /** An enum's constants, in declaration order. */
   constants: EnumConstant[]
   anonymous: boolean
+  /** Declared inside a method body. A local class sees the method's variables. */
+  local: boolean
   /** Built-in helper code: runs without recording steps. */
   prelude: boolean
   endLine: number

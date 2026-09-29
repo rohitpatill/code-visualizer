@@ -1,6 +1,7 @@
 import { CompileError } from '../../../shared/syntax'
 import type { Expr, Stmt, VarDeclarator } from '../ast'
 import type { JType } from '../types'
+import { atLocalType, parseLocalType } from './classes'
 import { parseFor, parseSwitchBody, parseTry } from './control'
 import { parseArgs, parseArrayInit, parseExpr } from './expressions'
 import { stmtNode as node } from './nodes'
@@ -9,11 +10,7 @@ import { type Cursor, KEYWORDS, arrayDims, parseType, skipAnnotations } from './
 const STATEMENT_EXPRESSIONS = new Set(['assign', 'postfix', 'call', 'new'])
 const DECLARATOR_FOLLOW = new Set(['=', ';', ',', '[', ':'])
 const UNSUPPORTED: Readonly<Record<string, string>> = {
-  enum: 'enums declared inside a method are not supported; declare the enum next to your classes',
   synchronized: 'synchronized blocks are not supported',
-  class: 'classes declared inside a method are not supported; declare the class next to your other classes',
-  interface: 'interfaces declared inside a method are not supported',
-  record: 'records declared inside a method are not supported; declare the record next to your classes',
 }
 
 export function parseBlock(c: Cursor): { body: Stmt[]; endLine: number } {
@@ -87,7 +84,11 @@ export function parseStatement(c: Cursor): Stmt {
   if (c.accept(';')) return node(line, { k: 'empty' })
   const tok = c.peek()
   const word = tok.kind === 'ident' ? tok.text : ''
-  if (word in UNSUPPORTED && !(word === 'record' && !c.at('(', 2))) throw new CompileError(UNSUPPORTED[word]!, line)
+  if (word in UNSUPPORTED) throw new CompileError(UNSUPPORTED[word]!, line)
+  if (atLocalType(c)) {
+    parseLocalType(c)
+    return node(line, { k: 'empty' })
+  }
   switch (word) {
     case 'if': {
       c.next()
