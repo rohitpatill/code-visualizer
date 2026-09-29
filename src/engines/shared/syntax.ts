@@ -17,6 +17,8 @@ export interface BaseToken {
 /** A token stream for a recursive-descent parser, shared by the interpreted languages. */
 export class TokenCursor<T extends BaseToken> {
   pos = 0
+  /** Positions of `>>` tokens split in two, so a failed attempt can put them back. */
+  private readonly splits: { at: number; token: T }[] = []
 
   constructor(private readonly tokens: T[]) {}
 
@@ -44,8 +46,10 @@ export class TokenCursor<T extends BaseToken> {
 
   expect(text: string): T {
     if (this.at(text)) return this.next()
-    this.splitGreater()
-    if (this.at(text)) return this.next()
+    if (text === '>') {
+      this.splitGreater()
+      if (this.at(text)) return this.next()
+    }
     throw this.error(`expected '${text}'`)
   }
 
@@ -74,16 +78,22 @@ export class TokenCursor<T extends BaseToken> {
   splitGreater(): void {
     const tok = this.peek()
     if (tok.kind !== 'punct' || !tok.text.startsWith('>') || tok.text === '>') return
+    this.splits.push({ at: this.pos, token: tok })
     this.tokens.splice(this.pos, 1, { ...tok, text: '>' }, { ...tok, text: tok.text.slice(1) })
   }
 
-  /** Runs `parse`; on a compile error, rewinds and returns null. */
+  /** Runs `parse`; on a compile error, rewinds (undoing any `>>` splits) and returns null. */
   attempt<R>(parse: () => R): R | null {
     const start = this.pos
+    const splits = this.splits.length
     try {
       return parse()
     } catch (err) {
       if (!(err instanceof CompileError)) throw err
+      while (this.splits.length > splits) {
+        const { at, token } = this.splits.pop()!
+        this.tokens.splice(at, 2, token)
+      }
       this.pos = start
       return null
     }
