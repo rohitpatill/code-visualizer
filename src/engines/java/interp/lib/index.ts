@@ -70,11 +70,6 @@ export function callLibStatic(m: Machine, cls: string, name: string, args: reado
 const LISTS = { ArrayList: 'ArrayList', LinkedList: 'LinkedList', ArrayDeque: 'ArrayDeque', Stack: 'Stack', Vector: 'ArrayList' } as const
 const MAPS = new Set(['HashMap', 'LinkedHashMap', 'TreeMap'] as const)
 const SETS = new Set(['HashSet', 'LinkedHashSet', 'TreeSet'] as const)
-const OTHER_CLASSES = new Set(['EnumMap', 'PriorityQueue', 'StringBuilder', 'StringBuffer', 'Random', 'Scanner', 'Thread'])
-
-/** Built-in classes a program can instantiate but not extend here, as in `new LinkedHashMap<>() { ... }`. */
-export const isLibClassToExtend = (name: string): boolean =>
-  name in LISTS || MAPS.has(name as 'HashMap') || SETS.has(name as 'HashSet') || OTHER_CLASSES.has(name)
 
 /** `new` for a built-in class. */
 export function constructLib(m: Machine, type: RefType, args: readonly R[]): R {

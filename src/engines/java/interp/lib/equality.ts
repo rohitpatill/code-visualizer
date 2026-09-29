@@ -5,7 +5,7 @@ import { callObjectMethod, invokeCallable } from '../calls'
 import { Fault } from '../errors'
 import type { Machine } from '../machine'
 import { refR, truthy } from '../ops'
-import { Boxed, EntryVal, JObject, JStr, type JVal, ListVal, MapVal, SetVal, ViewVal, entryVal } from '../values'
+import { Boxed, EntryVal, JObject, JStr, type JVal, ListVal, MapVal, SetVal, ViewVal, builtinPart, entryVal } from '../values'
 import { runtimeClassName } from './types'
 
 // Java's equals, hashCode and compareTo for every value. HashMap, HashSet and
@@ -102,6 +102,7 @@ export function javaEquals(m: Machine, a: JVal, b: JVal): boolean {
   if (a instanceof EntryVal) return b instanceof EntryVal && javaEquals(m, a.entry.key, b.entry.key) && javaEquals(m, a.entry.value, b.entry.value)
   if (a instanceof JObject) {
     if (userMethod(a, 'equals', 1)) return truthy(callObjectMethod(m, a, 'equals', [refR(b)]))
+    if (a.base !== undefined) return javaEquals(m, a.base, builtinPart(b))
     return a.cls.decl.kind === 'record' && b instanceof JObject && recordEquals(m, a, b)
   }
   return false
@@ -118,6 +119,7 @@ export function javaHash(m: Machine, v: JVal): number {
   if (v instanceof EntryVal) return javaHash(m, v.entry.key) ^ javaHash(m, v.entry.value)
   if (v instanceof JObject) {
     if (userMethod(v, 'hashCode', 0)) return toPrim(callObjectMethod(m, v, 'hashCode', []), 'int') as number
+    if (v.base !== undefined) return javaHash(m, v.base)
     if (v.cls.decl.kind === 'record') {
       return v.cls.decl.components.reduce<number>((h, c) => (Math.imul(31, h) + javaHash(m, component(m, v, c.name))) | 0, 0)
     }

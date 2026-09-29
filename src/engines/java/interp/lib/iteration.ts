@@ -7,7 +7,7 @@ import type { Machine } from '../machine'
 import { truthy } from '../ops'
 import { viewItems } from '../text'
 import {
-  type Cursor, HeapVal, IterVal, JArray, JObject, JStr, type JVal, ListVal, MapVal, type R, SetVal, type Store, ViewVal,
+  type Cursor, HeapVal, builtinPart, IterVal, JArray, JObject, JStr, type JVal, ListVal, MapVal, type R, SetVal, type Store, ViewVal,
 } from '../values'
 
 const concurrent = () => new Fault('ConcurrentModificationException')
@@ -74,7 +74,8 @@ export function removeFromList(list: ListVal, i: number): void {
 }
 
 /** A fresh iterator over any Iterable value, as `iterator()` returns it. */
-export function cursorOf(m: Machine, v: JVal): Cursor | null {
+export function cursorOf(m: Machine, value: JVal): Cursor | null {
+  const v = builtinPart(value)
   if (v instanceof ListVal) return listCursor(v, (i) => removeFromList(v, i))
   if (v instanceof HeapVal) return listCursor(v, (i) => {
     v.items.splice(i, 1)
@@ -108,11 +109,14 @@ export function iterate(m: Machine, r: R, source: Expr): { cursor: Cursor; elem:
   throw new CompileStop('for-each not applicable to this expression type')
 }
 
-export const isCollection = (v: JVal) => v instanceof ListVal || v instanceof HeapVal || v instanceof SetVal || v instanceof ViewVal
+export function isCollection(value: JVal): boolean {
+  const v = builtinPart(value)
+  return v instanceof ListVal || v instanceof HeapVal || v instanceof SetVal || v instanceof ViewVal
+}
 
 /** Every element of a collection argument, in iteration order (for constructors, addAll and friends). */
 export function itemsOf(m: Machine, r: R, what: string): JVal[] {
-  const v = r.value
+  const v = builtinPart(r.value)
   if (v instanceof ListVal || v instanceof HeapVal) return [...v.items]
   if (v instanceof SetVal) return v.store.entries(m).map((e) => e.key)
   if (v instanceof ViewVal) return viewItems(m, v)

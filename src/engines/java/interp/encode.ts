@@ -106,7 +106,10 @@ export class Encoder {
     const m = this.m
     if (obj instanceof JArray) return { kind: 'list', type: typeName(obj.type), items: this.items(obj.items, obj.type.of, heap), size: obj.items.length }
     if (obj instanceof JObject) {
+      const base = obj.base
+      if (base !== undefined && !obj.fields.size && !(base instanceof NativeObj)) return { ...this.object(base as object, heap), type: obj.cls.name }
       const attrs = [...obj.fields].map(([name, slot]): [string, Value] => [name, this.value(slot.value, slot.type, heap)])
+      if (base !== undefined) attrs.push(['super', this.value(base, OBJECT, heap)])
       return { kind: 'instance', type: obj.cls.name, attrs }
     }
     if (obj instanceof ListVal) {

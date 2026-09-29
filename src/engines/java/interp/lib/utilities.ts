@@ -3,7 +3,7 @@ import { CompileStop, Fault } from '../errors'
 import type { Machine } from '../machine'
 import { VOID, boolR, intR, refR, strR } from '../ops'
 import { valueText } from '../text'
-import { EntryVal, JArray, type JVal, ListVal, MapVal, type R, SetVal } from '../values'
+import { EntryVal, JArray, type JVal, ListVal, MapVal, type R, SetVal, builtinPart } from '../values'
 import { checkIndex, element, intArg, noMethod } from './common'
 import { compareWith, javaEquals, javaHash } from './equality'
 import { reversed } from './functional'
@@ -116,7 +116,7 @@ function arraysStatic(m: Machine, name: string, args: readonly R[]): R {
 }
 
 function listArg(r: R | undefined, what: string): ListVal {
-  const v = r?.value
+  const v = r && builtinPart(r.value)
   if (v instanceof ListVal) return v
   if (v === null) throw new Fault('NullPointerException')
   throw new CompileStop(`${what} needs a List`)

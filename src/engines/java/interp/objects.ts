@@ -1,6 +1,7 @@
 import type { Initializer, MethodDecl } from '../lang/ast'
-import { type ClassInfo, instanceFields, isSubtype } from './classes'
-import { bindArgs, pickMethod, runFrame } from './calls'
+import { type ClassInfo, instanceFields, isSubtype, libSuperclass } from './classes'
+import { runFrame } from './calls'
+import { bindArgs, pickMethod } from './overloads'
 import { convert, zeroOf } from './convert'
 import { createConstants } from './enums'
 import { CompileStop } from './errors'
@@ -8,7 +9,8 @@ import { evalExpr, initialValue } from './eval'
 import { execBody, execList } from './exec'
 import type { Machine } from './machine'
 import { Scope } from './scope'
-import { JObject, type R, Slot } from './values'
+import { constructLib } from './lib'
+import { JObject, MapVal, type R, Slot } from './values'
 
 const NO_LINE = -1
 
@@ -94,6 +96,22 @@ function constructRecord(m: Machine, cls: ClassInfo, obj: JObject, args: readonl
 
 const isCanonical = (cls: ClassInfo, ctor: MethodDecl) => ctor.params.length === cls.decl.components.length
 
+/**
+ * `super(args)`: the superclass constructor, or for a class extending a
+ * built-in collection, the built-in object it wraps, made with those arguments.
+ */
+function constructSuper(m: Machine, cls: ClassInfo, obj: JObject, args: readonly R[]): void {
+  if (cls.superclass) {
+    construct(m, cls.superclass, obj, args)
+    return
+  }
+  const lib = libSuperclass(cls)
+  if (!lib) return
+  const base = constructLib(m, { t: 'ref', name: lib, args: [] }, args).value
+  if (base instanceof MapVal) base.owner = obj
+  obj.base = base
+}
+
 /** Runs the constructor of `cls` that fits `args` on an allocated object, including its superclass constructors. */
 export function construct(m: Machine, cls: ClassInfo, obj: JObject, args: readonly R[]): void {
   const decl = cls.decl
@@ -104,7 +122,7 @@ export function construct(m: Machine, cls: ClassInfo, obj: JObject, args: readon
   }
   if (!ctors.length) {
     if (args.length && !decl.anonymous) throw new CompileStop(`constructor ${cls.name} in class ${cls.name} cannot be applied to ${args.length} arguments`)
-    if (cls.superclass) construct(m, cls.superclass, obj, decl.anonymous ? args : [])
+    constructSuper(m, cls, obj, decl.anonymous ? args : [])
     if (decl.instanceInit.length) withObjectFrame(m, cls, obj, () => runInitializers(m, decl.instanceInit, (name) => obj.fields.get(name)!))
     return
   }
@@ -119,8 +137,8 @@ export function construct(m: Machine, cls: ClassInfo, obj: JObject, args: readon
       m.step(explicit.line)
       const callArgs = explicit.args.map((a) => evalExpr(m, a))
       if (explicit.which === 'this') construct(m, cls, obj, callArgs)
-      else if (cls.superclass) construct(m, cls.superclass, obj, callArgs)
-    } else if (cls.superclass) construct(m, cls.superclass, obj, [])
+      else constructSuper(m, cls, obj, callArgs)
+    } else constructSuper(m, cls, obj, [])
     if (explicit?.which !== 'this') runInitializers(m, decl.instanceInit, (name) => obj.fields.get(name)!)
     return execBody(m, explicit ? rest : (ctor.body ?? []), scope, explicit?.line)
   }, { t: 'void' }, ctor.endLine, obj)

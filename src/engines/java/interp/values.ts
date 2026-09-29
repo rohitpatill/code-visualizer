@@ -72,6 +72,8 @@ export class JObject {
   readonly fields = new Map<string, Slot>()
   /** Set on an enum's constants. */
   constant: { name: string; ordinal: number } | null = null
+  /** For a class that extends a built-in class, the built-in part: the LinkedHashMap behind an LRU cache. */
+  base: JVal | undefined = undefined
 
   constructor(
     readonly cls: ClassInfo,
@@ -79,6 +81,9 @@ export class JObject {
     readonly env: Scope | null,
   ) {}
 }
+
+/** The collection a library routine should read: the built-in part of an object whose class extends a collection. */
+export const builtinPart = (v: JVal): JVal => (v instanceof JObject && v.base !== undefined ? v.base : v)
 
 type ListKind = 'ArrayList' | 'LinkedList' | 'ArrayDeque' | 'Stack' | 'List'
 
@@ -134,6 +139,9 @@ type MapKind = 'HashMap' | 'LinkedHashMap' | 'TreeMap' | 'EnumMap' | 'Map'
 type SetKind = 'HashSet' | 'LinkedHashSet' | 'TreeSet' | 'EnumSet' | 'Set'
 
 export class MapVal {
+  /** The user object this map is the built-in part of, whose removeEldestEntry decides evictions. */
+  owner: JObject | null = null
+
   constructor(
     readonly kind: MapKind,
     readonly store: Store,

@@ -1,10 +1,11 @@
 import type { JType } from '../../lang/types'
-import { invokeCallable } from '../calls'
+import { callObjectMethod, invokeCallable } from '../calls'
+import { methodsNamed } from '../classes'
 import { CompileStop, Fault } from '../errors'
 import type { Machine } from '../machine'
 import { VOID, boolR, intR, isRawPrim, refR, truthy } from '../ops'
 import { valueText } from '../text'
-import { type EntryVal, type JVal, MapVal, type R, ViewVal, entryVal } from '../values'
+import { type EntryVal, type JVal, MapVal, type R, ViewVal, builtinPart, entryVal } from '../values'
 import { arity, element, intArg, noMethod } from './common'
 import { compareWith, javaEquals, javaHash } from './equality'
 import { cursorOf } from './iteration'
@@ -19,7 +20,17 @@ function writable(map: MapVal): void {
 
 function put(m: Machine, map: MapVal, key: JVal, value: JVal, first = false): JVal {
   writable(map)
-  return map.store.put(m, key, value, first)?.value ?? null
+  const before = map.store.put(m, key, value, first)
+  if (!before) afterInsertion(m, map)
+  return before?.value ?? null
+}
+
+/** LinkedHashMap.afterNodeInsertion: a subclass's removeEldestEntry may evict the eldest entry after a new key goes in. */
+function afterInsertion(m: Machine, map: MapVal): void {
+  const owner = map.owner
+  if (!owner || map.kind !== 'LinkedHashMap' || !methodsNamed(owner.cls, 'removeEldestEntry').length) return
+  const eldest = map.store.entries(m)[0]
+  if (eldest && truthy(callObjectMethod(m, owner, 'removeEldestEntry', [refR(entryVal(eldest))]))) map.store.remove(m, eldest.key)
 }
 
 function remove(m: Machine, map: MapVal, key: JVal): JVal {
@@ -31,7 +42,7 @@ function remove(m: Machine, map: MapVal, key: JVal): JVal {
 export function constructMap(m: Machine, kind: MapVal['kind'], typeArgs: JType[], args: readonly R[]): R {
   arity(`new ${kind}`, args, 0, 3)
   const [a] = args
-  const source = a?.value instanceof MapVal ? a.value : null
+  const source = a && builtinPart(a.value) instanceof MapVal ? (builtinPart(a.value) as MapVal) : null
   let map: MapVal
   if (kind === 'TreeMap') {
     const cmp = source?.store instanceof TreeStore ? source.store.cmp : source ? null : (a?.value ?? null)
@@ -181,11 +192,11 @@ export function mapMethod(m: Machine, map: MapVal, name: string, args: readonly 
       return refR(e ? put(m, map, e.key, arg(1)) : null)
     }
     case 'putAll': {
-      const source = args[0]!.value
+      const source = builtinPart(args[0]!.value)
       if (!(source instanceof MapVal)) throw new CompileStop('putAll needs a Map')
       writable(map)
       if (store instanceof HashStore) store.reserve(source.store.size)
-      for (const e of source.store.entries(m)) store.put(m, e.key, e.value)
+      for (const e of source.store.entries(m)) put(m, map, e.key, e.value)
       return VOID
     }
     case 'size':

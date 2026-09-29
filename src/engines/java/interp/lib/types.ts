@@ -5,7 +5,7 @@ import { isSubtype } from '../classes'
 import { statsClassName } from './statistics'
 import type { Machine } from '../machine'
 import {
-  Boxed, BuilderVal, ClassRef, EntryVal, FnVal, HeapVal, IterVal, JArray, JObject, JStr, type JVal, ListVal, MapVal, SetVal, ViewVal,
+  Boxed, BuilderVal, ClassRef, builtinPart, EntryVal, FnVal, HeapVal, IterVal, JArray, JObject, JStr, type JVal, ListVal, MapVal, SetVal, ViewVal,
 } from '../values'
 
 type Test = (v: JVal) => boolean
@@ -101,7 +101,8 @@ export function instanceOfType(m: Machine, v: JVal, type: JType): boolean {
   if (type.t !== 'ref') return false
   const cls = m.classes.resolve(type.name, m.frame?.cls ?? null)
   if (cls) return v instanceof JObject && isSubtype(v.cls, cls.name)
-  return BUILTIN[type.name]?.(v) ?? true
+  const test = BUILTIN[type.name]
+  return test ? test(v) || test(builtinPart(v)) : true
 }
 
 const LANG = new Set(['String', 'Integer', 'Long', 'Double', 'Float', 'Short', 'Byte', 'Character', 'Boolean', 'StringBuilder'])

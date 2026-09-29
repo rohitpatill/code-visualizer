@@ -176,10 +176,25 @@ describe('Java tracer', () => {
     expect(o).toMatchObject({ kind: 'instance', type: 'Optional', attrs: [['value', { t: 'p', k: 'str', v: '"a"' }]] })
   })
 
+  it('draws a class extending a collection as its fields plus the collection, and traces its overrides', () => {
+    const lru =
+      '  static class LRU extends LinkedHashMap<Integer, Integer> {\n    int cap = 1;\n    LRU() {\n      super(4, 0.75f, true);\n    }\n' +
+      '    protected boolean removeEldestEntry(Map.Entry<Integer, Integer> e) {\n      return size() > cap;\n    }\n  }\n'
+    const t = trace(main('    LRU c = new LRU();\n    c.put(1, 1);\n    c.put(2, 2);\n    int end = 0;', lru))
+    const at = lastIndex(t) - 1
+    const heap = t.heap(at)
+    const obj = heap.get((varOf(t.steps[at]!, 'c') as Ref).id)!
+    expect(obj).toMatchObject({ kind: 'instance', type: 'LRU', attrs: [['cap', { v: '1' }], ['super', { t: 'r' }]] })
+    const inner = heap.get(((obj as { attrs: [string, Ref][] }).attrs[1]![1]).id)
+    expect(inner).toMatchObject({ kind: 'dict', size: 1, entries: [[{ v: '2' }, { v: '2' }]] })
+    expect(t.steps.filter((s) => s.event === 'call' && top(s).name === 'LRU.removeEldestEntry')).toHaveLength(2)
+  })
+
   it('names what is not supported instead of failing obscurely', () => {
     const err = (body: string, members = '') => raw(main(body, members)).error?.message
     expect(err('    record P(int x) {}')).toContain('records declared inside a method are not supported')
-    expect(err('    Map<Integer, Integer> m = new LinkedHashMap<>() {\n    };')).toContain('extending the built-in class LinkedHashMap is not supported')
+    expect(err('    Thread t = new Thread() {\n    };')).toContain('threads are not supported')
+    expect(err('', '  static class Name extends String {}\n')).toBe('Compile error: cannot inherit from final String')
     expect(err('    enum Local { A }')).toContain('enums declared inside a method are not supported')
   })
 

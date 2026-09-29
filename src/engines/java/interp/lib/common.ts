@@ -4,7 +4,10 @@ import { CompileStop, Fault } from '../errors'
 import type { Machine } from '../machine'
 import { JStr, type JVal, type R } from '../values'
 
-export const noMethod = (owner: string, name: string) => new CompileStop(`cannot find symbol: method ${name}(...) in ${owner}`)
+/** A built-in class has no method of that name. Its own class, so an unqualified call can keep looking in enclosing classes. */
+export class NoMethod extends CompileStop {}
+
+export const noMethod = (owner: string, name: string) => new NoMethod(`cannot find symbol: method ${name}(...) in ${owner}`)
 
 export function arity(what: string, args: readonly R[], min: number, max = min): void {
   if (args.length >= min && args.length <= max) return

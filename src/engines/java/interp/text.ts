@@ -94,6 +94,7 @@ function objectText(m: Machine, obj: JObject): string {
   const own = methodsNamed(obj.cls, 'toString').find((x) => !x.decl.params.length && x.decl.body)
   if (own) return valueText(m, callMethod(m, { type: { t: 'ref', name: obj.cls.name, args: [] }, value: obj }, 'toString', []).value)
   if (obj.constant) return obj.constant.name
+  if (obj.base !== undefined) return valueText(m, obj.base)
   if (obj.cls.decl.kind === 'record') return recordText(m, obj)
   if (isThrowable(obj.cls)) return throwableText(obj)
   return `${obj.cls.name}@${m.identityHash(obj).toString(16)}`

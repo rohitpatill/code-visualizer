@@ -1,6 +1,7 @@
 import { CompileError } from '../../shared/syntax'
 import type { ClassDecl, FieldDecl, MethodDecl, Program } from '../lang/ast'
 import { zeroOf } from './convert'
+import { extendError, isExtendableLib } from './lib/extendable'
 import { Slot } from './values'
 
 export interface Method {
@@ -65,10 +66,12 @@ export class ClassTable {
     const superName = cls.decl.superName
     if (!superName) return
     const parent = this.resolve(superName, from ?? cls)
+    const refused = parent ? null : extendError(superName)
+    if (refused) throw new CompileError(refused, cls.decl.line)
     if (parent?.decl.kind === 'interface') cls.interfaces.push(parent)
     else if (parent) cls.superclass = parent
-    else if (!cls.decl.anonymous && superName !== 'Object') {
-      throw new CompileError(`${cls.name} extends ${superName}: only your own classes and the built-in exceptions can be extended`, cls.decl.line)
+    else if (!cls.decl.anonymous && superName !== 'Object' && !isExtendableLib(superName)) {
+      throw new CompileError(`${cls.name} extends ${superName}: only your own classes, the built-in exceptions and the collections can be extended`, cls.decl.line)
     }
   }
 
@@ -98,6 +101,10 @@ export class ClassTable {
     return cls
   }
 }
+
+/** The built-in class `cls` extends directly, as `class LRUCache extends LinkedHashMap`, or null. */
+export const libSuperclass = (cls: ClassInfo): string | null =>
+  !cls.superclass && cls.decl.superName && isExtendableLib(cls.decl.superName) ? cls.decl.superName : null
 
 /** Is `cls` the class `name`, or a subclass or implementation of it? */
 export function isSubtype(cls: ClassInfo, name: string): boolean {
