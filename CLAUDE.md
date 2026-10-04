@@ -119,10 +119,23 @@ common data structure or pattern.
    app only suggests a view (dashed pill), never applies one silently.
 7. **Algorithms are pointers over arrays.** Pointer markers and window shading
    are core, not extras.
-8. **Pointer markers are name based** (`i j l r lo hi low high mid left right
-   start end slow fast p q p1 p2 idx index pos ptr write read top front back`).
-   `k` is excluded (usually a window size). Grid cells use pairs (`r,c`
-   `row,col` `i,j` `nr,nc` `x,y`). Trade-off: a pointer named `x` won't show.
+8. **Pointer markers come from the code's own subscripts.** The run's source
+   is scanned once (`structures/accesses.ts`) for `a[i]`, `grid[r][c]` at any
+   depth, `self.dp[i]`, `list.get(i)`, `s.charAt(i)`, `map.getOrDefault(k)`
+   and slice bounds; only plain variable indexes count. Each step resolves
+   those to real heap objects (`indexMarks.ts`), so aliases (`helper(nums)`
+   as `arr`) and implicit fields (`this.nums`) work, and markers show in the
+   plain memory view as well as the array and grid views. Common pointer
+   names (`i j l r lo hi low high mid left right start end slow fast p q p1
+   p2 idx index pos ptr write read top front back`) that the code never uses
+   as an index (`lo`/`hi` around `nums[mid]`) are added to arrays the code
+   indexes; an array view of a never-indexed array falls back to names
+   alone, and a grid view to the cell pairs (`r,c` `row,col` `i,j` `nr,nc`
+   `x,y`). Only globals and the running frame count; a global's marker is
+   grey while a function runs. Negative indexes are never wrapped (grid DFS
+   probes `r = -1` before its bounds check). Trade-offs: `arr[i + 1]` marks
+   nothing (no expression evaluation), and for-each loops have no index
+   variable to show.
 9. **Functions and classes render inline** as violet labels, keeping the heap
    about data.
 10. **Guess mode** (predict a value before seeing it) is the most valued
@@ -266,7 +279,9 @@ src/
   model/                    pure logic: describe, diff, heapLayout,
                             callTree, guess
   structures/               view suggestions and data builders: common,
-                            pointers, suggest, linear, trees, graph, build
+                            pointers, accesses (subscripts in the code),
+                            indexMarks (index variables per container),
+                            suggest, linear, trees, graph, build
   app/
     store.ts                zustand store: all state and actions
     drafts.ts               per-language drafts, legacy migration
@@ -501,7 +516,7 @@ src/
 
 ## Verification status
 
-- `npm test` (Vitest, 391 tests):
+- `npm test` (Vitest, 409 tests):
   - Python golden traces for all 13 samples in real Pyodide 0.26.4 from npm
     (`PYTHONHASHSEED=0`, since set order depends on string hashing), plus
     errors, step limit, `input()`, UTF-16 output, stable ids, deltas;
@@ -535,6 +550,9 @@ src/
   - `WorkerRunner` with a fake worker: ready, results, busy, timeout and
     restart, crash, load failure, stale results;
   - drafts and language switching, including without storage;
+  - the subscript scanner (nesting, fields, index calls, slices, comments
+    and strings) and index marks (jagged rows, aliases, `this` fields,
+    paused callers, named pointers) on every language's samples;
   - every structure builder over every step of every sample in every
     language, and a check that preset view names exist in each trace;
   - every step of every sample in every language rendered in jsdom, both

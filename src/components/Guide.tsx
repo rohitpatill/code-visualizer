@@ -34,7 +34,7 @@ const sections = (language: string, copy: EngineCopy): Section[] => [
   },
   {
     title: 'Pointers and windows',
-    body: 'In array and grid views, index variables with common names (i, j, lo, hi, mid, left, right, slow, fast, r, c ...) show as markers under the cells. Pairs like left/right shade the window between them. Tree and linked list nodes get name tags for the variables pointing at them.',
+    body: 'Index variables show as amber markers under the cell they point at, in the plain memory view too: arr[i] marks i on arr, grid[r][c] marks r on the row and c on the cell, at any depth, and counts[w] marks the key w. A grey marker belongs to a paused caller. Common names (lo, hi, left, right ...) also mark arrays the code indexes, and pairs like left/right shade the window between them in the array view. Tree and linked list nodes get name tags for the variables pointing at them.',
   },
   {
     title: 'Recursion',

@@ -56,10 +56,14 @@ to the plain view.
 | Queue | deque, list | horizontal, front and back marked |
 | Heap | list used with `heapq` | the implicit tree plus the array |
 
-**Pointers.** Int variables with common index names (`i j l r lo hi low high
-mid left right start end slow fast p q idx pos ptr ...`) show as markers under
-array cells. Pairs like `left`/`right` or `lo`/`hi` shade the window between
-them. Grids highlight the cell for pairs like `r, c` or `row, col`.
+**Pointers.** Every variable your code uses as an index shows as an amber
+marker under the cell it points at, right in the memory view: `arr[i]` marks
+`i` on `arr`, `grid[r][c]` marks `r` on the outer list and `c` on that row, at
+any depth, and `counts[w]` marks the key `w`. An index equal to the length
+shows on a dashed "end" cell; other out-of-range values are listed under the
+object. A grey marker belongs to a paused caller. Common names (`lo hi left
+right mid start end ...`) also mark arrays the code indexes, and pairs like
+`left`/`right` shade the window between them in the array view.
 
 **Graph state.** Nodes in a variable named `visited` / `seen` are teal, nodes
 in `queue` / `stack` / `heap` / `frontier` are dashed amber, and the node held
@@ -122,8 +126,9 @@ body.
   Java.
 - `Scanner` (and `BufferedReader`) read the input box.
 - Stops after 3000 steps, with a 15 second hard timeout.
-- Pointer markers are name based. A variable called `x` won't show on an
-  array, by design, to avoid noise.
+- Pointer markers come from the indexes your code uses (`arr[i]`,
+  `grid[r][c]`, `list.get(i)`), so any variable name works. An index that is
+  an expression (`arr[i + 1]`) and a for-each loop variable show no marker.
 
 ## How it works
 

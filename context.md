@@ -7,7 +7,7 @@ reference (read it first, it is kept in sync with the code). This file is the
 story: who we work for, how they like to work, what was decided and why, what
 state things are in, and what comes next.
 
-Last updated: 2026-09-30, after renaming the app back to Stepthrough.
+Last updated: 2026-10-04, after adding index markers from the code.
 
 ## 1. The person and how to work with him
 
@@ -155,6 +155,12 @@ Session work, by commit:
 8. **Name back to Stepthrough** (he preferred the old name): header, tab
    title and docs, with a Space Grotesk wordmark. Repo and folder keep the
    code-visualizer name.
+9. **Index markers from the code** (he asked to see, on the array itself,
+   which variable points where during iteration, at any nesting depth). He
+   checked it in the browser and approved it. The source is scanned once per run for subscripts; each step resolves them
+   to heap objects. See CLAUDE.md decision 8. Left for a later phase:
+   for-each loop positions (needs each engine to report the iterator's
+   position) and name tags for node pointers in the plain memory view.
 
 ## 4. Decisions and the reasoning behind them
 
@@ -237,7 +243,7 @@ Recorded in CLAUDE.md "Key decisions"; the reasoning and rejected options:
 - Languages: Python (Pyodide 0.26.4), JavaScript (instrumented), Java and C++
   (interpreters). All four share examples, guide, structure views, call tree,
   timeline, breakpoints and guess mode.
-- Tests: 391 passing (`npm test`). Build passes (`npm run build`, which runs
+- Tests: 409 passing (`npm test`). Build passes (`npm run build`, which runs
   `tsc` first). Main chunk about 630 kB (CodeMirror); JS worker 150 kB
   (acorn, astring); Java worker 169 kB; C++ worker 80 kB; Python worker 11 kB
   (Pyodide from CDN); editor grammars are lazy chunks.
