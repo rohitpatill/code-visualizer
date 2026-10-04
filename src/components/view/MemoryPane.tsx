@@ -2,7 +2,9 @@ import { useMemo, useRef } from 'react'
 import { useStore } from '../../app/store'
 import { buildCallTree } from '../../model/callTree'
 import { diffSteps } from '../../model/diff'
+import { scanAccesses } from '../../structures/accesses'
 import { buildStructures } from '../../structures/build'
+import { buildIndexMarks } from '../../structures/indexMarks'
 import { buildTags } from '../../structures/pointers'
 import type { Trace } from '../../trace/Trace'
 import type { Step } from '../../trace/types'
@@ -22,10 +24,18 @@ interface Props {
 
 function Memory({ step, prevStep }: { step: Step; prevStep: Step | null }) {
   const views = useStore((s) => s.views)
+  const source = useStore((s) => s.run?.source ?? '')
+  const lineComment = useStore((s) => s.engine.lineComment)
   const memoryRef = useRef<HTMLDivElement>(null)
+  const accesses = useMemo(() => scanAccesses(source, lineComment), [source, lineComment])
+  const marks = useMemo(() => buildIndexMarks(step, accesses), [step, accesses])
+  const prevMarks = useMemo(() => (prevStep ? buildIndexMarks(prevStep, accesses) : null), [prevStep, accesses])
   const changed = useMemo(() => diffSteps(prevStep, step), [prevStep, step])
-  const built = useMemo(() => buildStructures(step, views), [step, views])
-  const prevStructures = useMemo(() => (prevStep ? buildStructures(prevStep, views).structures : []), [prevStep, views])
+  const built = useMemo(() => buildStructures(step, views, marks), [step, views, marks])
+  const prevStructures = useMemo(
+    () => (prevStep && prevMarks ? buildStructures(prevStep, views, prevMarks).structures : []),
+    [prevStep, prevMarks, views],
+  )
   const tags = useMemo(() => buildTags(step), [step])
   const cover = useMemo<Cover>(
     () => ({ coveredBy: built.coveredBy, roots: new Set(built.structures.flatMap((s) => (s.rootId ? [s.rootId] : []))) }),
@@ -35,7 +45,7 @@ function Memory({ step, prevStep }: { step: Step; prevStep: Step | null }) {
     <CoverContext.Provider value={cover}>
       <div className="memory-inner" ref={memoryRef}>
         <StackPanel step={step} changed={changed} />
-        <HeapPanel step={step} prevStep={prevStep} changed={changed} built={built} prevStructures={prevStructures} tags={tags} />
+        <HeapPanel step={step} prevStep={prevStep} changed={changed} built={built} prevStructures={prevStructures} tags={tags} marks={marks} />
         <Arrows containerRef={memoryRef} layoutKey={built} />
       </div>
     </CoverContext.Provider>

@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useStore } from '../../app/store'
 import type { StepDiff } from '../../model/diff'
 import { layoutHeap } from '../../model/heapLayout'
-import type { BuiltStructures, Structure, Tag } from '../../structures/types'
+import type { BuiltStructures, IndexMarks, Structure, Tag } from '../../structures/types'
 import type { Step } from '../../trace/types'
 import { StructureCard } from '../structures/StructureCard'
 import { HeapObject } from './HeapObject'
@@ -16,9 +16,10 @@ interface Props {
   built: BuiltStructures
   prevStructures: readonly Structure[]
   tags: ReadonlyMap<string, Tag[]>
+  marks: IndexMarks
 }
 
-export function HeapPanel({ step, prevStep, changed, built, prevStructures, tags }: Props) {
+export function HeapPanel({ step, prevStep, changed, built, prevStructures, tags, marks }: Props) {
   const setView = useStore((s) => s.setView)
   const containers = useStore((s) => s.engine.copy.containers)
   const rows = useMemo(() => layoutHeap(step, new Set(built.coveredBy.keys())), [step, built])
@@ -53,6 +54,7 @@ export function HeapPanel({ step, prevStep, changed, built, prevStructures, tags
                 isNew={!!prevStep && !prevStep.heap.has(id)}
                 isChanged={changed.heap.has(id)}
                 heap={step.heap}
+                marks={marks.get(id)}
               />
             )
           })}
