@@ -65,7 +65,7 @@ describe.each(engines)('structure builders: $label', (engine) => {
   it('marks binary search pointers and the lo..hi window', () => {
     const { steps, views } = load(engine, 'binary-search')
     const arrays = structuresOf(steps, views, 'array')
-    expect(arrays.some((a) => a.data.pointers.some(([n]) => n === 'mid'))).toBe(true)
+    expect(arrays.some((a) => a.data.pointers.some((p) => p.name === 'mid'))).toBe(true)
     expect(arrays.some((a) => a.data.window?.names.join() === 'lo,hi')).toBe(true)
   })
 

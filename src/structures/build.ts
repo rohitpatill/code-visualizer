@@ -4,7 +4,9 @@ import { buildGraph } from './graph'
 import { buildArray, buildGrid, buildLinkedList } from './linear'
 import { viewsFor } from './suggest'
 import { buildHeapTree, buildTree } from './trees'
-import type { BuiltStructures, Structure, StructureView, ViewName, Views } from './types'
+import type { BuiltStructures, IndexMarks, Structure, StructureView, ViewName, Views } from './types'
+
+const NO_MARKS: IndexMarks = new Map()
 
 /** Bottom to top, whichever end the language pushes at. */
 function stackItems(obj: HeapObject | undefined): Value[] {
@@ -12,14 +14,14 @@ function stackItems(obj: HeapObject | undefined): Value[] {
   return obj && 'stackTop' in obj && obj.stackTop === 'first' ? [...items].reverse() : items
 }
 
-function buildView(view: ViewName, value: Value, step: Step): StructureView | null {
+function buildView(view: ViewName, value: Value, step: Step, marks: IndexMarks, key: string): StructureView | null {
   const rootId = value.t === 'r' ? value.id : null
   const obj = rootId ? step.heap.get(rootId) : undefined
   switch (view) {
     case 'array':
-      return { view, data: buildArray(value, step.heap, step) }
+      return { view, data: buildArray(value, step.heap, step, marks.get(key)) }
     case 'grid':
-      return { view, data: buildGrid(obj, step.heap, step) }
+      return { view, data: buildGrid(obj, step.heap, step, marks, rootId) }
     case 'graph':
       return { view, data: buildGraph(obj, step.heap, step) }
     case 'heap':
@@ -39,7 +41,7 @@ const coveredIds = (s: StructureView): readonly string[] => ('covered' in s.data
 
 // Frames are walked outermost first and a root already drawn is skipped, so a
 // recursive call with `root` in every frame renders one tree, not one per frame.
-export function buildStructures(step: Step, views: Views): BuiltStructures {
+export function buildStructures(step: Step, views: Views, marks: IndexMarks = NO_MARKS): BuiltStructures {
   const structures: Structure[] = []
   const keys = new Set<string>()
   const coveredBy = new Map<string, string>()
@@ -49,7 +51,7 @@ export function buildStructures(step: Step, views: Views): BuiltStructures {
     const rootId = value.t === 'r' ? value.id : null
     const key = `${rootId ?? `${frame.id}:${name}`}:${view}`
     if (keys.has(key) || (rootId && coveredBy.has(rootId))) return
-    const built = buildView(view, value, step)
+    const built = buildView(view, value, step, marks, rootId ?? `${frame.id}:${name}`)
     if (!built) return
     keys.add(key)
     structures.push({ ...built, key, name, rootId, frameLabel: frame.global ? null : `${frame.name}()` })

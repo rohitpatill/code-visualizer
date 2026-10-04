@@ -5,18 +5,28 @@ export type ViewName = 'array' | 'grid' | 'list' | 'tree' | 'graph' | 'stack' | 
 /** Variable name to the view chosen for it. */
 export type Views = Readonly<Record<string, ViewName>>
 
-export type Pointer = [name: string, index: number]
+/** An index variable pointing into a container. `active` is false for a paused frame's variable. */
+export interface IndexMark {
+  name: string
+  index: number
+  active: boolean
+}
+
+/** Container key (heap id, or `frameId:name` for a string in a variable) to the marks on it. */
+export type IndexMarks = ReadonlyMap<string, readonly IndexMark[]>
 
 export interface ArrayData {
   items: Value[]
-  pointers: Pointer[]
-  offArray: Pointer[]
+  pointers: IndexMark[]
+  offArray: IndexMark[]
   window: { lo: number; hi: number; names: [string, string] } | null
 }
 
 export interface GridData {
   rows: Value[][]
   marks: { r: number; c: number; label: string }[]
+  /** Row index to the variables pointing at that whole row. */
+  rowMarks: ReadonlyMap<number, string[]>
   covered: string[]
 }
 

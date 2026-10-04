@@ -139,6 +139,18 @@
   font-size: 9px;
 }
 
+/* a paused caller's variable: still named, just quieter */
+.ptr.is-paused {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.grid th.is-pointed {
+  color: var(--amber);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 /* Grid */
 
 .grid {
