@@ -15,6 +15,7 @@ export const javascript: Engine = {
   buildProgram: joinSource,
   editorLanguage: () => import('@codemirror/lang-javascript').then((m) => m.javascript()),
   highlight: highlightJavaScript,
+  lineComment: '//',
   samples,
   starterSample: samples.find((s) => s.id === 'factorial') ?? samples[0]!,
   copy: {

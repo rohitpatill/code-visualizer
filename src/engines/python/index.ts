@@ -14,6 +14,7 @@ export const python: Engine = {
   buildProgram: joinSource,
   editorLanguage: () => import('@codemirror/lang-python').then((m) => m.python()),
   highlight: highlightPython,
+  lineComment: '#',
   samples,
   starterSample: samples.find((s) => s.id === 'factorial') ?? samples[0]!,
   copy: {

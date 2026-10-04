@@ -14,6 +14,7 @@ export const java: Engine = {
   buildProgram: buildJavaProgram,
   editorLanguage: () => import('@codemirror/lang-java').then((m) => m.java()),
   highlight: highlightJava,
+  lineComment: '//',
   samples,
   starterSample: samples.find((s) => s.id === 'factorial') ?? samples[0]!,
   copy: {

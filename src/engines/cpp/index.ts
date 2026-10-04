@@ -14,6 +14,7 @@ export const cpp: Engine = {
   buildProgram: buildCppProgram,
   editorLanguage: () => import('@codemirror/lang-cpp').then((m) => m.cpp()),
   highlight: highlightCpp,
+  lineComment: '//',
   samples,
   starterSample: samples.find((s) => s.id === 'factorial') ?? samples[0]!,
   copy: {

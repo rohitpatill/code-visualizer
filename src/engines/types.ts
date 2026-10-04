@@ -1,5 +1,6 @@
 import type { Extension } from '@codemirror/state'
 import type { SampleId } from '../samples/catalog'
+import type { LineComment } from '../structures/accesses'
 import type { Views } from '../structures/types'
 import type { Runner } from './runner'
 
@@ -46,6 +47,8 @@ export interface Engine {
   /** Loaded on demand, so each language's grammar is its own chunk. */
   editorLanguage(): Promise<Extension>
   highlight(line: string): Token[]
+  /** How a line comment starts, so the subscript scanner skips comments. */
+  lineComment: LineComment
   samples: readonly Sample[]
   starterSample: Sample
   copy: EngineCopy
