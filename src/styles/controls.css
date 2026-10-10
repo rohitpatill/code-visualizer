@@ -159,8 +159,9 @@
 }
 
 @media (max-width: 860px) {
+  /* minmax(0, 1fr): a plain 1fr column grows to its widest line and widens the whole page */
   .edit-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: 1fr auto;
   }
   .editor-wrap {
@@ -168,7 +169,7 @@
     border-bottom: 1px solid var(--line);
   }
   .view-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: 40vh minmax(0, 1fr) auto;
   }
   .code-pane {
