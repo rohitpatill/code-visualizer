@@ -299,7 +299,8 @@ src/
                             Value, Arrows, cover (CoverContext, useIsHot)
     structures/             StructureCard + one file per view family
   test/goldens.ts           golden lookup across all engines, for tests
-  styles/                   index.css imports 14 small sheets in cascade order
+  styles/                   index.css imports 15 small sheets in cascade order;
+                            phone.css (last) holds every phone-only rule
 ```
 
 ### Trace contract (`src/trace/types.ts`)
@@ -508,6 +509,14 @@ src/
 - Signature: the stack as a staircase, echoed by the timeline depth graph.
 - Tuples dashed (immutable), sets are pills without index.
 - Motion only in response to steps; `prefers-reduced-motion` disables it.
+- Phones (640px and below) get their own rules in `styles/phone.css` only,
+  so laptop and tablet layouts never read them. The page scrolls there
+  instead of being locked to the screen: code on top (34dvh), memory below
+  (72dvh, its own scroll, stack and heap still side by side because arrows
+  run left to right), step controls pinned to the bottom. Fields use 16px so
+  iPhone Safari does not zoom on focus. Stacked grid columns are
+  `minmax(0, 1fr)`; a plain `1fr` grows to the widest code line and widens
+  the whole page.
 
 ## Keyboard
 

@@ -1,0 +1,148 @@
+/*
+ * Phones only. Everything here sits inside this one query, so laptop and
+ * tablet layouts never read it. On a phone the page scrolls instead of being
+ * locked to the screen height: code on top, memory below with its own scroll,
+ * and the step controls pinned to the bottom edge.
+ */
+@media (max-width: 640px) {
+  html,
+  body,
+  #root {
+    height: auto;
+  }
+
+  .app {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Two per row: language and example, then guide and Visualize */
+  .topbar-actions > * {
+    flex: 1 1 calc(50% - 5px);
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  /* 16px keeps iPhone Safari from zooming in when a field is tapped */
+  .picker,
+  .stdin,
+  .editor-wrap .cm-editor .cm-content {
+    font-size: 16px;
+  }
+
+  .edit-layout {
+    grid-template-rows: auto auto;
+  }
+
+  .editor-wrap {
+    height: 55vh;
+    height: 55dvh;
+  }
+
+  .edit-side {
+    padding: 18px 16px 28px;
+  }
+
+  .view-layout {
+    grid-template-rows: 34vh 72vh auto;
+    grid-template-rows: 34dvh 72dvh auto;
+  }
+
+  .code-lines {
+    font-size: 13px;
+    padding: 8px 0;
+  }
+
+  .code-line {
+    grid-template-columns: 16px 28px 1fr;
+  }
+
+  .lineno {
+    padding-right: 10px;
+  }
+
+  .code-legend {
+    flex-wrap: wrap;
+    gap: 4px 14px;
+    padding: 6px 12px;
+  }
+
+  .output {
+    min-height: 72px;
+  }
+
+  .tabs {
+    padding: 6px 12px 0;
+  }
+
+  .memory-inner {
+    grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+    column-gap: 40px;
+    padding: 12px 12px 32px;
+  }
+
+  .controls {
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    padding: 8px 12px 10px;
+    gap: 8px;
+    box-shadow: 0 -6px 16px rgba(10, 14, 24, 0.45);
+  }
+
+  .narration {
+    gap: 4px 10px;
+    min-height: 0;
+  }
+
+  .narration strong {
+    font-size: 14px;
+  }
+
+  .narration span {
+    font-size: 13px;
+  }
+
+  .timeline {
+    height: 32px;
+  }
+
+  .transport {
+    gap: 8px;
+  }
+
+  /* first row: the step buttons across the full width */
+  .transport > .buttons:first-child {
+    width: 100%;
+  }
+
+  .transport > .buttons:first-child .btn {
+    flex: 1;
+    min-height: 40px;
+  }
+
+  .transport .btn {
+    min-height: 40px;
+  }
+
+  .play {
+    min-width: 0;
+  }
+
+  .speed {
+    margin-left: 0;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .chip {
+    padding: 5px 12px;
+  }
+
+  .guide {
+    padding: 16px 16px 32px;
+  }
+}
